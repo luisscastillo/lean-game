@@ -1,0 +1,8 @@
+[package]
+name = "hilbertgame"
+version = "0.1"
+lean_version = "leanprover-community/lean:3.45.0"
+path = "src"
+
+[dependencies]
+mathlib = {git = "https://github.com/leanprover-community/mathlib", rev = "1a424e18225dcf7b30b748d37e4df11efb066b98"}
