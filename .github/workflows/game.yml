@@ -39,7 +39,7 @@ jobs:
       - name: Install elan
         run: |
           set -o pipefail
-          curl https://raw.githubusercontent.com/Kha/elan/master/elan-init.sh -sSf | sh -s -- -v -y
+          curl -sSfL https://github.com/leanprover/elan/releases/download//elan-x86_64-unknown-linux-gnu.tar.gz -o /tmp/tmp.wQdA6z4Jx1/elan-init.tar.gz
           sudo ln -s $HOME/.elan/bin/* /usr/local/bin;
           
       - name: Install python Lean dependencies
