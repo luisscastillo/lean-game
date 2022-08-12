@@ -41,6 +41,7 @@ jobs:
           set -o pipefail
           curl https://raw.githubusercontent.com/Kha/elan/master/elan-init.sh -sSf | sh -s -- -v -y
           sudo ln -s $HOME/.elan/bin/* /usr/local/bin;
+          
       - name: Install python Lean dependencies
         run: |
           python -m pip install --upgrade pip requests markdown2 toml mathlibtools toposort invoke
