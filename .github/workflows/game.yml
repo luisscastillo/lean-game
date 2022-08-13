@@ -71,7 +71,7 @@ jobs:
       - name: Make game
         run: |
           cat leanpkg.path
-          make-lean-game --source_base_url=$source_base_url --web_editor_url=$web_editor_url
+          make-lean-game 
           
       - name: Deploy production
         uses: JamesIves/github-pages-deploy-action@4.1.5
