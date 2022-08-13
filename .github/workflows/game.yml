@@ -7,26 +7,29 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
+    inputs:
+      production:
+        description: 'Deploy to production (default: false). If false, will deploy to test subfolder.'
+        required: false
+        default: false
 jobs:
   deploy:
     runs-on: ubuntu-22.04
     env: 
-      branch: 'main'
-      source_base_url: "https://raw.githubusercontent.com/${{ github.repository }}/main/"
-      # web_editor_url: "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/editor"
-
+      branch: ${{ github.event.inputs.production && 'main' || 'test' }}
+      source_base_url: "https://raw.githubusercontent.com/${{ github.repository }}/${{ github.event.inputs.production && 'main' || 'test' }}/"
+      web_editor_url: "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/${{ github.event.inputs.production && 'editor/' || 'test/editor' }}"
     steps:
       - name: Echo branch
         run: |
           echo Deploying branch: $branch
           echo Source base url: $source_base_url
           echo Web editor url: $web_editor_url
-      - name: Checkout main branch
+      - name: Checkout ${{ env.branch }} branch
         uses: actions/checkout@v2
         with:
           ref: ${{ env.branch }}
-  
+
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
@@ -34,7 +37,7 @@ jobs:
 
       - name: Update packages
         run: sudo apt install -y unzip make nodejs gettext build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python3-openssl
- 
+
       - name: Install elan
         run: |
           set -o pipefail
@@ -66,15 +69,43 @@ jobs:
           mkdir -p "Lean-game-maker/src/interactive_interface/lean_server/leanprover-community/lean:$LATEST_BROWSER_LEAN/"
           cp build/shell/* "Lean-game-maker/src/interactive_interface/lean_server/leanprover-community/lean:$LATEST_BROWSER_LEAN/"
       - name: Make game
+        run: make-lean-game --source_base_url=$source_base_url --web_editor_url=$web_editor_url
+
+    ## Now we generate the editor ##
+
+      - name: Install lean editor
+        run: git clone --depth=1 https://github.com/leanprover-community/lean-web-editor.git
+
+      - name : Get server files
         run: |
-          cat leanpkg.path
-          make-lean-game --source_base_url=$source_base_url --web_editor_url=$web_editor_url
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.4.0
+          mkdir -p dist
+          mv build/shell/* dist/
+      - name: generate library.zip
+        run: ./generate-library.sh
+
+      - name: upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: library
+          path: |
+            ./dist/library.zip
+            ./dist/library.*.json
+      - name: build
+        run: |
+          mv dist lean-web-editor/
+          cd lean-web-editor
+          npm install
+          NODE_ENV=production ./node_modules/.bin/webpack
+  
+      - name: place editor in the website
+        run: mv lean-web-editor/dist html/editor
+
+      - name: Deploy ${{ github.event.inputs.production && 'production' || 'test' }}
+        uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           token: ${{ secrets.github_token }}
           branch: gh-pages # The branch the action should deploy to.
           folder: ./html # The folder the action should deploy.
-          target-folder: '/'
+          target-folder: ${{ github.event.inputs.production && '/' || '/test/' }}
           single-commit: "true"
-          clean: "true"
+          clean: "false"
