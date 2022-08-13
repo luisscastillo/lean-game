@@ -3,36 +3,35 @@
 name: MakeGame
 
 # Controls when the workflow will run
-on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main ]
+on: 
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-    inputs:
-      production:
-        description: 'Deploy to production (default: false). If false, will deploy to test subfolder.'
-        required: false
-        default: false
+
 jobs:
   deploy:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-18.04
+    env: 
+      branch: 'main'
+      source_base_url: "https://raw.githubusercontent.com/${{ github.repository }}/main/"
+      # web_editor_url: "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/editor"
+
     steps:
-      - name: Checkout
+      - name: Echo branch
+        run: |
+          echo Deploying branch: $branch
+          echo Source base url: $source_base_url
+          echo Web editor url: $web_editor_url
+      - name: Checkout main branch
         uses: actions/checkout@v2
         with:
-          submodules: true
-
+          ref: ${{ env.branch }}
+  
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.10.4'
-      - name: Cancel Previous Workflow Runs
-        uses: n1hility/cancel-previous-runs@v2.0
-        with: 
-          token: ${{ secrets.GITHUB_TOKEN }}
-          workflow: game.yml
+          python-version: '3.8'
+
       - name: Update packages
         run: sudo apt install -y unzip make nodejs gettext build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python3-openssl
  
@@ -49,8 +48,8 @@ jobs:
         with:
           repo: ${{ github.repository }}
           access-token: ${{ secrets.GITHUB_TOKEN }}
-          
-      - name: Install Game maker 
+
+      - name: Install Game maker
         run: |
           git clone --depth=1 https://github.com/mmasdeu/Lean-game-maker.git
           cd Lean-game-maker/src/interactive_interface
@@ -58,7 +57,6 @@ jobs:
           ./node_modules/.bin/webpack --mode=production
           cd ../..
           pip3 install -e .
-          
       - name : Get server files
         run: |
           curl -s https://api.github.com/repos/leanprover-community/lean/releases/latest | grep "browser.zip" | grep -v name | cut -d : -f 2,3 | tr -d \"  | wget -qi -
@@ -67,12 +65,10 @@ jobs:
           echo "LATEST_BROWSER_LEAN=$LATEST_BROWSER_LEAN" >> $GITHUB_ENV
           mkdir -p "Lean-game-maker/src/interactive_interface/lean_server/leanprover-community/lean:$LATEST_BROWSER_LEAN/"
           cp build/shell/* "Lean-game-maker/src/interactive_interface/lean_server/leanprover-community/lean:$LATEST_BROWSER_LEAN/"
-          
       - name: Make game
         run: |
           cat leanpkg.path
-          make-lean-game 
-          
+          make-lean-game --source_base_url=$source_base_url --web_editor_url=$web_editor_url
       - name: Deploy production
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
