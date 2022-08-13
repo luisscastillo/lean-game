@@ -1,5 +1,5 @@
 /-
-# The Hilbert Game, version 1.0.0.
+# The Euclid Game, version 1.0.0.
 
 ## BIYSC 2022
 
