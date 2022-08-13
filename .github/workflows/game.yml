@@ -50,21 +50,23 @@ jobs:
           repo: ${{ github.repository }}
           access-token: ${{ secrets.GITHUB_TOKEN }}
           
-      - name: Install Game maker
+ - name: Install Game maker
         run: |
-          git clone https://github.com/mpedramfar/Lean-game-maker.git
+          git clone --depth=1 https://github.com/mmasdeu/Lean-game-maker.git
           cd Lean-game-maker/src/interactive_interface
           npm install .
           ./node_modules/.bin/webpack --mode=production
           cd ../..
           pip3 install -e .
+          
       - name : Get server files
         run: |
           curl -s https://api.github.com/repos/leanprover-community/lean/releases/latest | grep "browser.zip" | grep -v name | cut -d : -f 2,3 | tr -d \"  | wget -qi -
           unzip *.zip
-          VER=`ls *zip | cut -c 6-11`
-          mkdir -p "Lean-game-maker/src/interactive_interface/lean_server/leanprover-community/lean:$VER/"
-          cp build/shell/* "Lean-game-maker/src/interactive_interface/lean_server/leanprover-community/lean:$VER/"
+          LATEST_BROWSER_LEAN=`ls *zip | cut -c 6-11`
+          echo "LATEST_BROWSER_LEAN=$LATEST_BROWSER_LEAN" >> $GITHUB_ENV
+          mkdir -p "Lean-game-maker/src/interactive_interface/lean_server/leanprover-community/lean:$LATEST_BROWSER_LEAN/"
+          cp build/shell/* "Lean-game-maker/src/interactive_interface/lean_server/leanprover-community/lean:$LATEST_BROWSER_LEAN/"
           
       - name: Make game
         run: make-lean-game
