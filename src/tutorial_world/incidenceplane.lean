@@ -1,6 +1,4 @@
 import tactic
-import data.real.basic
-import data.set.function
 
 noncomputable theory
 open_locale classical
