@@ -1,9 +1,7 @@
 /-
 # The Euclid Game, version 1.0.0.
 
-## BIYSC 2022
-
-Learn Lean with the Hilbert plane!
+Where the past and the future of mathematics meet!
 
 # What is this game?
 
@@ -12,7 +10,7 @@ facts about geometry. Travel through different worlds solving challenges.
 
 Have fun!
 
-# Credits
+# Thanks
 
 The BIYSC team on "Can computers do math?" at UAB.
 
