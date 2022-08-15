@@ -7,9 +7,9 @@ cd combined_lib/
 sed -i 's/name.*/name = "combined_lib"/g' leanpkg.toml
 sed -i '/path/d' leanpkg.toml
 
-# Get last revision of hilbertgame:
+# Get last revision of lean-game:
 LAST_COMMIT=$(git ls-remote https://github.com/luisscastillo/lean-game.git HEAD | cut -f1)
-echo "hilbertgame = {git = \"https://github.com/luisscastillo/lean-game\", rev = \"$LAST_COMMIT\"}" >> leanpkg.toml
+echo "lean-game = {git = \"https://github.com/luisscastillo/lean-game\", rev = \"$LAST_COMMIT\"}" >> leanpkg.toml
 
 # Generate a zip in dist/library.zip
 
