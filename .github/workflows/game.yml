@@ -22,6 +22,7 @@ jobs:
           echo Deploying branch: $branch
           echo Source base url: $source_base_url
           echo Web editor url: $web_editor_url
+          
       - name: Checkout main branch
         uses: actions/checkout@v2
         with:
@@ -40,9 +41,11 @@ jobs:
           set -o pipefail
           curl https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh -sSf | sh -s -- -v -y
           sudo ln -s $HOME/.elan/bin/* /usr/local/bin;
+          
       - name: Install python Lean dependencies
         run: |
           python -m pip install --upgrade pip requests markdown2 toml mathlibtools toposort invoke
+          
       - name: upgrade Lean and dependencies
         uses: leanprover-contrib/lean-upgrade-action@master
         with:
@@ -57,9 +60,10 @@ jobs:
           ./node_modules/.bin/webpack --mode=production
           cd ../..
           pip3 install -e .
+          
       - name : Get server files
         run: |
-          curl -s https://api.github.com/repos/leanprover-community/lean/releases/tags/v3.46.0 | grep "browser.zip" | grep -v name | cut -d : -f 2,3 | tr -d \"  | wget -qi -
+          curl -s https://api.github.com/repos/leanprover-community/lean/releases/tags/v3.45.0 | grep "browser.zip" | grep -v name | cut -d : -f 2,3 | tr -d \"  | wget -qi -
           unzip *.zip
           LATEST_BROWSER_LEAN=`ls *zip | cut -c 6-11`
           echo "LATEST_BROWSER_LEAN=$LATEST_BROWSER_LEAN" >> $GITHUB_ENV
