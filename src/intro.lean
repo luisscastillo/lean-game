@@ -5,8 +5,8 @@ Where the past and the future of mathematics meet!
 
 # What is this game?
 
-In this game, you will learn the basics of Lean using as examples some
-facts about geometry. Travel through different worlds solving challenges.
+Welcome to The Euclid Game! In this game, you will learn how to teach mathematics to the computer by 
+using some facts about geometry. 
 
 Have fun!
 
