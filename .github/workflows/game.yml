@@ -55,7 +55,6 @@ jobs:
       - name: Install Game maker
         run: |
           git clone --depth=1 https://github.com/mmasdeu/Lean-game-maker.git
-          git fetch origin pull/3/merge && git checkout FETCH_HEAD
           cd Lean-game-maker/src/interactive_interface
           npm install .
           ./node_modules/.bin/webpack --mode=production
@@ -73,6 +72,7 @@ jobs:
           
       - name: Make game
         run: |
+          cat leanpkg.path
           make-lean-game --source_base_url=$source_base_url --web_editor_url=$web_editor_url
           
       - name: Deploy production
