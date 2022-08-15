@@ -63,7 +63,7 @@ jobs:
           
       - name : Get server files
         run: |
-          curl -s https://api.github.com/repos/leanprover-community/lean/releases/tags/v3.45.0 | grep "browser.zip" | grep -v name | cut -d : -f 2,3 | tr -d \"  | wget -qi -
+          curl -s https://api.github.com/repos/leanprover-community/lean/releases/latest | grep "browser.zip" | grep -v name | cut -d : -f 2,3 | tr -d \"  | wget -qi -
           unzip *.zip
           LATEST_BROWSER_LEAN=`ls *zip | cut -c 6-11`
           echo "LATEST_BROWSER_LEAN=$LATEST_BROWSER_LEAN" >> $GITHUB_ENV
