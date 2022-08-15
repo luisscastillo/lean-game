@@ -1,5 +1,5 @@
-name = "The Hilbert game"
-version = "1.1.0"
+name = "The Euclid Game"
+version = "1.0.0"
 extra_files = "extras"
 intro = "src/intro.lean"
 
