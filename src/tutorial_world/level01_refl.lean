@@ -27,13 +27,21 @@ will close the goal and solve the level. Don't forget the comma.
 /-
 # Tutorial World
 
-## Level 1: the `refl` tactic.
+## The setup
 
-Welcome to the Tutorial World! In this world, you're going to prove some geometric facts using `tactics`.
+Welcome to the Tutorial World! In this world, you're going to prove some geometric facts by using `tactics`. 
+These `tactics`are just instructions that make progress in a mathematical proof.
 During your proofs, your "goal" (i.e. what you're
-supposed to be proving) will be displayed with  a `⊢` symbol in front of it. If the top
-right hand box reports "Proof complete!", you have closed all the goals in the level
-and can move on to the next level in the world you're in. 
+supposed to be proving) will be displayed in front of a `⊢` symbol on the top
+right hand box, so you will need to use `tactics` to close that goals. Once you close all the goals, the top
+right hand box will report "Proof complete!", so that you 
+can move on to the next level in the world you're in. 
+
+## The language
+
+To get the best of this game, you should know that 
+
+## Level 1: the `refl` tactic.
 
 Let's learn some tactics! Let's start with the `refl` tactic. `refl` stands for "reflexivity", which is a fancy
 way of saying that it will prove any goal of the form `A = A`. It doesn't matter how
