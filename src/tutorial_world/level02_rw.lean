@@ -106,6 +106,8 @@ begin
   
 end
 
+/-
+
 ## Exploring your proof
 
 Click on `rw h1`, and then use the arrow keys to move your cursor around the proof. 
@@ -113,3 +115,5 @@ Go up and down and note that the goal changes -- indeed you can inspect Lean's "
 each line of the proof (the hypotheses, and the goal). Try to figure out the exact place 
 where the goal changes. The comma tells Lean "I've finished writing this tactic now, please
 process it." Lean ignores new lines, but pays great attention to commas.
+
+-/
