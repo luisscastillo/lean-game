@@ -70,11 +70,19 @@ then `rw h1 at h2` will turn `h2` into `h2 : C = B` (remember operator precedenc
 
 ## Level 2: The rewrite (`rw`) tactic.
 
-The next tactic we will learn is `rw` (from rewrite). It rewrites equalities. That is,
-if we have a proof `h : A = B` and we want to prove `⊢ A = C`, then after `rw h` the goal
+The next tactic we will learn is `rw` (from rewrite). Rewriting is one of the most basic methods of proof, 
+we substitute one object we know equals another inside what we want to prove, 
+by doing this we can get closer to something that we already know to be true, 
+or get to a point where things cancel out or simplify.
+
+In general, if we have a proof `h : A = B` and we want to prove `⊢ A = C`, then after `rw h` the goal
 will become `⊢ B = C`.
 
-After many tactics (and `rw` is one of them) Lean tries to apply `refl`. This is why
+Now, delete the sorry and take a look in the top right box at what we have. The variables `A`, `B` and `C` are 
+points that lie on the plane `Ω`. Here we have to prove that if the point $A$ is equal to the point $B$, 
+and the point $B$ is equal to the point $C$, then the point $A$ is equal to the point $C$.
+
+After many tactics (and `rw` is one of them), Lean tries to apply `refl`. This is why
 in the following proof you may get away with only two tactic applications.
 
 -/
