@@ -71,25 +71,27 @@ then `rw h1 at h2` will turn `h2` into `h2 : C = B` (remember operator precedenc
 ## Level 2: The rewrite (`rw`) tactic.
 
 The next tactic we will learn is `rw` (from rewrite). Rewriting is one of the most basic methods of proof, 
-we substitute one object we know equals another inside what we want to prove, 
-by doing this we can get closer to something that we already know to be true, 
-or get to a point where things cancel out or simplify.
+where we "substitute" one object that we know that is equal to another.
 
-In general, if we have a proof `h : A = B` and we want to prove `⊢ A = C`, then after `rw h` the goal
-will become `⊢ B = C`.
+For example, if `h : A = B` is a hypothesis (i.e., a proof of `A = B`) in your local context (the box in the top right)
+and if your goal contains one or more `A`s, then `rw h` will change them all to `B`'s.
 
 Now, delete the sorry and take a look in the top right box at what we have. The variables `A`, `B` and `C` are 
-points that lie on the plane `Ω`. Here we have to prove that if the point $A$ is equal to the point $B$, 
+points that lie in the plane `Ω`. Here we have to prove that if the point $A$ is equal to the point $B$, 
 and the point $B$ is equal to the point $C$, then the point $A$ is equal to the point $C$.
 
-After many tactics (and `rw` is one of them), Lean tries to apply `refl`. This is why
-in the following proof you may get away with only two tactic applications.
+Now try to use a sequence of rewrite steps to prove the lemma below by typing them into the box underneath, 
+between the begin and end lines that tell Lean you are starting and finishing a proof.
+
+Right below this explanation, you will find a grey box where a "Hint" is hidden in case you get stuck. Click on
+it to step through this level faster, but remember to use it wisely! From now on, you will find a "Hint" for each level.
 
 -/
 
 /- Hint : Click here for a hint, in case you get stuck.
-Delete `sorry` and type `rw h,` (don't forget the comma!). Lean tries `refl` afterwards,
-so you will see that this suffices.
+Delete `sorry` and type `rw h1,` (don't forget the comma!). Then, note how the goal changes into ⊢ B = C. Directly after,
+try to think what would happen if you write `rw h2,`. Typying that line will finish the proof instead of wiritng ⊢ C = C . This is
+because Lean tries to apply `refl` right after some tactics, and `rw`is one of them!
 -/
 
 variables {Ω : Type} -- hide
