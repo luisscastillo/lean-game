@@ -45,7 +45,7 @@ In Type theory, there are `terms` and `types`. A term and its type are written t
 where the symbol : can be thought as "is an element of" (this is also represented by the symbol ∈).
 Then, if we find the expression Ω : Type , we should understand that Ω is an element of the type "Type". 
 Analogously, A : Ω  will translate into "A is an element of Ω", which makes us think that terms can also be types.
-In this case, because we are talking about geometry, Ω must be interpreted as a plane, where A is a point that lies on 
+In this case, because we are talking about geometry, Ω must be interpreted as a plane, where A is a point that lies in 
 that plane. However, if we found h : A = B, that should be read as "h is a hypotheses assuming that A = B is true". 
 These hypotheses/assumptions will be used to step through the mathematical proofs by using `tactics` that point at them.
 
