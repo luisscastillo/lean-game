@@ -54,7 +54,8 @@ Where it used to say `sorry`, write `refl,`
 If all is well, Lean should tell you "Proof complete!" in the top right box, and there
 should be no errors in the bottom right box. You just did the first
 level of the tutorial! And you also learnt how to avoid by *far* the most
-common mistake that beginner users make -- **every line must end with a comma**.
+common mistake that beginner users make -- **every line must end with a comma**. 
+At the end, the comma is important because it tells Lean you are done with one step of your proof!
 
 For each level, the idea is to get Lean into this state: with the top right
 box saying "Proof complete!" and the bottom right box empty (i.e. with no errors in).
