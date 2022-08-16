@@ -1,7 +1,7 @@
 /-
 # The Euclid Game, version 1.0.0.
 
-## Where the past and the future of mathematics meet!
+## Where the past and the future of mathematics meet...
 
 # What is this game?
 
