@@ -84,7 +84,7 @@ Now try to use a sequence of rewrite steps to prove the lemma below by typing th
 between the begin and end lines that tell Lean you are starting and finishing a proof.
 
 Right below this explanation, you will find a grey box where a "Hint" is hidden in case you get stuck. Click on
-it to step through this level faster, but remember to use it wisely! From now on, you will find a "Hint" for each level.
+it to step through this level faster, but remember to use it wisely! From now on, you will find some "Hints" that might help you.
 
 -/
 
