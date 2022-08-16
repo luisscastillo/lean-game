@@ -19,13 +19,14 @@ The proof assistant will completely keep track of what facts we know so far, and
 needs to be shown to finish the current proof, importantly it won't let us show something that
 doesn't logically follow from what we have proved so far.
 
-This is a very literal sort of computer assisted proof, we are using a computer to step through and
-understand individual steps in a proof.
+What makes *proof assistants* unique is the fact that they allow us to step through and
+understand individual steps in a proof. A mathematician would remark that we are using *computer-assisted proofs*. 
 Later we will see how the assistant can do more than just follow our instructions; it can also
 search for useful facts we might want to use. Lean can even complete some moderately
 difficult statements on its own, using proof methods based on pre-defined rules.
 This saves us time thinking about details in some situations, without losing any confidence in the
 correctness of the result, and in some cases we can even learn from the proofs Lean finds!
+
 To get started, click on the first world, the blue circle labelled Tutorial World, on the right.
 Once you complete all the levels of the Tutorial World, hit "Main Menu" in the top left to get back here. 
 In this way, you will see that the first blue circle has turned into green, which 
