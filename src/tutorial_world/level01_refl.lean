@@ -30,7 +30,7 @@ will close the goal and solve the level. Don't forget the comma.
 ## The setup
 
 Welcome to the Tutorial World! In this world, you're going to prove some geometric facts by using `tactics`. 
-These `tactics`are just instructions that make progress in a mathematical proof.
+These `tactics` are just instructions that make progress in a mathematical proof.
 During your proofs, your "goal" (i.e. what you're
 supposed to be proving) will be displayed in front of a `⊢` symbol on the top
 right hand box, so you will need to use `tactics` to close that goals. Once you close all the goals, the top
@@ -46,7 +46,7 @@ where the symbol : can be thought as "is an element of" (this is also represente
 Then, if we find the expression Ω : Type , we should understand that Ω is an element of the type "Type". 
 Analogously, A : Ω  will translate into "A is an element of Ω", which makes us think that terms can also be types.
 In this case, because we are talking about geometry, Ω must be interpreted as a plane, where A is a point that lies in 
-that plane. However, if we found h : A = B, that should be read as "h is a hypotheses assuming that A = B is true". 
+that plane. However, if we found h : A = B, that should be read as "h is a hypothesis assuming that A = B is true". 
 These hypotheses/assumptions will be used to step through the mathematical proofs by using `tactics` that point at them.
 
 In conclusion, the syntax of Lean depends on the context of each situation, and adapting to it will be crucial to understand
