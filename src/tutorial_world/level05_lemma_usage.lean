@@ -12,6 +12,13 @@ line_through_right (P Q : Ω) : Q ∈ (line_through P Q)
 # Tutorial World
 
 ## The first axiom of incidence.
+
+Just as the roof of a building cannot stand without the bricks that are glued to the floor, 
+neither can theorems stand without axioms. In mathematics, we need to set down some starting points 
+to build our knowledge, and this is why axioms should join the game. What are axioms? - you will be
+wondering... Axioms are unprovable statements which are assumed to be true because of their self-evidence. 
+They are served to
+
 -/
 
 variables {Ω : Type} [IncidencePlane Ω] --hide
