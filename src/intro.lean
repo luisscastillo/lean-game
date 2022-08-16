@@ -5,10 +5,10 @@
 
 # What is this game?
 
-Welcome to The Euclid Game! In this game, you will learn the basics of how a program called a *proof assistant* 
+Welcome to The Euclid Game! In this game, you will learn the basics of how a program called *Lean* 
 works and how it is used to formalize some mathematical results.
 What does this mean? Instead of writing down proofs in English or any other human language, we will
-explain the steps of the proof to the proof assistant by using a precise language, similar to a
+explain the steps of the proof to this *proof assistant* by using a precise language, similar to a
 programming language in some aspects.
 The advantage of doing this is that the computer can keep track of the proof for us, and tell
 us if we make any steps that aren't logically valid; computers are very good at understanding logic
@@ -21,7 +21,7 @@ doesn't logically follow from what we have proved so far.
 
 What makes *proof assistants* unique is the fact that they allow us to step through and
 understand individual steps in a proof. A mathematician would remark that we are using *computer-assisted proofs*. 
-Later we will see how the assistant can do more than just follow our instructions; it can also
+Later we will see how the proof assistant can do more than just follow our instructions; it can also
 search for useful facts we might want to use. Lean can even complete some moderately
 difficult statements on its own, using proof methods based on pre-defined rules.
 This saves us time thinking about details in some situations, without losing any confidence in the
