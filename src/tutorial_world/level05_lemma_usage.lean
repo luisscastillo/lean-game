@@ -34,13 +34,26 @@ called a *`model`*. A model consists of assigning the concepts of point and line
 As long as all the *`axioms of incidence`* are satisfied by this model, we can then ensure that this system of axioms is consistent. 
 Let's introduce the axioms of incidence so that we can create a model that satisfies them!
 
-*A.1)* Given two distinct points, there is one and only one line passing through them.
+*A.1)* For every point P and for every point Q not equal to P, there exists a unique line ℓ "passing through" (=incident with) P and Q.
 
-*A.2)* Every line has at least two points. 
+*A.2)* For every line ℓ, there exist two distinct points that "pass through" (=are incident with) it.  
 
-To solve this level, we need to use
-the first axiom of incidence, which follows like this: *`
+*A.3)* There exist three distinct points with the property that no line "passes through" (=is incident with) all three of them.
 
+It might be useful for you to do a drawing in order to understand each of the axioms more clearly, but remember that mathematics
+does not understand drawings but logical relationships to build new knowledge!
+
+Let's make a model! For example, say that we have three distinct needles and thread. (Note: we must specify how many objects of each type
+we have in order to be as rigorous as axioms are.) Then, we can define these three distinct needles as three distinct points and thread as the line ℓ.
+Now, we have to check if this model satisfies the axioms of incidence. If you try by your own, you will realise that the three axioms are being 
+satisfied at the same time and without contradicting one another. Then, the axioms of incidence are consistent! 
+
+Now, notice that the more axioms there exist, the more difficult it is to create a model that satisfies all of them. For this reason, the objective 
+of axiomatic geometry is establishing as less axioms as possible to create a specific model that might be beautiful or applicable to reality.
+
+## The axioms of incidence in Lean.
+
+How do we make the computer understand such complex statements?
 
 -/
 
