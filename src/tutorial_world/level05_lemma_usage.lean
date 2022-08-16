@@ -11,7 +11,7 @@ line_through_right (P Q : Ω) : Q ∈ (line_through P Q)
 /-
 # Tutorial World
 
-## The axioms of incidence.
+## Level 5: The axioms of incidence.
 
 Just as the roof of a building cannot stand without the bricks that are glued to the floor, 
 neither can theorems stand without axioms. In mathematics, we need to set down some starting points 
@@ -27,7 +27,8 @@ These three blocks are called *`incidence`*, *`betweenness`* and *`congruence`* 
 Inside the first block of axioms, there are up to three *`axioms of incidence`*. These are established to define
 the notions of *`point`*, *`line`* and the relationship between these two concepts, which is called *`incidence`*. Notice 
 that by "incidence" we mean whatever idea that satifies the *`axioms of incidence`*. Then, you will be wondering... are the
-notions of "point" and "line" referring to whatever object of reality that satisfies the *`axioms of incidence`*? Exactly! 
+notions of "point" and "line" referring to whatever object of reality that satisfies the *`axioms of incidence`*? Exactly!
+Before the axioms of incidence, the notions of point and line are undefined!
 
 In fact, if we want to verify the consistency and independency of these axioms from one another, we need to create something 
 called a *`model`*. A model consists of assigning the concepts of point and line to whatever object of reality we would like to imagine.
@@ -53,14 +54,26 @@ of axiomatic geometry is establishing as less axioms as possible to create a spe
 
 ## The axioms of incidence in Lean.
 
-How do we make the computer understand such complex statements?
+How do we make the computer understand such complex statements? By using Type Theory, it is possible to define that concepts in Lean! However, 
+some of them are such difficult for a computer to comprehend that must be divided into more than one statement. For example, the first axiom is 
+divided into four statements: 
 
+-/
+
+(line_through' : Point → Point → Line)
+(line_through_left' (P Q : Point) : P ∈ (line_through' P Q))
+(line_through_right' (P Q : Point) : Q ∈ (line_through' P Q))
+(incidence' {P Q : Point} {ℓ : Line} : P ≠ Q → P ∈ ℓ → Q ∈ ℓ → ℓ = line_through' P Q)
+
+/-
+In this level, we need two out of that four statements. Click on the top left menu where it says *Theorem statements* to discover which two of 
+them we are talking about. Delete the `sorry` and see that the goal is ⊢ B ∈ line_through A B 
 -/
 
 variables {Ω : Type} [IncidencePlane Ω] --hide
 
 /- Lemma :  no-side-bar
-A point lies in the line through it.
+A point lies in the line that passes through it.
 -/
 lemma point_on_line {A B : Ω} {r : Line Ω} :
 B ∈ line_through A B :=
