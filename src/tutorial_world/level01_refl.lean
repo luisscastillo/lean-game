@@ -64,10 +64,6 @@ Now click on "next level" in the top right of your browser to go onto the second
 Tutorial World, where we'll learn about the `rw` tactic.
 -/
 
-/- Hint : Click here for a hint, in case you get stuck.
-Just delete `sorry` and type `refl,` (don't forget the comma!).
--/
-
 variables {Ω : Type} -- hide
 
 /- Lemma : no-side-bar
