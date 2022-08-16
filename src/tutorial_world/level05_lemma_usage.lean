@@ -58,14 +58,13 @@ How do we make the computer understand such complex statements? By using Type Th
 some of them are such difficult for a computer to comprehend that must be divided into more than one statement. For example, the first axiom is 
 divided into four statements: 
 
--/
 
 (line_through' : Point → Point → Line)
 (line_through_left' (P Q : Point) : P ∈ (line_through' P Q))
 (line_through_right' (P Q : Point) : Q ∈ (line_through' P Q))
 (incidence' {P Q : Point} {ℓ : Line} : P ≠ Q → P ∈ ℓ → Q ∈ ℓ → ℓ = line_through' P Q)
 
-/-
+
 In this level, we need two out of that four statements. Click on the top left menu where it says *Theorem statements* to discover which two of 
 them we are talking about. Delete the `sorry` and see that the goal is ⊢ B ∈ line_through A B. Presumably, the goal shows the same structure as
 the statement `line_through_right (P Q : Point) : Q ∈ (line_through P Q)`. [Remember that the points P and Q could be needles!]. Then, we just 
