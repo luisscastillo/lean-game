@@ -31,12 +31,25 @@ because `j(h(p))` is easily checked to be a term of type `R`
 -/
 
 /-
-In this level we learn the tactic `exact`, which solves a goal that is exactly one of the hypotheses.
-The lemma is the same as in the previous level, but we will solve it in a different way.
+# Tutorial World
+
+## Level 4: The `exact` tactic.
+
+In this level, we learn the tactic `exact`, which solves a goal that is exactly one of the hypotheses.
+For example, if the finishing goal is ⊢ `A = B` and we have the hypothesis `z : A = B`, then `exact z`
+will complete the level.
+
+This level is a new variant of the the previous one, but we will solve it in a different way. As you can imagine, 
+mathematical proofs can be solved in many differents ways, which is something that definitely makes this field special.
+
+## The tactics index
+
+In case you forgot how to use some of the tactics, click on the top left menu to see what we have learned so far. 
+Play around with the menus on the left and see what is there currently. More information will appear as you progress.
 -/
 
 /- Hint : Click here for a hint, in case you get stuck.
-By doing a `rw` you will get the goal to look exactly like one of the hypotheses...
+By using the `rw` tactic you will get the goal to look exactly like one of the hypotheses...
 -/
 
 variables {Ω : Type} -- hide
@@ -51,4 +64,3 @@ begin
 
   
 end
-
