@@ -19,7 +19,10 @@ click on it, you will see the solution of this level. Again, try to use this too
 
 -/
 
-
+/- Hint : Click here for a hint, in case you get stuck.
+You may want to use *`rw ←`* first. Use it only with one of the hypotheses. Then, think if it's necessary to use it again
+or you just can finish the proof by using `rw`without `←`.
+-/
 variables {Ω : Type} -- hide
 
 /- Lemma : no-side-bar
@@ -27,7 +30,7 @@ If A, B and C are points with B = A and B = C, then A = C.
 -/
 lemma example_exact (A B C: Ω) (h1 : B = A) (h2 : B = C) : A = C :=
 begin
-  rw ←h1,
+  rw ← h1,
   rw h2,
 
   
