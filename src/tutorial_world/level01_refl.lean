@@ -39,7 +39,18 @@ can move on to the next level in the world you're in.
 
 ## The language
 
-To get the best of this game, you should know that 
+To get the best of this game, you should know that Lean is written in a specific syntax that 
+is designed to look similar to written mathematics. This formal presentation is called *Type theory*. 
+In Type theory, there are `terms` and `types`. A term and its type are written together as `term`:`type`, 
+where the symbol : can be thought as "is an element of" (this is also represented by the symbol ∈).
+Then, if we find the expression Ω : Type , we should understand that Ω is an element of the type "Type". 
+Analogously, A : Ω  will translate into "A is an element of Ω", which makes us think that terms can also be types.
+In this case, because we are talking about geometry, Ω must be interpreted as a plane, where A is a point that lies on 
+that plane. However, if we found h : A = B, that should be read as "h is a hypotheses assuming that A = B is true". 
+These hypotheses/assumptions will be used to step through the mathematical proofs by using `tactics` that point at them.
+
+In conclusion, the syntax of Lean depends on the context of each situation, and adapting to it will be crucial to understand
+the essence of each level. 
 
 ## Level 1: the `refl` tactic.
 
