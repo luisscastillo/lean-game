@@ -15,7 +15,7 @@ and then a space, so the system will change it automatically.
 ## Did you know?
 
 On the top right corner of the screen, there is a box named *"View source"* for each level. If you 
-click on it, you will see the solution of this level. Again, try to use this tool wisely! 
+click on it, you will see one possible solution to this level. Again, try to use this tool wisely! 
 
 -/
 
