@@ -67,7 +67,12 @@ divided into four statements:
 
 /-
 In this level, we need two out of that four statements. Click on the top left menu where it says *Theorem statements* to discover which two of 
-them we are talking about. Delete the `sorry` and see that the goal is ⊢ B ∈ line_through A B 
+them we are talking about. Delete the `sorry` and see that the goal is ⊢ B ∈ line_through A B. Presumably, the goal shows the same structure as
+the statement `line_through_right (P Q : Point) : Q ∈ (line_through P Q)`. [Remember that the points P and Q could be needles!]. Then, we just 
+have to write that statement in a different way! -- How do we change the points P and Q for A and B? -- Follow the same structure of the statement
+we need to use. Do you remember that `exact` tactic solved the goal by using a hypothesis that showed the same structure. Then, because the computer
+already knows what `line_through_right (P Q : Point) : Q ∈ (line_through P Q)` means, why don't we type `exact line_through_right A B`? Type that and see 
+how it finishes the proof! 
 -/
 
 variables {Ω : Type} [IncidencePlane Ω] --hide
