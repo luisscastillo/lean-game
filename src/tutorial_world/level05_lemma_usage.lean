@@ -17,7 +17,10 @@ Just as the roof of a building cannot stand without the bricks that are glued to
 neither can theorems stand without axioms. In mathematics, we need to set down some starting points 
 to build our knowledge, and this is why axioms should join the game. What are axioms? - you will be
 wondering... Axioms are unprovable statements which are assumed to be true because of their self-evidence. 
-They are served to
+They are served as a premise for further reasoning and arguments, so that we can reach new conclusions from them.
+
+By travelling back in time to 300 B.C., we meet the great mathematician Euclid, who formalized the very 
+first axioms of geometry in his well-known book *`The Elements`*.
 
 -/
 
