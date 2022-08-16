@@ -27,7 +27,8 @@ difficult statements on its own, using proof methods based on pre-defined rules.
 This saves us time thinking about details in some situations, without losing any confidence in the
 correctness of the result, and in some cases we can even learn from the proofs Lean finds!
 To get started, click on the first world, the blue circle labelled Tutorial World, on the right.
-Once you complete all the levels of the Tutorial World, the blue circle will turn into green, which 
+Once you complete all the levels of the Tutorial World, hit "Main Menu" in the top left to get back here. 
+In this way, you will see that the first blue circle has turned into green, which 
 will give you access to the following world.
 You can use this menu to navigate as you try more of the problems.
 
