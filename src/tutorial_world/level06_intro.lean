@@ -80,7 +80,7 @@ variables {Ω : Type} [IncidencePlane Ω] --hide
 variables {A B : Ω} {r s : Line Ω} -- hide
 
 /- Lemma :
-If two lines contain two distinct points, then they are the same
+If two lines contain two distinct points, then they are the same line.
 -/
 lemma equal_lines_of_contain_two_points :
 A ≠ B → A ∈ r →  A ∈ s → B ∈ r → B ∈ s → 	r = s :=
