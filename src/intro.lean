@@ -5,8 +5,8 @@
 
 # What is this game?
 
-Welcome to The Euclid Game! In this game, you will learn the basics of how a program called *Lean* 
-works and how it is used to formalize some mathematical results.
+Welcome to The Euclid Game! In this game, you will learn the basics of *axiomatic geometry* and 
+how a program called *Lean* is used to formalize some mathematical results.
 What does this mean? Instead of writing down proofs in English or any other human language, we will
 explain the steps of the proof to this *proof assistant* by using a precise language, similar to a
 programming language in some aspects.
