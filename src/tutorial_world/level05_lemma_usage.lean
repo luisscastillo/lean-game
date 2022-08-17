@@ -55,7 +55,7 @@ Now, notice that **the more axioms there exist, the more difficult it is to crea
 
 ## The axioms of incidence in Lean.
 
-How do we make the computer understand such complex statements? By using Type Theory, it is possible to define that concepts in Lean! However, 
+How do we make the computer understand such complex statements? By using Type Theory, it is possible to define these concepts in Lean! However, 
 some of them are such difficult for a computer to comprehend that they must be divided into more than one statement. For example, the first axiom is 
 divided into four statements: 
 
