@@ -26,10 +26,10 @@ were proposed by David Hilbert (1862-1943 AD), who made remarkable improvements 
 These three sets are called **incidence**, **betweenness** and **congruence** (we might also want to add the **Parallel Axiom**).
 
 Inside the first set of axioms, there are up to three axioms of incidence. These are established to define
-the notions of **point**, **line** and the relationship between these two concepts, which is called **incidence**. Notice 
+the primitive notions of **point**, **line** and the relationship between these two concepts, which is called **incidence**. Notice 
 that by "incidence" we mean whatever idea that satifies the axioms of incidence. Then, you will be wondering... are the
 notions of "point" and "line" referring to whatever object of reality that satisfies the axioms of incidence? Exactly!
-Before the axioms of incidence, the notions of point and line are undefined!
+Before the axioms of incidence, these notions are **undefined**!
 
 In fact, if we want to verify the consistency and independency of these axioms from one another, we need to create something 
 called a **model**. A model consists of assigning the concepts that are mentioned in the axioms to whatever objects of reality we would like to imagine.
