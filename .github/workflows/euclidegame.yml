@@ -89,7 +89,12 @@ jobs:
         run: |
           cat leanpkg.path
           make-lean-game --source_base_url=$source_base_url --web_editor_url=$web_editor_url
-
+          
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          # Upload entire repository
+          path: '.'
 
   # Deployment job
   deploy:
