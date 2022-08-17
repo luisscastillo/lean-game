@@ -80,7 +80,7 @@ Now, delete the sorry and take a look in the top right box at what we have. The 
 points that lie in the plane `Ω`. Here we have to prove that if the point $A$ is equal to the point $B$, 
 and the point $B$ is equal to the point $C$, then the point $A$ is equal to the point $C$.
 
-Now try to use a sequence of rewrite steps to prove the lemma below by typing them into the box underneath, 
+Try to use a sequence of rewrite steps to prove the lemma below by typing them into the box underneath, 
 between the begin and end lines that tell Lean you are starting and finishing a proof.
 
 Right below this explanation, you will find a grey box where a "Hint" is hidden in case you get stuck. Click on
