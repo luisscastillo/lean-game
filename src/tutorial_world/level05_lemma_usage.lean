@@ -50,8 +50,8 @@ we have in order to be as rigorous as axioms are.) Then, we can define these thr
 Now, we have to check if this model satisfies the axioms of incidence. If you try by your own, you will realise that the three axioms are being 
 satisfied at the same time and without contradicting one another. Then, the axioms of incidence are consistent! 
 
-Now, notice that **the more axioms there exist, the more difficult it is to create a model that satisfies all of them.** For this reason, **the objective 
-of axiomatic geometry is establishing as less axioms as possible to create a specific model that might be beautiful or applicable to reality.**
+Now, notice that **the more axioms there exist, the more difficult it is to create a model that satisfies all of them.** For this reason, 
+**the objective of axiomatic geometry is establishing as less axioms as possible to create a specific model that might be beautiful or applicable to reality.**
 
 ## The axioms of incidence in Lean.
 
