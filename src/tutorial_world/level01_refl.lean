@@ -29,7 +29,7 @@ will close the goal and solve the level. Don't forget the comma.
 
 ## The setup
 
-Welcome to the Tutorial World! In this world, you're going to prove some geometric facts by using `tactics`. 
+Welcome to the Tutorial World! In this world, you're going to prove some geometric facts by using **`tactics`**. 
 These `tactics` are just instructions that make progress in a mathematical proof.
 During your proofs, your "goal" (i.e. what you're
 supposed to be proving) will be displayed in front of a `⊢` symbol on the top
@@ -40,7 +40,7 @@ can move on to the next level in the world you're in.
 ## The language
 
 To get the best of this game, you should know that Lean is written in a specific syntax that 
-is designed to look similar to written mathematics. This formal presentation is called *Type theory*. 
+is designed to look similar to written mathematics. This formal presentation is called **Type theory**. 
 In Type theory, there are `terms` and `types`. A term and its type are written together as `term`:`type`, 
 where the symbol : can be thought as "is an element of" (this is also represented by the symbol ∈).
 Then, if we find the expression Ω : Type , we should understand that Ω is an element of the type "Type". 
