@@ -86,9 +86,9 @@ lemma equal_lines_of_contain_two_points :
 A ≠ B → A ∈ r →  A ∈ s → B ∈ r → B ∈ s → 	r = s :=
 begin
 
-  intros hAB hAr hAs hBr hBs,
-  rw incidence hAB hAr hBr,
-  rw incidence hAB hAs hBs,
+  intros h1 h2 h3 h4 h5,
+  rewrite incidence h1 h2 h4,
+  rewrite incidence h1 h3 h5,
 
 end
 
