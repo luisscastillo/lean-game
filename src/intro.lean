@@ -20,7 +20,7 @@ needs to be shown to finish the current proof, importantly it won't let us show 
 doesn't logically follow from what we have proved so far.
 
 What makes *proof assistants* unique is the fact that they allow us to step through and
-understand individual steps in a proof. A mathematician would remark that we are using *computer-assisted proofs*. 
+understand individual steps in a proof. A mathematician would remark that we are providing *computer-assisted proofs*. 
 Later we will see how the proof assistant can do more than just follow our instructions; it can also
 search for useful facts we might want to use. Lean can even complete some moderately
 difficult statements on its own, using proof methods based on pre-defined rules.
