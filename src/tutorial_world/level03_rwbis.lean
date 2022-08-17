@@ -9,12 +9,12 @@ also possible. That is to say: could we change B's into A's when the goal contai
 the hypothesis `h : A = B` in the local context?
 
 So the answer is... Yes! The hypotheses in this level are a bit different than before, 
-so you should use *`rw ←`* instead. To do so, you can type the little left-arrow by typing *\l* 
+so you should use **`rw ←`** instead. To do so, you can type the little left-arrow by typing **\l** 
 and then a space, so the system will change it automatically.
 
 ## Did you know?
 
-On the top right corner of the screen, there is a box named *"View source"* for each level. If you 
+On the top right corner of the screen, there is a box named "View source" for each level. If you 
 click on it, you will see one possible solution to this level. Again, try to use this tool wisely! 
 
 -/
