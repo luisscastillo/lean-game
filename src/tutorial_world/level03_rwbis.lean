@@ -21,7 +21,7 @@ click on it, you will see one possible solution to this level. Again, try to use
 
 /- Hint : Click here for a hint, in case you get stuck.
 You may want to use *`rw ←`* first. Use it only with one of the hypotheses. Then, think if it's necessary to use it again
-or you just can finish the proof by using `rw`without `←`.
+or you just can finish the proof by using `rw` without `←`.
 -/
 variables {Ω : Type} -- hide
 
