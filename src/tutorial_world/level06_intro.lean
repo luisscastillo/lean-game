@@ -44,9 +44,18 @@ appears in the local context.
 -/
 
 /-
-This level introduces the `intros` tactic. This allows you to introduce
-a new hypothesis in the context. You can learn more about it in the side bar.
--/
+#Tutorial World
+
+## Level 6: the `intro` tactic.
+
+This level introduces the `intro` tactic. This allows you to create
+a new hypothesis in the local context, just above the goal with the `⊢` symbol, whenever you see
+the **`→`** symbol in the "goal" section. [**Remember:** the **`→`** symbol refers to the idea of 
+an **implication**. `P → Q` is read as "P implies Q" and interpreted as "If P happens, then Q also happens".]  
+In Lean, if we have the goal `⊢ IT RAINS → I GET WET`, by typing `intro assumption` we will get a new hypothesis in 
+the local context of the type `assumption : IT RAINS` and the goal will just change into  `⊢ I GET WET`.
+
+Now, delete the `sorry` and note how the goal shows a list of implications.  
 
 variables {Ω : Type} [IncidencePlane Ω] --hide
 variables {A B : Ω} {r s : Line Ω} -- hide
