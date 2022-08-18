@@ -14,17 +14,31 @@ and once you know which one you are going for you can change
 the goal with `left` or `right` to the appropriate choice.
 -/
 
-/-
-We have seen how to prove a goal of the form `P ∧ Q`, now you will learn how to prove
-a goal of the form `P ∨ Q`, which means that either `P` holds or `Q` holds.
-In this case, you will have to decide whether you can prove `P` or `Q`. The `left` and `right`
-tactics will allow you to change the goal to ⊢ P or ⊢ Q accordingly.
+/- Tactic : unfold
+## Summary
+`unfold` works both on the goal and the hypotheses. It transforms some
+mathematical expressions into others which are simpler to read. 
+## Example
+If we find the expression `⊢ collinear {A, B, C}`, then typying `unfold collinear`
+will change the goal into `⊢ ∃ (ℓ : Line Ω), ∀ {P : Ω}, P ∈ {A, B, C} → P ∈ ℓ`, which makes 
+it easier to understand what `tactic` we should apply to solve the goal.
 -/
+
+/-
+# Tutorial World
+
+## Level 13: The `unfold`, and the `left` and `right` tactics.
+
+Read the lemma. Do a drawing of the situation. Once you're done, come back here. Until now, we have seen how to 
+prove a goal of the form `P ∧ Q` with the `split` tactic. In this level, you will learn how to prove a goal of the
+form `P ∨ Q`, which means that either `P` holds or `Q` holds. In this case, you will have to decide whether you can
+prove `P` or `Q`. The `left` and `right` tactics will allow you to change the goal to `⊢ P` or `⊢ Q`, respectively.
+[**Tip:** Before typing any line, try to think which is the shortest path to finish the proof, either P or Q.]
 
 variables {Ω : Type} [IncidencePlane Ω] -- hide
 
 /- Lemma : no-side-bar
-Example of the usage of left and right
+Given three distinct points A, B and C, if C lies in the line through A and B, either A = C or A, B and C are collinear points. 
 -/
 lemma left_right_example (A B C : Ω) (h : C ∈ line_through A B) :
 A = C ∨ collinear ({A, B, C} : set Ω) :=
