@@ -90,7 +90,7 @@ it to step through this level faster, but remember to use it wisely! From now on
 
 /- Hint : Click here for a hint, in case you get stuck.
 Delete `sorry` and type `rw h1,` (don't forget the comma!). Then, note how the goal changes into ⊢ B = C. Directly after,
-try to think what would happen if you write `rw h2,`. Typying that line will finish the proof instead of wiritng ⊢ C = C . This is
+try to think what would happen if you write `rw h2,`. Typing that line will finish the proof instead of wiritng ⊢ C = C . This is
 because Lean tries to apply `refl` right after some tactics, and `rw`is one of them!
 -/
 
