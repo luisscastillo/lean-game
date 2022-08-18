@@ -1,7 +1,7 @@
 /-
 # Tutorial World 
 
-## Level 3: The rewrite (`rw`) tactic (II).
+## Level 3: the rewrite (`rw`) tactic (II).
 
 In the previous level, we learned that `rw h` changes A's into B's when the goal contains one or more A's 
 and we have the hypothesis `h : A = B` in the local context. You may be wondering if the opposite case is 
