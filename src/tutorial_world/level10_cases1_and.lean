@@ -74,7 +74,7 @@ Still bewildered? Click on "View source" (located on the top right corner of the
 -/
 
 /- Lemma : no-side-bar
-The line ℓ is the line through P and Q as long as P ≠ Q and both P and Q are in ℓ
+The line ℓ is the line through P and Q as long as P ≠ Q and both P and Q are in ℓ.
 -/
 lemma line_through_from_and (P Q : Ω) (ℓ : Line Ω) (h1 : P ≠ Q)
 (h2 : P ∈ ℓ ∧ Q ∈ ℓ) : ℓ = line_through P Q :=
