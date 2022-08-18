@@ -30,8 +30,8 @@ Then, the `use` tactic is useful. If we know that an object `a` satisfies the  p
 will simplify the goal into ⊢ P a.
 
 Let's look at this level to understand it better! Delete the `sorry` to see the goal `⊢ ∃ (ℓ : Line Ω), P ∈ ℓ`.
-What does this mean? You can read it as **"there exists a line ℓ that lies in the plane Ω, such that the point
-P is an element of the line ℓ"**. [**Tip:** do a drawing if it feels very abstract to you.] Then, we have to 
+What does this mean? You can read it as **"there exists a line ℓ that lies in the plane Ω, such that the point P is an element of the line ℓ"**. 
+[**Tip:** do a drawing if it feels very abstract to you.] Then, we have to 
 find an object **?** that satisfies the property `ℓ`, so that we can type `use ?,` to simplify the goal into 
 `⊢ P ∈ ?`. Now, we should take a look at our "Theorem statements" section to ask ourselves if there is any statement
 that has a similar structure to the goal `⊢ P ∈ ?`. At this point, I am sure that you thought about `line_through_right`
