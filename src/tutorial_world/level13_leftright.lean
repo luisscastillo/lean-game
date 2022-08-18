@@ -27,7 +27,7 @@ it easier to understand what `tactic` we should apply to solve the goal.
 /-
 # Tutorial World
 
-## Level 13: The `unfold`, and the `left` and `right` tactics.
+## Level 13: the `unfold`, and the `left` and `right` tactics.
 
 Read the lemma. Do a drawing of the situation. Once you're done, come back here. Until now, we have seen how to 
 prove a goal of the form `P ∧ Q` with the `split` tactic. In this level, you will learn how to prove a goal of the
@@ -59,11 +59,6 @@ begin
   {
     cases hP,
     exact h,
-  }
-
-
-
-
-
+  },
 
 end
