@@ -25,9 +25,9 @@ top right corner of the game screen) to see the solution.
 -/
 
 /- Lemma : no-side-bar
-If X is any set in Ω and either P or Q is in X, then X is not empty.
+If ℓ is any line in the plane Ω and either the point P or the point Q is in ℓ, then ℓ is not an empty line.
 -/
-lemma nonempty_example (P Q : Ω) (X : set Ω) (h : P ∈ X ∨ Q ∈ X) : ∃ R, R ∈ X :=
+lemma nonempty_example (P Q : Ω) (ℓ : Line Ω) (h : P ∈ ℓ ∨ Q ∈ ℓ) : ∃ R, R ∈ ℓ :=
 begin
 
   cases h,
