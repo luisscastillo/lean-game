@@ -49,7 +49,7 @@ x : X
 /-
 # Tutorial World
 
-## Level 7: The `split` tactic.
+## Level 7: the `split` tactic.
 
 In this level we will learn the `split` tactic. It breaks a goal of the type `P ∧ Q` into two goals (proving `P`, and then proving `Q`),
 and also breaks goals of the form `P ↔ Q` into proving each of the implications separately. That is to say, it asks us to prove `P → Q` first, and 
@@ -58,7 +58,7 @@ Analogously, the **`↔`** symbol refers to a **double implication**, or an **if
 find the **`↔`** symbol written as **iff**. 
 
 Because you are supposed to be making process, try to solve this level by your own. You can solve it in three lines of code. 
-After deleting `sorry` and typying `split,`, you will see that this level is remarkably similar to Level 5. Feel free to go back to it! 
+After deleting `sorry` and typing `split,`, you will see that this level is remarkably similar to Level 5. Feel free to go back to it! 
 [**Remember:** Whenever there are two goals to solve in Lean, you will always have to solve the above goal first, and then the one below.]
 -/
 
