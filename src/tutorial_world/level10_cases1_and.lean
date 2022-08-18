@@ -51,15 +51,26 @@ into two, one with `p : P` and the other with `q : Q`.
 variables {Ω : Type} [IncidencePlane Ω] --hide
 
 /-
+# Tutorial World
+
+## Level 10: The `cases` tactic.
+
 The next tactic we introduce is `cases`, and since it does many things
 we will have a couple levels seeing when to apply it. This tactic works
 always on hypotheses, and it transforms them in different ways. The first
 instance that we learn arises when you have a hypothesis that says that `P`
-or `Q` holds. That is, you have `h : P ∧ Q`. Then `cases h with h₁ h₂` will 
-replace `h` with two new hypotheses, namely `h₁ : P` and `h₂ : Q`.
+and `Q` holds. That is, you have `h : P ∧ Q`. Then `cases h with h1 h2` will 
+replace `h` with two new hypotheses, namely `h1 : P` and `h2 : Q`.
 
 This is done usually for aesthetic reasons, since `h.1` and `h.2` also serve
 as proofs of `P` and `Q`.
+
+Knowing that, I'm sure you can complete this level by your own. It's only two lines of code!
+-/
+
+/- Hint : Click here for a hint, in case you get stuck.
+After typing `cases h2 with hA hB,`, try to look for a theorem statement that may finish the proof. 
+Still bewildered? Click on "View source" (located on the top right corner of the game screen) to see the solution.
 -/
 
 /- Lemma : no-side-bar
@@ -68,10 +79,9 @@ The line ℓ is the line through P and Q as long as P ≠ Q and both P and Q are
 lemma line_through_from_and (P Q : Ω) (ℓ : Line Ω) (h1 : P ≠ Q)
 (h2 : P ∈ ℓ ∧ Q ∈ ℓ) : ℓ = line_through P Q :=
 begin
+
   cases h2 with hP hQ,
   exact incidence h1 hP hQ,
-
-
 
 end
 
