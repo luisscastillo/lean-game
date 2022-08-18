@@ -6,7 +6,7 @@ variables {Ω : Type} [IncidencePlane Ω] --hide
 /-
 # Tutorial World
 
-## Level 11: The `cases` tactic (II).
+## Level 11: the `cases` tactic (II).
 
 Suppose now that your hypothesis says that `P` **or** `Q` holds. That is, you have `h : P ∨ Q`. Then `cases h` will create
 two new goals, and in each of them it will replace `h` with `h : P` in the first case, and with `h : Q` in the second.
@@ -19,7 +19,7 @@ the look of the proof more visual.]
 -/
 
 /- Hint : Click here for a hint, in case you get stuck.
-After typying `cases h,`, two goals will appear. Write curly braces to structure the proof. Then, start each goal by typying `use P` 
+After typing `cases h,`, two goals will appear. Write curly braces to structure the proof. Then, start each goal by typing `use P` 
 and `use Q`, respectively. The line that closes the goal is the same for both cases. Still bewildered? Click on "View source" (located on the
 top right corner of the game screen) to see the solution.
 -/
