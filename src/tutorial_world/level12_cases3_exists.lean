@@ -45,10 +45,17 @@ this level. If so, why don't we use the `exact` tactic? [**Pro tip:** Whenever w
 you can solve the first goal! 
 
 When it comes to the second goal, you should remember what tactic comes handy for solving goals of the form
-`⊢ ∃ x, P x`. 
-
+`⊢ ∃ x, P x`. Once you have it mind, try to use it with the hypotheses `r` or `s`. From there, some `split`'s, `exact`'s 
+a `rewrite` will close the goal.
 
 -/
+
+/- Hint : Click here for a hint, in case you get stuck.
+The tactic that comes handy for solving goals of the form `⊢ ∃ x, P x` is the `use` tactic. Type `use r,` and note how the goal 
+changes. Now, `split` will break the proof into different goals. Try to close with the `exact` tactic. You may need to use `rw` before
+writing the last `exact` that will take you home. Bewildered? Click on "View source" (located on the top right corner of the game screen) to see the solution. 
+-/
+
 
 /- Lemma : no-side-bar
 Given 4 distinct points that pass through a line, then that line passes through two different subsets of three points.
