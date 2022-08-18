@@ -53,7 +53,7 @@ variables {Ω : Type} [IncidencePlane Ω] --hide
 /-
 # Tutorial World
 
-## Level 10: The `cases` tactic.
+## Level 10: the `cases` tactic.
 
 The next tactic we introduce is `cases`, and since it does many things
 we will have a couple levels seeing when to apply it. This tactic works
