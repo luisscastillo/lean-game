@@ -5,15 +5,51 @@ open set --hide
 /- Tactic : use
 
 ## Summary
-The tactic use specializes the goal with a particular case.
-For example, if we want to prove the statement "there exists a natural number which is odd",
-we will need to provide a concrete number like 3. 
+`use` is a tactic which works on goals of the form `⊢ ∃ c, P(c)` where `P(c)` 
+is some proposition which depends on `c`. With a goal of this form, `use 0` 
+will turn the goal into `⊢ P(0)`, `use x + y` (assuming x and y are natural 
+numbers in your local context) will turn the goal into `⊢ P(x + y)` and so on.
+
+## Example
+If your goal is `⊢ ∃ n : natural_numbers, 1 + x = x + n` then `use 1` will 
+turn the goal into `⊢ 1 + x = x + 1`, and the rather more unwise `use 0` will 
+turn it into the impossible-to-prove `⊢ 1 + x = x + 0`.
 -/
 
 /-
-Sometimes we will need to prove that there exists an object satisfying certain properties.
-The goal will then look like ⊢ ∃ x, P x. In this case, the `use` tactic is useful. If we know
-that an object `a` satisfies the  property `P`, then `use a` will transform the goal into ⊢ P a.
+# Tutorial World
+
+## Level 8: the `use` tactic.
+
+In further proofs, we will need to prove that there exists an object satisfying certain properties.
+The goal will then look like `⊢ ∃ x, P x`, where the symbol **`∃`** is read as **"there exists"** and
+**`P x`** can be understood as **"P is an element of x"**, which could be also written as **`P ∈ x`**.
+In this case, the whole goal can be interpreted as **"there exists x such that P is an element of x"**.
+Then, the `use` tactic is useful. If we know that an object `a` satisfies the  property `x`, then `use a` 
+will simplify the goal into ⊢ P a.
+
+Let's look at this level to understand it better! Delete the `sorry` to see the goal `⊢ ∃ (ℓ : Line Ω), P ∈ ℓ`.
+What does this mean? You can read it as **"there exists a line ℓ that lies in the plane Ω, such that the point
+P is an element of the line ℓ"**. [**Tip:** do a drawing if it feels very abstract to you.] Then, we have to 
+find an object **?** that satisfies the property `ℓ`, so that we can type `use ?,` to simplify the goal into 
+`⊢ P ∈ ?`. Now, we should take a look at our "Theorem statements" section to ask ourselves if there is any statement
+that has a similar structure to the goal `⊢ P ∈ ?`. At this point, I am sure that you thought about `line_through_right`
+or `line_through_left`. The statement `⊢ P ∈ line_through P Q` is very similar to that in `⊢ P ∈ ?`, isn't it?
+
+Then, why don't we type `use line_through P Q,`. If you try that, you will see that an error appears. This is
+because we don't have such point called Q in this level. We only have one point! And it's called P! What does this mean?
+Do we have to create a line that goes from the point P to the point P again? Exactly! You may be wondering how is 
+that possible if a line cannot close itself as if it was a circle... in the plane! However, it **is** possible. We have not
+defined what is a plane yet! The computer doesn't know how a plane looks like! Because of this reason, you can type `use 
+line_through P P,` and see how the goal changes into `⊢ P ∈ line_through P P`. Now, try to finish the proof by your own! It's 
+only one more line of code! In case you get stuck, click on the grey box right below to look for a "Hint".
+ 
+-/
+
+/- Hint : Click here for a hint, in case you get stuck.
+Delete `sorry` and type `split,` (don't forget the comma!). Directly after, go to the "Theorem statements" box (located on the 
+top left of the game screen) and try to find a lemma which could be suitable to solve this level. Still bewildered? Click on "View source"
+(located on the top right corner of the game screen) to see the solution.
 -/
 
 variables {Ω : Type} [IncidencePlane Ω] --hide
