@@ -5,10 +5,11 @@ open set --hide
 /- Tactic : use
 
 ## Summary
-`use` is a tactic which works on goals of the form `⊢ ∃ c, P(c)` where `P(c)` 
-is some proposition which depends on `c`. With a goal of this form, `use 0` 
-will turn the goal into `⊢ P(0)`, `use x + y` (assuming x and y are natural 
-numbers in your local context) will turn the goal into `⊢ P(x + y)` and so on.
+The `use` tactic works on the goal that looks like `⊢ ∃ x, P x`, where the symbol **`∃`** is read as **"there exists"** and
+**`P x`** can be understood as **"P is an element of x"**, which could also be written as **`P ∈ x`**.
+In this case, the whole goal can be interpreted as **"there exists x such that P is an element of x"**.
+Then, the `use` tactic is useful. If we know that an object `a` satisfies the  property `x`, then `use a` 
+will simplify the goal into ⊢ P a.
 
 ## Example
 If your goal is `⊢ ∃ n : natural_numbers, 1 + x = x + n` then `use 1` will 
