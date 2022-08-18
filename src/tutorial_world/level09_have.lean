@@ -84,6 +84,8 @@ In this way, by deleting the `sorry`'s, you will be able to prove the goals sepa
 easily understand how the syntax of Lean works! 
 
 First, we are going to prove the first goal, which is `⊢ r = line_through B C,`. To begin with, let's look at the "theorem statements" we have. 
+Can you note that `incidence` finishes with the same structure as our goal? Then, we have to check if we have the previous implications of `incidence`
+in our local context. 
 
 -/
 
