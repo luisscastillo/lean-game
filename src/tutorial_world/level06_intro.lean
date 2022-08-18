@@ -94,6 +94,7 @@ begin
 
 end
 
+/-
 ## Another proof for the same level
 
 Mathematics is not "black or white". We can provide different proofs to solve the same lemma. In the explanation showed above, 
@@ -101,7 +102,7 @@ we've seen how we the goal changes into `⊢ line_through A B = s` after writing
 `rewrite h1 h3 h5` just before that line? If you try it, you will see that the goal changes into `⊢ r = line_through A B`. Make an
 effort to understand why that happens so that you're ready to face the next level with ease! 
  
-
+-/
 
 
 
