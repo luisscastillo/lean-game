@@ -22,19 +22,24 @@ element of the CAR**. Then, `cases h with FERRARI hFERRARI` will break `h` into 
 is an element of the "FERRARI"**. Is it better for you now? [**Tip:** Whenever you don't
 understand an abstract concept, try to apply a real life example to it.]
 
-Now, let's try to solve this level! From now on, it will be better if we start by doing a draw of
-the situation. Read the lemma as many times as you need to understand it.
-
-
-Delete the `sorry` and take a look to the hypothesis h1 and h2. 
-As you may think, we can use the `cases` tactic with them. Following the guiding thread of the real
-life example, we need to think about a specific line for each of them. In geometry, lines are usually
-represented by the letters `r` and `s`. Then, type `cases h1 with r hr,`, click on enter, and wirte 
-`cases h2 with s hs,`. If you look at the local context, you'll see that we've assumed that `r` and `s`
-are lines in the plane Ω. 
+Now, let's try to solve this level! From now on, it will be better if we start by reading the lemma 
+as many times as we need to understand it. Then, do a drawing of the situation. In this way, we can
+think of a clearer path to close the goal. Once you feel ready, delete the `sorry` and take a look 
+to the hypothesis h1 and h2. As you may be thinking, we can apply the `cases` tactic to them. Following
+the guiding thread of the real life example, we need to think about a specific line for each of them. 
+In geometry, lines are usually represented by the letters `r` and `s`. Then, type `cases h1 with r hr,`, 
+click on enter, and write `cases h2 with s hs,`. If you look at the local context, you'll see that we've
+assumed that `r` and `s`are lines in the plane Ω. 
 
 Right after, it comes the genius idea. After reading the lemmma and trying to do a draw that represents
-the situation, 
+the situation, you should be wondering if we could create a hypothesis to state that the lines we've just
+added to the local context are the same (`r = s`). Do you remember how we could add a hypothesis? Exactly, 
+the `have` tactic will do it for us! Now, type `have H : r = s,`.  
+
+Subsequently, we will have to prove two goals. First, try to look for a theorem statement that might help us 
+to close the `⊢ r = s` goal. Can you see that `equal_lines_of_contain_two_points` ends with exactly the `r = s`
+statement? Then, try to look if we have all the previous implications of this statement in the local context of 
+this level. If so, 
 
 
 -/
