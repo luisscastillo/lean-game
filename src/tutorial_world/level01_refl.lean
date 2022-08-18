@@ -52,7 +52,7 @@ These hypotheses/assumptions will be used to step through the mathematical proof
 In conclusion, the syntax of Lean depends on the context of each situation, and adapting to it will be crucial to understand
 the essence of each level. 
 
-## Level 1: The `refl` tactic.
+## Level 1: the `refl` tactic.
 
 Once we've mastered the language...Let's learn some tactics! Let's start with the `refl` tactic. `refl` 
 stands for "reflexivity", which is a fancy way of saying that it will prove any goal of the form `A = A`.
