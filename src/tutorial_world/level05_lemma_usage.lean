@@ -11,7 +11,7 @@ line_through_right (P Q : Ω) : Q ∈ (line_through P Q)
 /-
 # Tutorial World
 
-## Level 5: The theorem statements.
+## Level 5: the `theorem statements`.
 
 To solve this level, we need to introduce a new section that appears on the left side of the screen, which is called
 **Theorem statements**.  Click on the top left menu where it says **"Theorem statements"** and display the **"Tutorial
