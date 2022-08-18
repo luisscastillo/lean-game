@@ -68,7 +68,7 @@ then `rw h1 at h2` will turn `h2` into `h2 : C = B` (remember operator precedenc
 /-
 # Tutorial World
 
-## Level 2: The rewrite (`rw`) tactic.
+## Level 2: the rewrite (`rw`) tactic.
 
 The next tactic we will learn is `rw` (from rewrite). Rewriting is one of the most basic methods of proof, 
 where we "substitute" one object that we know that is equal to another.
