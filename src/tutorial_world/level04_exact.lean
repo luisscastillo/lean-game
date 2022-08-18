@@ -33,7 +33,7 @@ because `j(h(p))` is easily checked to be a term of type `R`
 /-
 # Tutorial World
 
-## Level 4: The `exact` tactic.
+## Level 4: the `exact` tactic.
 
 In this level, we learn the `exact` tactic, which solves a goal that is exactly one of the hypotheses.
 For example, if the finishing goal is ⊢ `A = B` and we have the hypothesis `z : A = B`, then `exact z`
