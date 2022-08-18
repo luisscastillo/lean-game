@@ -47,9 +47,9 @@ only one more line of code! In case you get stuck, click on the grey box right b
 -/
 
 /- Hint : Click here for a hint, in case you get stuck.
-Delete `sorry` and type `split,` (don't forget the comma!). Directly after, go to the "Theorem statements" box (located on the 
-top left of the game screen) and try to find a lemma which could be suitable to solve this level. Still bewildered? Click on "View source"
-(located on the top right corner of the game screen) to see the solution.
+Because the goal is now `⊢ P ∈ line_through P P`, it shows the same structure as `line_through_left` and `line_through_right`
+statements. Try any of both to finish the proof by using the `exact` tactic. Remember to type the variables that we are using 
+before the comma! Still bewildered? Click on "View source" (located on the top right corner of the game screen) to see the solution. 
 -/
 
 variables {Ω : Type} [IncidencePlane Ω] --hide
