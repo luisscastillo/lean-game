@@ -85,7 +85,16 @@ easily understand how the syntax of Lean works!
 
 First, we are going to prove the first goal, which is `⊢ r = line_through B C,`. To begin with, let's look at the "theorem statements" we have. 
 Can you note that `incidence` finishes with the same structure as our goal? Then, we have to check if we have the previous implications of `incidence`
-in our local context. 
+in our local context. On the face of it, `h : B ≠ C` and `h1 : B ∈ r ∧ C ∈ r` are what we are looking for. However, `h1` should be divided into `B ∈ r`
+and `C ∈ r`, right? [**Rule of thumb:** whenever a hypothesis looks like `h1 : P ∧ Q`, we can refer to `P` and `Q` as `h1.1` and `h1.2`, respectively.]
+Then, notice how `exact incidence h h1.1 h1.2,` closes the first goal! 
+
+Before jumping onto the second goal, we may want to rewrite something first. Can you see that we can `rw hr,` (where `hr : r = line_through B C`) to change 
+the goal `⊢ r = s` into `⊢ line_through B C = s`. Now, you will be wondering if `exact incidence h h2.1 h2.2,` finishes the proof, but it does not. Do you 
+know why? Because the theorem statement called `incidence` works with the goal `⊢ s = line_through B C`, but not with `⊢ line_through B C` = s`. Because of 
+this reason, we should create another hypothesis by using the `have` tactic. That is to say, type `have hs : s = line_through B C,` right before the curly braces.
+
+Now, two final goals are waiting to be proved! I'm sure that you are able to 
 
 -/
 
