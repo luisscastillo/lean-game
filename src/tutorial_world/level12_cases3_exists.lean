@@ -39,13 +39,19 @@ the `have` tactic will do it for us! Now, type `have H : r = s,`.
 Subsequently, we will have to prove two goals. First, try to look for a theorem statement that might help us 
 to close the `⊢ r = s` goal. Can you see that `equal_lines_of_contain_two_points` ends with exactly the `r = s`
 statement? Then, try to look if we have all the previous implications of this statement in the local context of 
-this level. If so, 
+this level. If so, why don't we use the `exact` tactic? [**Pro tip:** Whenever we have a hypothesis of the form
+`h : P ∧ Q ∧ R`, we write `h.1` to refer to `P` and we type `h.2` to refer to `Q ∧ R`. If we want to refer to just 
+`Q`, we need to write `h.2.1`. Analogously, if we want to refer to just `R`, then we type `h.2.2`. With that being said, 
+you can solve the first goal! 
+
+When it comes to the second goal, you should remember what tactic comes handy for solving goals of the form
+`⊢ ∃ x, P x`. 
 
 
 -/
 
 /- Lemma : no-side-bar
-Given 4 distinct points that pass through a line, then the line also passes through two different subsets of three points.
+Given 4 distinct points that pass through a line, then that line passes through two different subsets of three points.
 -/
 lemma exists_line_example (P Q R S : Ω) (h : Q ≠ R) (h1 : ∃ ℓ : Line Ω, P ∈ ℓ ∧ Q ∈ ℓ ∧ R ∈ ℓ)
 (h2 : ∃ ℓ : Line Ω, Q ∈ ℓ ∧ R ∈ ℓ ∧ S ∈ ℓ) :
