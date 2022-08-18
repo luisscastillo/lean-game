@@ -57,7 +57,7 @@ the essence of each level.
 Once we've mastered the language...Let's learn some tactics! Let's start with the `refl` tactic. `refl` 
 stands for "reflexivity", which is a fancy way of saying that it will prove any goal of the form `A = A`.
 It doesn't matter how complicated `A` is, all that matters is that the left hand side is *exactly equal* 
-to theright hand side. 
+to the right hand side. 
 
 Each level in this game involves proving a theorem or a lemma (a lemma is just a baby theorem).
 At the bottom of the text in this box, there's a lemma, which says that if $A$ is a point, then $A$ = $A$. 
