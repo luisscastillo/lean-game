@@ -19,7 +19,7 @@ the goal with `left` or `right` to the appropriate choice.
 `unfold` works both on the goal and the hypotheses. It transforms some
 mathematical expressions into others which are simpler to read. 
 ## Example
-If we find the expression `⊢ collinear {A, B, C}`, then typying `unfold collinear`
+If we find the expression `⊢ collinear {A, B, C}`, then typing `unfold collinear`
 will change the goal into `⊢ ∃ (ℓ : Line Ω), ∀ {P : Ω}, P ∈ {A, B, C} → P ∈ ℓ`, which makes 
 it easier to understand what `tactic` we should apply to solve the goal.
 -/
