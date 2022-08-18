@@ -72,7 +72,7 @@ Bewildered? Click on the box right below for a hint.
 -/
 
 /- Hint : Click here for a hint, in case you get stuck.
-In case you wrote `intros h1 h2 h3 h4 h5,` in the first line, after typying `rewrite h1 h2 h4,`, click on enter and
+In case you wrote `intros h1 h2 h3 h4 h5,` in the first line, after typing `rewrite h1 h2 h4,`, click on enter and
 write `rewrite h1 h3 h5,`. Now, the goal should change into `⊢ line_through A B = line_through A B`, but Lean finishes the 
 proof for us because it realises that automatically!
 -/
