@@ -41,7 +41,7 @@ can move on to the next level in the world you're in.
 
 To get the best of this game, you should know that Lean is written in a specific syntax that 
 is designed to look similar to written mathematics. This formal presentation is called **Type theory**. 
-In Type theory, there are `terms` and `types`. A term and its type are written together as `term`:`type`, 
+In Type theory, there are `terms` and `types`. A term and its type are written together as `term` : `type`, 
 where the symbol : can be thought as "is an element of" (this is also represented by the symbol ∈).
 Then, if we find the expression Ω : Type , we should understand that Ω is an element of the type "Type". 
 Analogously, A : Ω  will translate into "A is an element of Ω", which makes us think that terms can also be types.
