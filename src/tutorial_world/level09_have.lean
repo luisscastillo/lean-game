@@ -108,7 +108,7 @@ top right corner of the game screen) to see the solution.
 variables {Ω : Type} [IncidencePlane Ω] --hide
 
 /- Lemma : no-side-bar
-If two lines share two distinct points then they are the same
+If two lines share two distinct points, then they are the same line.
 -/
 lemma equal_lines_example (B C : Ω) (h : B ≠ C) (r s : Line Ω)
 (h1 :  B ∈ r ∧ C ∈ r)
