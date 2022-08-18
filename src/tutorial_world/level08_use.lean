@@ -23,7 +23,7 @@ turn it into the impossible-to-prove `⊢ 1 + x = x + 0`.
 
 In further proofs, we will need to prove that there exists an object satisfying certain properties.
 The goal will then look like `⊢ ∃ x, P x`, where the symbol **`∃`** is read as **"there exists"** and
-**`P x`** can be understood as **"P is an element of x"**, which could be also written as **`P ∈ x`**.
+**`P x`** can be understood as **"P is an element of x"**, which could also be written as **`P ∈ x`**.
 In this case, the whole goal can be interpreted as **"there exists x such that P is an element of x"**.
 Then, the `use` tactic is useful. If we know that an object `a` satisfies the  property `x`, then `use a` 
 will simplify the goal into ⊢ P a.
