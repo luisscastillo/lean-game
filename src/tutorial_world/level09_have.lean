@@ -94,8 +94,15 @@ the goal `⊢ r = s` into `⊢ line_through B C = s`. Now, you will be wondering
 know why? Because the theorem statement called `incidence` works with the goal `⊢ s = line_through B C`, but not with `⊢ line_through B C` = s`. Because of 
 this reason, we should create another hypothesis by using the `have` tactic. That is to say, type `have hs : s = line_through B C,` right before the curly braces.
 
-Now, two final goals are waiting to be proved! I'm sure that you are able to 
+Now, two final goals are waiting to be proved! I'm sure that you are able to complete the level by your own! Make an effort to apply the knowledge that
+we have acquired so far! In case you get stuck, click right below for a hint. 
 
+-/
+
+/- Hint : Click here for a hint, in case you get stuck.
+Do you see that `exact incidence h h2.1 h2.2,` closes the above goal? It is similar to the case that we have proved earlier. 
+Now, try to finish the proof by rewriting one of the hypotheses. Still bewildered? Click on "View source" (located on the
+top right corner of the game screen) to see the solution.
 -/
 
 variables {Ω : Type} [IncidencePlane Ω] --hide
