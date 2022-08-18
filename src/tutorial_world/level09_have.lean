@@ -51,7 +51,7 @@ and your original goal will have `q : Q` added to the list of hypotheses.
 /-
 # Tutorial World 
 
-## Level 9: The `have` tactic (boss level).
+## Level 9: the `have` tactic (boss level).
 
 Congratulations! You are half of the way to finish this world! In this level, we introduce the new tactic `have`. It is used to add a new hypothesis
 to the context (which, of course, you will have to prove!). This is sometimes useful to structure our proofs. In this particular level, it is convenient
