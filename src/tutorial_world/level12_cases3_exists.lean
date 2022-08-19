@@ -15,11 +15,11 @@ some `z` exists (`z : x`), it will give you another hypothesis in which `z` sati
 property `P` (`hz : P z`).
 
 Let's try to understand this with a real life example! Say that we have the hypothesis 
-`h: ∃ CAR, FOUR_WHEELS CAR`. That is, **there exists a CAR such that "FOUR_WHEELS" is an 
-element of the CAR**. Then, `cases h with FERRARI hFERRARI` will break `h` into two goals:
-`FERRARI : CAR`, which is read as **the term "FERRARI" is an element of the type "CAR"**, and
-`hFERRARI: FOUR_WHEELS FERRARI, which is read as **the hypothesis hFERRARI assumes that "FOUR_WHEELS"
-is an element of the "FERRARI"**. Is it better for you now? [**Tip:** Whenever you don't
+`h: ∃ GALAXY, SOLAR_SYSTEM GALAXY`. That is, **there exists a GALAXY such that "SOLAR_SYSTEM" is an element of "GALAXY"**. 
+Then, `cases h with MILKY_WAY hMILKY_WAY` will break `h` into two goals:
+`MILKY_WAY : GALAXY`, which is read as **the "MILKY_WAY" is a term of the type "GALAXY"**, and
+`hMILKY_WAY : SOLAR_SYSTEM MILKY_WAY, which is read as **the hypothesis hMILKY_WAY assumes that "SOLAR_SYSTEM"
+is an element of the "MILKY_WAY"**. Is it better for you now? [**Tip:** Whenever you don't
 understand an abstract concept, try to apply a real life example to it.]
 
 Now, let's try to solve this level! From now on, it will be better if we start by reading the lemma 
@@ -46,7 +46,7 @@ you can solve the first goal!
 
 When it comes to the second goal, you should remember what tactic comes handy for solving goals of the form
 `⊢ ∃ x, P x`. Once you have it mind, try to use it with the hypotheses `r` or `s`. From there, some `split`'s, `exact`'s 
-a `rewrite` will close the goal.
+and a `rewrite` will close the goal.
 
 -/
 
