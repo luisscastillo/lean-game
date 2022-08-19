@@ -37,6 +37,8 @@ prove `P` or `Q`. The `left` and `right` tactics will allow you to change the go
 [**Tip:** Before typing any line, try to think which is the shortest path to finish the proof, either P or Q.] To
 take the best decision, read the lemma and do a drawing of the situation. Once you're done, come back here. 
 
+-/
+
 variables {Ω : Type} [IncidencePlane Ω] -- hide
 
 /- Lemma : no-side-bar
