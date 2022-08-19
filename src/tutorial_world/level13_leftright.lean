@@ -29,11 +29,13 @@ it easier to understand what `tactic` we should apply to solve the goal.
 
 ## Level 13: the `unfold`, and the `left` and `right` tactics.
 
-Read the lemma. Do a drawing of the situation. Once you're done, come back here. Until now, we have seen how to 
+Until now, we have seen how to 
 prove a goal of the form `P ∧ Q` with the `split` tactic. In this level, you will learn how to prove a goal of the
 form `P ∨ Q`, which means that either `P` holds or `Q` holds. In this case, you will have to decide whether you can
 prove `P` or `Q`. The `left` and `right` tactics will allow you to change the goal to `⊢ P` or `⊢ Q`, respectively.
-[**Tip:** Before typing any line, try to think which is the shortest path to finish the proof, either P or Q.]
+
+[**Tip:** Before typing any line, try to think which is the shortest path to finish the proof, either P or Q.] To
+take the best decision, read the lemma and do a drawing of the situation. Once you're done, come back here. 
 
 variables {Ω : Type} [IncidencePlane Ω] -- hide
 
