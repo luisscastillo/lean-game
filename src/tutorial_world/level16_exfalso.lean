@@ -18,6 +18,10 @@ we can then `apply h` to transform the goal into `⊢ P`.
 
 
 /-
+# Tutorial World
+
+## Level 16: the `exfalso` tactic. 
+
 In this level we introduce the new tactic `exfalso`. Look at what it does, it is a bit
 strange at first. We will also need one of the axioms for our plane, the one that says that
 the line through two points contains each of them. You can see the statement of this theorem
