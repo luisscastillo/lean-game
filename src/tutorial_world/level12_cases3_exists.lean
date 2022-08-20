@@ -34,7 +34,7 @@ assumed that `r` and `s`are lines in the plane Ω.
 Right after, it comes the genius idea. After reading the lemmma and trying to do a draw that represents
 the situation, you should be wondering if we could create a hypothesis to state that the lines we've just
 added to the local context are the same (`r = s`). Do you remember how we could add a hypothesis? Exactly, 
-the `have` tactic will do it for us! Now, type `have H : r = s,`.  
+the `have` tactic will do it for us! Now, type `have H : r = s,` (don't forget the comma).  
 
 Subsequently, we will have to prove two goals. First, try to look for a theorem statement that might help us 
 to close the `⊢ r = s` goal. Can you see that `equal_lines_of_contain_two_points` ends with exactly the `r = s`
