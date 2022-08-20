@@ -69,7 +69,7 @@ Lean which powers everything behind the scenes. Try Chrome? Try not using privat
 
 This first level shows a pretty easy goal to prove -- you can just prove it with the `refl` tactic.
 Where it used to say `sorry`, write `refl,`
-**and don't forget the comma**. Then hit enter to go onto the next line.
+**and don't forget the comma**. Then **hit enter** to go onto the next line.
 If all is well, Lean should tell you "Proof complete!" in the top right box, and there
 should be no errors in the bottom right box. You just did the first
 level of the tutorial! And you also learnt how to avoid by *far* the most
