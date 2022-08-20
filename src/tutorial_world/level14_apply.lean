@@ -23,16 +23,27 @@ so it suffices to prove $P$".
 -/
 
 /-
-In this level we introduce the new tactic `apply`. Suppose that you have a theorem `h`
-that states exactly that your goal is true, provided that some hypotheses are satisfied. Then
-`apply h` will change your goal into proving your new hypotheses.
+# Tutorial World
+
+## Level 14: the `apply` tactic.
+
+In this level, we introduce the new tactic `apply`. Suppose you are asked to prove a goal of the form `⊢ R` and you have a theorem statement called `h` which 
+ensures that `h : P → Q → R`. Then, `apply h` will change your goal into proving `⊢ Q` and `⊢ P`. Now, read the lemma and do a drawing of the situation. Once, 
+you're done, delete the 'sorry' and try to look for a theorem statement that ends with the form of the goal shown for this level: `⊢ line_through Q P = line_through P Q`.
+Can you see that `incidence` is the right theorem statement to use? Type `apply incidence,` and make an effort to finish the proof by your own.
+
+-/
+
+/- Hint : Click here for a hint, in case you get stuck.
+The tactic that comes handy for solving the three remaining goals is `exact`. You may need to use a theorem statement to
+close two of the goals. Bewildered? Click on "View source" (located on the top right corner of the game screen) to see the solution. 
 -/
 
 variables {Ω : Type} [IncidencePlane Ω] -- hide
 variables {P Q : Ω} -- hide
 
 /- Lemma :
-The line through two points is a symmetrical concept
+The line through two points is a symmetrical concept.
 -/
 lemma line_through_symmetrical (h : P ≠ Q) : line_through Q P = line_through P Q :=
 begin
@@ -45,10 +56,7 @@ begin
   },
   {
     exact line_through_left Q P,
-  }
-
-
-
+  },
 
 end
 
