@@ -93,8 +93,14 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          # Upload entire repository
+          # Upload ./html files: 
           path: './html'
+          
+      - name: Deploy production 
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          token: ${{ secrets.github_token }}
+          branch: gh-pages # The branch the action should deploy to.
 
   # Deployment job
   deploy:
