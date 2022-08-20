@@ -51,10 +51,16 @@ A, B and C implies that P is an element of the line ℓ.**
 I'm sure that you know now what tactic makes progress with this type of goal. To give you a hint, we need to consider a specific line ℓ in the plane Ω.
 Can you see that the hypothesis `h` assumes that the point C is an element of the `line_through A B`? Then, because the goal says that the point P is an
 element of the set of points A, B and C, there is no other way than changing the line ℓ into the `line_through A B`. Once you've done that, use the `intros`
-tactic to add two new hypotheses to the local context until you see the goal `⊢ P ∈ line_through A B`. From there, 
+tactic to add two new hypotheses to the local context until you see the goal `⊢ P ∈ line_through A B`. From there, use the `cases` tactic to make the point P
+equal to the points A, B and C, in each of the cases. Try to finish the proof by your own. In case you get stuck, I recommend you to take a look at the previous levels. 
 
 -/
 
+/- Hint : Click here for a hint, in case you get stuck.
+After typing `unfold collinear,`, you should have noticed that the `use` tactic had to be employed with `line_through A B`. Then, 
+you made progress by typing `intros P hP,`. Now, use `cases hP` and make an effort to prove the goals that you are left with. The
+`exact` and `rewrite` tactics may help you. Bewildered? Click on "View source" (located on the top right corner of the game screen) to see the solution. 
+-/
 variables {Ω : Type} [IncidencePlane Ω] -- hide
 
 /- Lemma : no-side-bar
