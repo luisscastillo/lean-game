@@ -33,6 +33,12 @@ the right-hand side of the double implication, which is more concrete. Now, dele
 `simp,`. After that, try to complete the level by using the tactics that we've learned so far. 
 -/
 
+/- Hint : Click here for a hint, in case you get stuck.
+Do you remember how to solve a goal of the form `⊢ P ∨ Q`? Think of either `left` or `right` tactic to make progress.
+Using one of them twice, will set the goal to look exactly like one of the hypothesis. Still bewildered? Click on "View source" 
+(located on the top right corner of the game screen) to see the solution. 
+-/
+
 variables {Ω : Type} [IncidencePlane Ω] --hide
 
 /- Lemma : no-side-bar
