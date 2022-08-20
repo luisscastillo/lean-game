@@ -53,7 +53,7 @@ begin
   cases hP,
   {
     rw hP,
-    exact line_through_left A B
+    exact line_through_left A B,
   },
   cases hP,
   {
