@@ -70,13 +70,13 @@ make reference to the hypothesis `r = line_through B C`). Now, because two goals
 
 {
   
-(delete this parenthesis and type double space)sorry,
+(delete this parenthesis and hit the space bar twice)sorry,
   
 }, 
 
 {
 
-(delete this parenthesis and type double space)sorry, 
+(delete this parenthesis and hit the space bar twice)sorry, 
   
 }, 
 
