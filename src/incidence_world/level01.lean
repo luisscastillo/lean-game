@@ -74,9 +74,9 @@ existence (Ω : Type) : ∃ P Q R : Ω, P ≠ Q ∧ P ≠ R ∧ Q ≠ R ∧ R �
 
 With that being said, let's try to solve the first level of this world together! 
 
-## Let's solve this level together! 
+## Let's solve this level together!
 
-Now that we have learned the basic Lean tactics, we are ready to prove our first theorems! 
+Now that we have learned the basic Lean tactics, we are ready to prove our first theorem! 
 
 The goal of this world is to prove the existence of triangles, but we will start showing that there is no line 
 that covers the whole plane. That is to say, every line misses at least one point.
@@ -84,6 +84,8 @@ that covers the whole plane. That is to say, every line misses at least one poin
 To solve this level, we will need to use the third axiom of incidence. For this reason, the theorem statement 
 called `existence` has been added to the list of our theorem statements (located at the left-hand side of the game screen).
 [**Remember:** Despite being in the Incidence World, we can freely use the theorem statements from the Tutorial World.]
+
+## Step 1: Thinking of a mathematical proof!
 
 To begin with, we are going to understand why we need to start our proof by using the third axiom of incidence. Read the lemma 
 of this level and do a drawing of the situation. Can you see that there is a point which is not in the line you have drawed? Now, go above and 
@@ -111,6 +113,34 @@ already generated two or more points. Because these cases don't have to follow a
 first case, we will define a line through the points A and B so that the line misses the point C. In the second one, we will define a line through the points A and C
 so that the line misses the point B. In the third one, we will define a line through the points B and C so that the line misses the point A. 
 
+To finish with, draw the situation of these three cases separately. Then, make sure that all of them satisfy the three axioms of incidence and answer the lemma of
+this level at the same time. Read this section as many times as necessary to understand it so that you can enjoy the following steps to the maximum!
+
+## Step 2: Writing a mathematical proof in paper!
+
+Before typing any tactic in Lean, writing the mathematical proof in paper first is a synonym of success! In this way, you will have a clear and structured strategy to
+face the level you are trying to complete! Now, read the mathematical proof in paper for this lemma and try to grasp every bit of it!
+
+**Claim:** Every line misses at least one point.
+
+**Proof:** 
+
+By the third axiom of incidence, let A, B and C be three non-collinear points that lie on the plane Ω. 
+
+Now, we proceed with the proof by cases.
+
+**Case 1:** By the first axiom of incidence, let ℓ be the line that is incident with the points A and B. Because of the third axiom of incidence, the line ℓ 
+in not incident with the point C.
+
+**Case 2:** By the first axiom of incidence, let ℓ be the line that is incident with the points A and C. Because of the third axiom of incidence, the line ℓ 
+in not incident with the point B.
+
+**Case 3:** By the first axiom of incidence, let ℓ be the line that is incident with the points B and C. Because of the third axiom of incidence, the line ℓ 
+in not incident with the point A.
+
+Hence, we have shown that every line misses at least one point.
+
+## Step 3: Writing a mathematical proof in Lean!
 
 -/
 
