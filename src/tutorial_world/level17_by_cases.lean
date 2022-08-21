@@ -23,7 +23,8 @@ and the second one with `h : ¬ x ≤ 5`.
 
 ## Level 17: the `by_cases` tactic.
 
-In this level, we introduce the `by_cases` tactic. This is useful when we need to split a proof into different cases.
+In this level, we introduce the `by_cases` tactic. Mathematicians would use it to provide a **proof by cases**.
+This is useful when we need to split a proof into different cases.
 For example, if we are asked to solve a goal of the form `⊢ P ∨ ¬ P`, then `by_cases h : P` will split the goal into two cases, 
 assuming `h : P` in the first branch, and `h : ¬ P` in the second branch. With that being said, let's try to solve this level!
 
