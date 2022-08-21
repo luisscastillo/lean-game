@@ -26,8 +26,19 @@ one point in common. Delete the `sorry` to see the goal appear as `⊢ A = B`. N
 to the hypotheses that we have in our local context and try to do a drawing of the situation 
 by using all of them. Once you're done, note that the points A and B must be equal so that the 
 lines r and s satisfy the hypothesis `hrs: r ≠ s`. Then, try to look for a theorem statement which
-could be useful to complete this level. As you have well deduced, `equal_lines_of_contain_two_points`
-is the right path to choose. 
+could be useful for this level. As you've well deduced, `equal_lines_of_contain_two_points`
+is the right path to choose. However, note that it states `A ≠ B` and `r = s` instead of `A = B`and
+`r ≠ s`, respectively. Because of this reason, the `by_contra` tactic has to join the party. 
+
+Now, try to solve this level by your own in just three lines of code. [**Remember:** whenever you see
+a hypothesis of the form `h : P ≠ Q`, Lean can also understand it as `h : ¬ (P = Q)`, or `h : (P = Q) → false`.]
+-/
+
+/- Hint : Click here for a hint, in case you get stuck.
+Starting the proof by typing `by_contra h,` will change the goal into proving `⊢ false` and add the hypothesis `h : ¬ (A = B)` to the
+local context. Now, note that `hrs : r ≠ s` can be also understood as `h : (r = s) → false`. Then, `apply hrs,` will make progress. To finish with,
+try to close the goal in just one line by using the `equal_lines_of_contain_two_points` theorem statement.
+Still bewildered? Click on "View source" (located on the top right corner of the game screen) to see the solution. 
 -/
 
 variables {Ω : Type} [IncidencePlane Ω] --hide
