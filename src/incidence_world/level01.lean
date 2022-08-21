@@ -20,7 +20,7 @@ By travelling back in time to 300 B.C., we meet the great mathematician Euclid, 
 first postulates of geometry in his well-known book **`Elements`**. Euclidean geometry can be built up from three
 separate sets of axioms, each of them adding new independent notions that are needed to define the plane. These sets of axioms 
 were proposed by David Hilbert (1862-1943 AD), who made remarkable improvements in the foundations of geometry.
-These three sets are called **incidence**, **betweenness** and **congruence** (we might also want to add the **Parallel Axiom**).
+These three sets are called **incidence**, **order** and **congruence** (we might also want to add the **Parallel Axiom**).
 
 When it comes to the first set of axioms, there are up to three axioms of incidence. These are established to define
 the primitive notions of **point**, **line** and the relationship between these two concepts, which is called **incidence**. Notice 
@@ -142,11 +142,30 @@ Hence, we have shown that every line misses at least one point.
 
 ## Step 3: Writing a mathematical proof in Lean!
 
+To begin with, we generate three non-collinear points A, B and C in the plane Ω by using the following theorem statement:
+
+`existence (Ω : Type) : ∃ P Q R : Ω, P ≠ Q ∧ P ≠ R ∧ Q ≠ R ∧ R ∉ (line_through P Q)`
+
+To do so, delete the `sorry` and type `rcases existence Ω with ⟨A, B, C, ⟨hAB, hAC, hBC, h⟩⟩,` where Ω is the plane, A, B and C are the points that lie on 
+that plane and `hAB`, `hAC`, `hBC` and `h` are the hypotheses `A ≠ B`, `A ≠ C`, `B ≠ C` and `C ∉ (line_through A B)`, respectively.
+
+Then, we proceed with the proof by cases. First, we type `by_cases hA : A ∈ ℓ,`. This will break the proof into two cases. On the one hand, the one where the 
+point A is in the line ℓ. On the other hand, the one where the line ℓ misses the point A. [**Recommendation:** Write curly braces to structure the proof. See level
+9 of Tutorial World in case you don't remember how to do it.] 
+
+Subsequently, and inside the first case, we type `by_cases hB : B ∈ ℓ,`. This will break the firt case into two cases. On the one hand, the one where the 
+points A and B are in the line ℓ. In this case, you will have to call the point C by typing `use C,`, since it is the one that satisfies the goal `⊢ ∃ (P : Ω), P ∉ ℓ`. Right
+after, try to use the `incidence` theorem statement to change the goal from `⊢ C ∉ ℓ` into `⊢ C ∉ line_through A B`. On the other hand, it appears the one
+where the points A and C are in the line ℓ, so that ℓ misses the point B. Because of this reason, `use B,` will close the goal automatically.
+
+To finish with, you can finish the proof by solving the last case, which is the one where the line ℓ misses the point A. Try to follow the train of thought from the
+previous cases to complete this level. In case you case stuck, click right below for a hint. 
+
 -/
 
 /- Hint : Click here for a hint, in case you get stuck.
-This is really a proof `by_cases`, and you will need to come up
-with some candidate points...
+When using the `incidence` theorem statement, you are trying to "substitute" the line `ℓ` for the `line_through A B`. Try to find the Lean tactic that allows us
+to make progress. Still bewildered? Click on "View source" (located on the top right corner of the game screen) to see the solution. 
 -/
 
 variables {Ω : Type} [IncidencePlane Ω] --hide
@@ -162,9 +181,7 @@ begin
     by_cases hB : B ∈ ℓ,
     {
       use C,
-      have ltA := line_through_left A B,
-      have ltB := line_through_right A B,
-      rw (incidence hAB hA hB),
+      rw incidence hAB hA hB,
       exact h,
     },
     {
@@ -173,6 +190,6 @@ begin
   },
   {
     use A,
-  }
+  },
   
 end
