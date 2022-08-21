@@ -105,7 +105,11 @@ The answer to this question is **by knowing the minimum number of dimensions tha
 or one-dimensional spaces, you will see that it is not possible. However, in two-dimensional spaces (that is, the plane) it **is** possible to prove it. And because
 the minimum number of points to build the plane is three, then we can prove this lemma just by generating three points. 
 
-Now that we have divided the proof into 
+Now that we have divided the proof into three cases, it's time to talk about each of them. The strategy is to define a unique line for each of the cases so that
+exactly one point misses that line. To define the lines, we will make use of the first axiom of incidence, which is the only one that makes it possible when we've
+already generated two or more points. Because these cases don't have to follow a specific order, we will just choose an arbitrary order to step through them. In the
+first case, we will define a line through the points A and B so that the line misses the point C. In the second one, we will define a line through the points A and C
+so that the line misses the point B. In the third one, we will define a line through the points B and C so that the line misses the point A. 
 
 
 -/
