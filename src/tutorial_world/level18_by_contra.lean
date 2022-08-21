@@ -25,7 +25,9 @@ To finish this world, we would like to prove that two distinct lines have **at m
 one point in common. Delete the `sorry` to see the goal appear as `⊢ A = B`. Now, take a look
 to the hypotheses that we have in our local context and try to do a drawing of the situation 
 by using all of them. Once you're done, note that the points A and B must be equal so that the 
-lines r and s satisfy the hypothesis `hrs: r ≠ s`. Then, try to look for 
+lines r and s satisfy the hypothesis `hrs: r ≠ s`. Then, try to look for a theorem statement which
+could be useful to complete this level. As you have well deduced, `equal_lines_of_contain_two_points`
+is the right path to choose. 
 -/
 
 variables {Ω : Type} [IncidencePlane Ω] --hide
