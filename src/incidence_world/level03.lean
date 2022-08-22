@@ -39,14 +39,50 @@ Read the lemma and note that this is not what we want. For this reason, we have 
 
 ## Step 2: Writing a mathematical proof in paper!
 
+Now, read the mathematical proof in paper for this lemma and try to grasp every bit of it! You will see that we are using two Lean theorem statements!
 
+**Claim:** Given a point P, there exist two points Q and R, such that the three points are not collinear.
 
+**Proof:** 
 
-Using the lemma `point_in_line_not_point` that you proved in the previous
-level, we can prove a stronger version of the existence axiom. Remember that
-this axiom says that there are three distinct non-collinear points. The
-result in this level says that if we fix one point P, then we can find
-two other distinct points such that the three of them are non-collinear.
+By the third axiom of incidence, let A, B and C be three non-collinear points that lie on the plane Ω. 
+
+Now, we proceed with the proof by cases.
+
+**Case 1:** Let P = A. By the third axiom of incidence, we prove that the points P, B and C are not collinear.
+
+**Case 2:** Let P ≠ A. By the first axiom of incidence, let ℓ be the line that is incident with the points A and P.
+By the lemma `exists_not_point_in_line`, there exists a point that is not incident with the line ℓ. Let E be that point. 
+By the lemma `point_in_line_not_point`, since the point E is not incident with the line ℓ, then P ≠ E and A ≠ E. By the 
+third axiom of incidence, we prove that the points P, A and E are not collinear.
+
+Hence, we have shown that, given a point P, there exist two points Q and R, such that the three points are not collinear.
+
+## Step 3: Writing a mathematical proof in Lean!
+
+To begin with, we generate three non-collinear points A, B and C in the plane Ω by using the following theorem statement:
+
+`existence (Ω : Type) : ∃ P Q R : Ω, P ≠ Q ∧ P ≠ R ∧ Q ≠ R ∧ R ∉ (line_through P Q)`
+
+To do so, delete the `sorry` and type `rcases existence Ω with ⟨A, B, C, ⟨hAB, hAC, hBC, h⟩⟩,` where Ω is the plane, A, B and C are the points that lie on 
+that plane and `hAB`, `hAC`, `hBC` and `h` are the hypotheses `A ≠ B`, `A ≠ C`, `B ≠ C` and `C ∉ (line_through A B)`, respectively.
+
+Then, we proceed with the proof by cases. First, we type `by_cases h : P = A,`. This will break the proof into two cases. On the one hand, the one where the 
+point P is equal to A. On the other hand, the one where the point P is not equal to A. [**Recommendation:** Write curly braces to structure the proof. See level
+9 of Tutorial World in case you don't remember how to do it.] Now, try to solve the first case by your own! Then, come back here to prove the second case together!
+
+When it comes to the second case, you can add the hypothesis `H : ∃ (E : Ω), E ∉ line_through P A,` by using the `have` tactic. Then, `apply exists_point_not_in_line,` 
+will prove your hypothesis, so that you can use it to prove this second case. Right after, `cases H with E hE` will generate the point E. By typing `use A, use E,` we
+tell the computer which points are non-collinear with P. Now, `split` the goal. Remember that `¬ P = A` is equivalent to `P ≠ A`. To finish with, you will have to prove
+that P ≠ E and A ≠ E. Remember that the lemma `point_in_line_not_point` states that `P ∈ r → Q ∉ r → P ≠ Q`. Because your first goal is to prove the conclusion of
+the statement, that is, `⊢ P ≠ E`, then you have to provide Lean with the two previous hypotheses. To do so, type `exact point_in_line_not_point (line_through_left P A) hE,`. 
+Now, try to finish the remaining goals by your own. In case you get stuck, click right below for a hint.
+-/
+
+/- Hint : Click here for a hint, in case you get stuck.
+You can close the first case just by using the `split`, `exact` and `rewrite` tactics. To finish the second case, you may have to change `line_through_left P A` into
+`line_through_right P A` for the remaining goals. Try to understand why that happens. Still bewildered? Click on "View source" (located on the top right corner of the
+game screen) to see the solution. 
 -/
 
 variables {Ω : Type} [IncidencePlane Ω] --hide
@@ -57,35 +93,38 @@ Given a point P, there exist two points Q and R, such that the three points are 
 lemma point_existence_postulate (P : Ω) : ∃ (Q R : Ω), P ≠ Q ∧ P ≠ R ∧ Q ≠ R ∧ 
 R ∉ (line_through P Q) :=
 begin
-  rcases existence Ω with ⟨A, B, C, ⟨hAB, hAC, hBC, h⟩⟩,
-  by_cases hA : P = A,
-  {
-    rw hA,
-    use B, use C,
-    exact ⟨hAB, hAC, hBC, h⟩,
-  },
-  {
-    have htmp := exists_point_not_in_line (line_through' P A),
-    cases htmp with D hD,
-    use A, use D,
-    have hPD := point_in_line_not_point (line_through_left P A) hD,
-    have hAD := point_in_line_not_point (line_through_right P A) hD,
-    exact ⟨hA, hPD, hAD, hD⟩,
-  }
+  rcases ( existence Ω ) with ⟨ A, B, C, ⟨ h1, h2, h3, h4  ⟩ ⟩,
+by_cases h : P = A,
+ {
+  use B,
+  use C,
+  split,
+  rw h,
+  exact h1,
+  split,
+  rw h,
+  exact h2,
+  split,
+  exact h3,
+  rw h,
+  exact h4,
+},
+{
+   have H : ∃ (E : Ω), E ∉ line_through P A,
+   {  
+      apply exists_point_not_in_line,
+   }, 
+   cases H with E hE,
+   use A,
+   use E,
+   split,
+   exact h,
+   split,
+   exact point_in_line_not_point (line_through_left P A) hE,
+   split,
+   exact point_in_line_not_point (line_through_right P A) hE,
+   exact hE,
+   
+},
 
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-  
 end
