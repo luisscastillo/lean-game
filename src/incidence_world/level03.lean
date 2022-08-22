@@ -9,8 +9,10 @@ open IncidencePlane --hide
 In axiomatic geometry, when we are given a point, we can't determine where it is. Then, if we need to
 generate more points to prove a lemma, it might be the case where one of these points drops exactly where 
 the given point was located. Analogously, it might be the case where two of the points generated make a line with 
-the given point, or perhaps they don't do so... Because of this reason, we should think about all the possible
-distributions that are needed to satisfy a lemma. Let's come up with them by solving the level! 
+the given point, or perhaps they don't... Because of this reason, we should think about all the possible
+distributions that are needed to satisfy a lemma. Let's learn how to come up with them by solving this level! 
+
+## Step 1: Thinking of a mathematical proof!
 
 To begin with, read the lemma and do a drawing of the situation. To solve this level, we are given a point; call it P. 
 Now, try to think of an axiom to set up our proof. If you are not sure about which one to choose, let's step through them one by one. 
@@ -25,7 +27,19 @@ to set up our proof.
 
 Following the above train of thought, you wil get to the point where the third axiom of incidence is the correct one to choose. Still and all, 
 we have to think of all the possible distributions that could arise when having three non-collinear points (A, B and C) and the given point P. 
-It might be the case where the point P is not spo
+It might be the case where the point P concurs with one of these three, or it might not... Consequently, we must proceed the proof by cases: one
+where P = A (note that it would be the same if P = B or P = C, since P cannot be equal to two of these points at the same time), another one where P ≠ A.
+
+If P = A, then we are done because the points B, C and P are not collinear. Read the lemma and see how this case satisfies it. 
+
+If P ≠ A, it might be the case where P is not incident with any of the lines that passes through A and B, or trough A and C, or through B and C.
+However, it might be also the case where P is incident with the line through A and B, **or** with line through A and C, **or** with the line through B and C.
+In all of these last three situations, three points would be collinear and only one point which is not P would be non-collinear with it. 
+Read the lemma and note that this is not what we want. For this reason, we have to come up with an **auxiliary point** (call it E). 
+
+## Step 2: Writing a mathematical proof in paper!
+
+
 
 
 Using the lemma `point_in_line_not_point` that you proved in the previous
