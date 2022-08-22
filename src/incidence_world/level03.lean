@@ -74,7 +74,7 @@ point P is equal to A. On the other hand, the one where the point P is not equal
 When it comes to the second case, you can add the hypothesis `H : ∃ (E : Ω), E ∉ line_through P A,` by using the `have` tactic. Then, `apply exists_point_not_in_line,` 
 will prove your hypothesis, so that you can use it to prove this second case. Right after, `cases H with E hE` will generate the point E. By typing `use A, use E,` we
 tell the computer which points are non-collinear with P. Now, `split` the goal. Remember that `¬ P = A` is equivalent to `P ≠ A`. To finish with, you will have to prove
-that P ≠ E and A ≠ E. Remember that the lemma `point_in_line_not_point` states that `P ∈ r → Q ∉ r → P ≠ Q`. Because your first goal is to prove the conclusion of
+that P ≠ E and A ≠ E. Remember that the lemma `point_in_line_not_point` states that `(hPr : P ∈ r) (hQr : Q ∉ r) : P ≠ Q`. Because your first goal is to prove the conclusion of
 the statement, that is, `⊢ P ≠ E`, then you have to provide Lean with the two previous hypotheses. To do so, type `exact point_in_line_not_point (line_through_left P A) hE,`. 
 Now, try to finish the remaining goals by your own. In case you get stuck, click right below for a hint.
 -/
