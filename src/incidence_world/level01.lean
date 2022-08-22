@@ -159,7 +159,7 @@ after, try to use the `incidence` theorem statement to change the goal from `⊢
 where the points A and C are in the line ℓ, so that ℓ misses the point B. Because of this reason, `use B,` will close the goal automatically.
 
 To finish with, you can finish the proof by solving the last case, which is the one where the line ℓ misses the point A. Try to follow the train of thought from the
-previous cases to complete this level. In case you case stuck, click right below for a hint. 
+previous cases to complete this level. In case you get stuck, click right below for a hint. 
 
 -/
 
