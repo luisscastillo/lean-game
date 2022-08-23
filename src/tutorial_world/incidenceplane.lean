@@ -151,40 +151,4 @@ instance : subset (Segment Ω) Ω := { mem := λ P S, P = S.A ∨ P = S.B ∨ S.
 
 end Segment
 
-/--
-This lemma is a rephrasing of the incidence axiom that
-doesn't mention `line_through`
--/ 
-lemma equal_lines_of_contain_two_points {A B : Ω}	{r s : Line Ω}
-(hAB: A ≠ B)	(hAr: A ∈ r) (hAs: A ∈ s) (hBr: B ∈ r) (hBs: B ∈ s) :	r = s :=
-by rw [incidence hAB hAr hBr, incidence hAB hAs hBs]
-
--- The next lemmas allow us to deal with collinearity of sets
-meta def extfinish : tactic unit := `[ext, finish]
-lemma collinear_of_equal (S T : set Ω) (h : S = T . extfinish) : (collinear S ↔ collinear T) :=
-iff_of_eq (congr_arg collinear h)
-
-lemma collinear_subset (S T : set Ω) (hST : S ⊆ T) : collinear T → collinear S :=
-begin
-	intro h,
-	obtain ⟨ℓ, hℓ⟩ := h,
-	exact ⟨ℓ, λ P hP, hℓ (hST hP)⟩,
-end
-
-lemma collinear_union (S T : set Ω) {P Q : Ω} (h : P ≠ Q) (hS : collinear S) (hT : collinear T)
-(hPS : P ∈ S) (hPT : P ∈ T) (hQS : Q ∈ S) (hQT : Q ∈ T) : collinear (S ∪ T) :=
-begin
-	obtain ⟨u, hu⟩ := hS,
-	obtain ⟨v, hv⟩ := hT,
-	use u,
-	have huv : u = v := equal_lines_of_contain_two_points h (hu hPS) (hv hPT) (hu hQS) (hv hQT),
-	simp [←huv] at hv,
-	finish,
-end
-
-/--
-Two points P and Q lie on the same side of a line ℓ if the segment P⬝Q doesn't intersect ℓ
--/
-def same_side (ℓ : Line Ω) (P Q : Ω) :=  pts (P⬝Q) ∩ ℓ = ∅
-
 end IncidencePlane
