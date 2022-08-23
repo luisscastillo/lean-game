@@ -1,4 +1,4 @@
-import betweenness_world.level0x --hide
+import betweenness_world.level01 --hide
 open IncidencePlane --hide
 
 /-
