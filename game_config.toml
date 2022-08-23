@@ -13,3 +13,15 @@ name = "Incidence World"
 id = 2
 parents = [1]
 levels = [ "src/incidence_world/level*.lean" ]
+
+[[worlds]]
+name = "Betweenness World"
+id = 3
+parents = [2]
+levels = [ "src/betweenness_world/level*.lean" ]
+
+[[worlds]]
+name = "Plane Separation World"
+id = 4
+parents = [3]
+levels = [ "src/plane_separation_world/level*.lean" ]
