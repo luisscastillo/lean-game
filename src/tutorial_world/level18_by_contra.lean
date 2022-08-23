@@ -16,6 +16,10 @@ goal into `⊢ false`. Then, argue that `h : SKY_GREY_WHEN_RAINS` to finish the 
 -/
 
 /-
+# Tutorial World 
+
+## Level 18: the `by_contra` tactic.
+
 Congratulations! You are about to finish the first world of The Euclid Game! 
 In this level, we introduce the `by_contra` tactic. Mathematicians would use
 it to provide a **proof by contradiction**. This tactic changes the goal from 
