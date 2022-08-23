@@ -28,10 +28,10 @@ Hence, we have shown that a point that lies between two different collinear poin
 -/
 
 /- Hint : Click here for a hint, in case you get stuck.
-* Whenever we have a hypothesis of the form `h : P ∧ Q ∧ R`, we write `h.1` to refer to `P` and we type `h.2` to refer to `Q ∧ R`. If we want to refer to just 
+Whenever we have a hypothesis of the form `h : P ∧ Q ∧ R`, we write `h.1` to refer to `P` and we type `h.2` to refer to `Q ∧ R`. If we want to refer to just 
 `Q`, we need to write `h.2.1`. Analogously, if we want to refer to just `R`, then we type `h.2.2`. 
 
-* In case you don't know how to use the lemma `no_point_between_a_point`, look how you proved it in the previous level, so that you can adapt that code
+In case you don't know how to use the lemma `no_point_between_a_point`, look how you proved it in the previous level, so that you can adapt that code
 for this one.
 
 Still bewildered? Click on "View source" (located on the top right corner of the game screen) to see the solution.
