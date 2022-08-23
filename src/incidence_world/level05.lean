@@ -8,7 +8,7 @@ open IncidencePlane --hide
 
 Congratulations! You're almost there! To solve this level, we provide you with the mathematical proof in paper. Read it carefully and make
 an effort to understand every bit of it. Then, try to type the mathematical proof in Lean by your own. If needed, you can go back to the previous 
-levels and remember how to use some tactics. By the way, don't forget your list of theorem statements! Just as a final hint, you may want to start 
+levels to remember how to use some tactics. By the way, don't forget your list of theorem statements! Just as a final hint, you may want to start 
 your proof by typing `rcases (point_existence_postulate P) with ⟨Q, R, ⟨hPQ, hPR, hQR,H⟩⟩,`... Good luck!
 
 ## The mathematical proof in paper...
