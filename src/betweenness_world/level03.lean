@@ -13,13 +13,13 @@ To solve this level, the mathematical proof in paper will be given to you. Remem
 
 **Proof:** Let B be the point that lies between A and B, where these two are different collinear points that lie on the line `r`.
 
-(i) Let us assume that there exists a line ℓ such that A ∈ ℓ ∧ B ∈ ℓ ∧ C ∈ ℓ. By the first axiom of order `collinear_of_between`, since A * B * C,  
+**(i)** Let us assume that there exists a line ℓ such that A ∈ ℓ ∧ B ∈ ℓ ∧ C ∈ ℓ. By the first axiom of order `collinear_of_between`, since A * B * C,  
 we prove that there exists a line ℓ such that A ∈ ℓ ∧ B ∈ ℓ ∧ C ∈ ℓ. Let this line be called `s`. Then, A ∈ s ∧ B ∈ s ∧ C ∈ s.
 
-(ii) Let us assume that A ≠ C. By contradiction, if A = C, then A * B * C would be equal to C * B * C. By the lemma `no_point_between_a_point`, this is 
+**(ii)** Let us assume that A ≠ C. By contradiction, if A = C, then A * B * C would be equal to C * B * C. By the lemma `no_point_between_a_point`, this is 
 not possible, so we prove that A ≠ C.
 
-(iii) Let us assume that r = s. By the lemma `equal_lines_of_contain_two_points`, since A ≠ C, A ∈ r, A ∈ s, C ∈ r and C ∈ s, then we prove that
+**(iii)** Let us assume that r = s. By the lemma `equal_lines_of_contain_two_points`, since A ≠ C, A ∈ r, A ∈ s, C ∈ r and C ∈ s, then we prove that
 r = s. Because r = s, then B ∈ s, which we proved in (i), must be equivalent to B ∈ r. Therefore, the point B shares the same line `r` with the points
 A and C and satisfies that A * B * C.
 
