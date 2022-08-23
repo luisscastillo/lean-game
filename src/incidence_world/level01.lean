@@ -56,21 +56,21 @@ How do we make the computer understand such complex statements? By using Type Th
 some of them are such difficult for a computer to comprehend that they must be divided into more than one statement. For example, the first axiom is 
 divided into four statements: 
 
-line_through (P Q : Ω) : Line Ω := line_through' P Q
+* `line_through (P Q : Ω) : Line Ω := line_through' P Q`
 
-line_through_left (P Q : Ω) : P ∈ (line_through P Q)
+* `line_through_left (P Q : Ω) : P ∈ (line_through P Q)`
 
-line_through_right (P Q : Ω) : Q ∈ (line_through P Q)
+* `line_through_right (P Q : Ω) : Q ∈ (line_through P Q)`
 
-incidence {P Q : Ω} {ℓ : Line Ω} : P ≠ Q → P ∈ ℓ → Q ∈ ℓ → ℓ = line_through P Q
+* `incidence {P Q : Ω} {ℓ : Line Ω} : P ≠ Q → P ∈ ℓ → Q ∈ ℓ → ℓ = line_through P Q`
 
 Here it comes the second axiom of incidence in Lean: 
 
-line_contains_two_points (ℓ : Line Ω) : ∃ P Q : Ω, P ≠ Q ∧ ℓ = line_through P Q
+* `line_contains_two_points (ℓ : Line Ω) : ∃ P Q : Ω, P ≠ Q ∧ ℓ = line_through P Q`
 
 And, to finish with, the third one appears right below: 
 
-existence (Ω : Type) : ∃ P Q R : Ω, P ≠ Q ∧ P ≠ R ∧ Q ≠ R ∧ R ∉ (line_through P Q)
+* `existence (Ω : Type) : ∃ P Q R : Ω, P ≠ Q ∧ P ≠ R ∧ Q ≠ R ∧ R ∉ (line_through P Q)`
 
 With that being said, let's try to solve the first level of this world together! 
 
