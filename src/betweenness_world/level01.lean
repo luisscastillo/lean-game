@@ -1,6 +1,14 @@
 import incidence_world.level06 --hide
 open IncidencePlane --hide
 
+/- Axiom :
+collinear_of_between : (A * B * C) → ∃ ℓ : Line Ω, A ∈ ℓ ∧ B ∈ ℓ ∧ C ∈ ℓ
+-/
+
+/- Axiom :
+between_of_collinear (h: ∃ (ℓ : Line Ω), A ∈ ℓ ∧ B ∈ ℓ ∧ C ∈ ℓ) : xor3 (A * B * C) ( B * A * C ) (A * C * B)
+-/
+
 /-
 # Betweenness World
 
