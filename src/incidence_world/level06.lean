@@ -111,25 +111,7 @@ begin
     {
       exact equal_lines_of_contain_two_points hPA H.2.1 H.1 (line_through_left A C) (line_through_left A B),
     },
-    exact h1 h2,
-  }
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
+    tauto,
+  },
   
 end
