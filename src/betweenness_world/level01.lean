@@ -58,11 +58,17 @@ to rewrite the goal.]
 
 ## Let's solve this level! 
 
+To solve this level, you will need to use two axioms of order. Because of this reason, two theorem statements have been added to the list. Display the
+box called "Betweenness World" to take a look at them. Try to think of a mathematical proof in paper before typing your solution in Lean. In case you 
+get stuck, click right below for a hint.
+
 -/
 
 /- Hint : Click here for a hint, in case you get stuck.
-... Still bewildered? Click on "View source" (located on the top right
-corner of the game screen) to see the solution. 
+You can assume that exactly one point is between the other two by typing `have h2 : xor3 (A * B * C) ( B * A * C ) (A * C * B),`. Then, use the theorem
+statements commented above to prove that `h2` is true. After that, remember the **rule of thumb** of this level. To finish with, the `tauto` tactic may 
+finish the proof. In case you want to see how to avoid the `tauto` tactic, click on "View source" (located on the top right
+corner of the game screen).
 -/
 
 variables {Ω : Type} [IncidencePlane Ω] --hide
@@ -77,8 +83,21 @@ lemma not_between_of_between : (A * B * C) → ¬ (B * A * C) :=
 begin
 
   intro h,
-  have h' := between_of_collinear (collinear_of_between h),
-  unfold xor3 at h',
-  tauto,
+  have h2 : xor3 (A * B * C) ( B * A * C ) (A * C * B),
+  {
+    apply between_of_collinear,
+    exact collinear_of_between h,
+  },
+  unfold xor3 at h2,
+  cases h2 with hA hB,
+  {
+    exact hA.2.1,
+  },
+  cases hB with hB1 hB2,
+  {
+  exfalso,
+  exact hB1.1 h,
+  },
+  exact hB2.2.1,
   
 end
