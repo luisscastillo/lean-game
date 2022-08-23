@@ -21,7 +21,7 @@ variables {A B C P Q R : Ω} --hide
 variables {ℓ r s t : Line Ω} --hide
 
 /- Lemma :
-A point cannot be between a point. 
+A point cannot be between one point. 
 -/
 lemma no_point_between_a_point (A x : Ω) : (A * x * A) ↔ false :=
 begin
