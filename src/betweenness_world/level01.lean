@@ -23,7 +23,7 @@ variables {ℓ r s t : Line Ω} --hide
 /- Lemma :
 There...
 -/
-lemma not_between_of_between : (A * B * C) → ¬ B * A * C :=
+lemma not_between_of_between : (A * B * C) → ¬ (B * A * C) :=
 begin
 
   intro h,
