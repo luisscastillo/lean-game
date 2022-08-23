@@ -48,6 +48,7 @@ Regarding this last axiom of order, you may be wondering what **xor3** means. Th
 located at the hypothesis `h2`, for example, then `unfold xor3 at h2,` will make progress. If it is located at the goal, then `unfold xor3,` will be enough 
 to rewrite the goal.]
 
+## Let's solve this level! 
 
 -/
 
