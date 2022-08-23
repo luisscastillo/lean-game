@@ -1,6 +1,4 @@
 import betweenness_world.level01 --hide
-import plane_separation_world.hilbertaxioms --hide
-import hilbertaxioms --hide
 open IncidencePlane --hide
 
 /-
