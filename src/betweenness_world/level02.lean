@@ -7,14 +7,13 @@ open IncidencePlane --hide
 
 ## Level 2: don't try to break a point into two pieces...
 
-In this level, we are asked to show that points cannot be splitted. 
+In this level, we are asked to show that points cannot be splitted. You may want to use the theorem statement `different_of_between`. In case you get 
+stuck, click right below for a hint. 
 -/
 
 /- Hint : Click here for a hint, in case you get stuck.
-You can assume that exactly one point is between the other two by typing `have h2 : xor3 (A * B * C) ( B * A * C ) (A * C * B),`. Then, use the theorem
-statements commented above to prove that `h2` is true. After that, remember the **rule of thumb** of this level. To finish with, the `tauto` tactic may 
-finish the proof. In case you want to see how to avoid the `tauto` tactic, click on "View source" (located on the top right
-corner of the game screen).
+You can add the hypothesis `hAx : A ≠ x ∧ A ≠ A ∧ x ≠ A` and use the theorem statement commented above to prove it. Then, the `tauto` tactic may help you
+to close the goal. Still bewildered? click on "View source" (located on the top right corner of the game screen) to see the solution.
 -/
 
 variables {Ω : Type} [IncidencePlane Ω] --hide
