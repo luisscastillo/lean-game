@@ -33,11 +33,11 @@ called a **model**. A model consists of assigning the concepts that are mentione
 As long as all the `axioms of incidence` are satisfied by this model, we can then assure that this set of axioms is consistent. 
 Let's introduce the axioms of incidence so that we can create a model that satisfies them!
 
-**A.1)** For every point P and for every point Q not equal to P, there exists a unique line ℓ "passing through" (=incident with) P and Q.
+**A.1)** For every point P and for every point Q not equal to P, there exists a unique line ℓ "passing through" (= incident with) P and Q.
 
-**A.2)** For every line ℓ, there exist two distinct points that "pass through" (=are incident with) it.  
+**A.2)** For every line ℓ, there exist two distinct points that "pass through" (= are incident with) it.  
 
-**A.3)** There exist three distinct points with the property that no line "passes through" (=is incident with) all three of them.
+**A.3)** There exist three distinct points with the property that no line "passes through" (= is incident with) all three of them.
 
 It might be useful for you to do a drawing in order to understand each of the axioms more clearly, but remember that mathematics
 does not understand drawings but logical relationships to build new knowledge!
