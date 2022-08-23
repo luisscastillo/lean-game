@@ -57,7 +57,7 @@ the local context of the type `h : IT RAINS` and the goal will just change into 
 
 To solve this level, you will need to use a new statement that has been added to the list of "Theorem statements": 
 
-incidence (P Q : Point) (ℓ : Line) : P ≠ Q → P ∈ ℓ → Q ∈ ℓ → ℓ = line_through P Q
+* incidence (P Q : Point) (ℓ : Line) : P ≠ Q → P ∈ ℓ → Q ∈ ℓ → ℓ = line_through P Q
 
 Now, delete the `sorry` and note how the goal changes into a list of implications. [**Pro tip:** instead of writing 
 several lines of code with the `intro` tactic, try to use the `intros` tactic. This will make the computer understand 
