@@ -28,8 +28,14 @@ lemma no_point_between_a_point (A x : Ω) : (A * x * A) ↔ false :=
 begin
     split,
     {
-        intro h,
-        have H := different_of_between h,
-        tauto,
+      intro h,
+      have hAx : A ≠ x ∧ A ≠ A ∧ x ≠ A,
+      apply different_of_between,
+      exact h,
+      cases hAx with hA hB,
+      cases hB with hC hD,
+      apply hC,
+      refl,
     },
     tauto,
+end
