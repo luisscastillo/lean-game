@@ -8,7 +8,10 @@ open IncidencePlane --hide
 
 Also called the axioms of betweenness, the axioms of order were formalized by David Hilbert (1862-1943 AD) on the occasion of studying the Euclid's `Elements`.
 When it comes to them, there are up to four axioms of order. Their learning involves the definition of **segment**, **betweenness**, **line separation** and
-**plane separation**, among others. In mathematics, the idea of **betweenness** or "being in the middle of two objects" is represented by the **`*`** symbol.
+**plane separation**, among others. In mathematics, the notion of **betweenness** is represented by the **`*`** symbol. Now, take a look to the axioms of order.
+
+**A.1)** For every point P and for every point Q not equal to P, there exists a unique line ℓ "passing through" (= incident with) P and Q.
+
 -/
 
 /- Hint : Click here for a hint, in case you get stuck.
