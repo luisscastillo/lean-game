@@ -20,7 +20,7 @@ we prove that there exists a line ℓ such that A ∈ ℓ ∧ B ∈ ℓ ∧ C �
 not possible, so we prove that A ≠ C.
 
 **(iii)** Let us assume that r = s. By the lemma `equal_lines_of_contain_two_points`, since A ≠ C, A ∈ r, A ∈ s, C ∈ r and C ∈ s, then we prove that
-r = s. Because r = s, then B ∈ s, which we proved in (i), must be equivalent to B ∈ r. Therefore, the point B shares the same line `r` with the points
+r = s. Because r = s, then B ∈ s, which we proved in **(i)**, must be equivalent to B ∈ r. Therefore, the point B shares the same line `r` with the points
 A and C and satisfies that A * B * C.
 
 Hence, we have shown that a point that lies between two different collinear points shares the same line with them.
