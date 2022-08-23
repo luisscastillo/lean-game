@@ -28,6 +28,8 @@ line through P and Q, then the lines `r` and `s` are not equal.
 
 Hence, we have shown that there at least two different lines passing through a given point.
 
+-/
+
 /- Hint : Click here for a hint, in case you get stuck.
 This is not a proof by cases. The `use` tactic may get you going with the second and third lines of the proof. To close the last goal,
 go back to Level 3 of this world and try to see how we used the `point_in_line_not_point` lemma. Still bewildered? Click on "View source" 
