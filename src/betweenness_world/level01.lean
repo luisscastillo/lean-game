@@ -77,7 +77,7 @@ variables {ℓ r s t : Line Ω} --hide
 
 
 /- Lemma :
-There...
+Given three points A, B and C, if B lies between A and C, then A does not lie between B and C.
 -/
 lemma not_between_of_between : (A * B * C) → ¬ (B * A * C) :=
 begin
