@@ -1,4 +1,4 @@
-import plane_separation_world.level01 --hide
+import plane_separation_world.level02 --hide
 open IncidencePlane --hide
 
 /-
