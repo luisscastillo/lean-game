@@ -2,9 +2,9 @@ import incidence_world.level02--hide
 open IncidencePlane --hide
 
 /-
-## Incidence World
+# Incidence World
 
-# Level 3: in search of the extreme cases. 
+## Level 3: in search of the extreme cases. 
 
 In axiomatic geometry, when we are given a point, we can't determine where it is. Then, if we need to
 generate more points to prove a lemma, it might be the case where one of these points drops exactly where 
