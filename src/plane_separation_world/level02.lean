@@ -11,7 +11,7 @@ level by your own. But be careful! Later on, we may need to use them both, so ma
 -/
 
 /- Hint : Click here for a hint, in case you get stuck.
-... Still bewildered? Click on "View source" (located on the top right
+Remember to adapt the code from the previous level. Still bewildered? Click on "View source" (located on the top right
 corner of the game screen) to see the solution. 
 -/
 
