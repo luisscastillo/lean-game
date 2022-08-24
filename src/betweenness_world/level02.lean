@@ -1,14 +1,17 @@
 import betweenness_world.level01 --hide
 open IncidencePlane --hide
 
+/- Axiom :
+different_of_between : (A * B * C) → (A ≠ B ∧ A ≠ C ∧ B ≠ C)
+-/
 
 /-
 # Betweenness World
 
 ## Level 2: don't try to break a point into two pieces...
 
-In this level, we are asked to show that points cannot be splitted. You may want to use the theorem statement `different_of_between`. In case you get 
-stuck, click right below for a hint. 
+In this level, we are asked to show that points cannot be splitted. You may want to use the first axiom of order `different_of_between`. 
+You will find it in the list of theorem statements. In case you get stuck, click right below for a hint. 
 -/
 
 /- Hint : Click here for a hint, in case you get stuck.
