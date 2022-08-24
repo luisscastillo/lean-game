@@ -12,6 +12,12 @@ The notion of **plane separation** comes from the fourth axiom of order, which i
 and not passing through any of the points A, B, C. Then, if the line ℓ passes through a point of the segment A·B, 
 it will also pass through either a point of the segment B·C or a point of the segment A·C (but not both).
 
+In Lean, the Pasch's Axiom may be useful to complete following levels:
+
+* `lemma pasch {A B C D : Ω} {ℓ : Line Ω} (hnc: ¬ C ∈ line_through A B)
+(hnAl: ¬ (A ∈ ℓ)) (hnBl: ¬ B ∈ ℓ) (hnCl: ¬ C ∈ ℓ) (hDl: D ∈ ℓ) (hADB: A * D * B) :
+(∃ E ,  E ∈ ℓ ∧ (A * E * C)) xor (∃ E, E ∈ ℓ ∧ (B * E * C))`
+
 Thanks to this, we can define what "being on the same side" means. 
 
 **Definition:** Given a line ℓ and the points A and B, such that A, B ∉ ℓ, we say that A and B are on the same side if
