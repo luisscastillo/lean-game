@@ -1,4 +1,4 @@
-import plane_separation_world.hilbertaxioms
+import plane_separation_world.hilbertaxioms --hide
 open IncidencePlane --hide
 
 /-
