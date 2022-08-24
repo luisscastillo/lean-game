@@ -1,7 +1,6 @@
 import betweenness_world.level04 --hide
 open IncidencePlane --hide
 
-
 /-
 # Betweenness World
 
@@ -20,8 +19,8 @@ In case you get stuck, click right below for a hint.
 -/
 
 /- Hint : Click here for a hint, in case you get stuck.
-
-Still bewildered? Click on "View source" (located on the top right corner of the game screen) to see the solution.
+Whenever you see the hypothesis `hx: B ∈ A⬝A`, the `cases` tactic will make progress. Whenever you see the goal `⊢ A ∈ A⬝A`, the `left` and `right` tactics
+will make progress. Still bewildered? Click on "View source" (located on the top right corner of the game screen) to see the solution.
 -/
 
 variables {Ω : Type} [IncidencePlane Ω] --hide
