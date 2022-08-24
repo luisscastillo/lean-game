@@ -26,14 +26,17 @@ begin
 split,
 {
   intro h1,
-  rcases h1 with ⟨ℓ, hℓ⟩,
+  unfold collinear at h1,
+  cases h1 with ℓ hℓ,
   simp at hℓ,
-  rw ←(incidence h hℓ.1 hℓ.2.1),
+  rw ← (incidence h hℓ.1 hℓ.2.1),
   exact hℓ.2.2,
 },
 {
   intro h1,
+  unfold collinear,
   use line_through A B,
-  simp [h1],
-}
+  simp,
+  exact h1,
+},
 end
