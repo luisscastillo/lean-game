@@ -6,7 +6,13 @@ open IncidencePlane --hide
 
 ## Level 3: proving useful lemmas...
 
+To solve the following levels, we may want to use the lemma that we are going to prove now. Here you have some hints that could help you to step through it!
 
+**Hint 1:** Whenever you see the word `collinear`, the `unfold` tactic will make progress.
+
+**Hint 2:** Whenever you find a goal or hypothesis of the form `∀ {X : Ω}, X ∈ {A, B, C} → X ∈ r`, the `simp` tactic will make progress.
+
+**Hint 3:** To solve the first goal, you may want to use the theorem statement `incidence` with the `rewrite` tactic.
 -/
 
 /- Hint : Click here for a hint, in case you get stuck.
