@@ -70,6 +70,7 @@ lemma left_right_example (A B C : Ω) (h : C ∈ line_through A B) :
 A = C ∨ collinear ({A, B, C} : set Ω) :=
 begin
   right,
+  unfold collinear,
   use line_through A B,
   intros P hP,
   cases hP,
