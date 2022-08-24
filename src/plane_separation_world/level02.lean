@@ -7,7 +7,7 @@ open IncidencePlane --hide
 ## Level 2: another version of the previous level.
 
 If you managed to solve the previous level, then you know how to prove this lemma with flying colours. Use the same structure as Level 1 to complete this 
-level by your own. But be careful! Later on, we will need to use them both, so make sure you understand what they mean!
+level by your own. But be careful! Later on, we may need to use them both, so make sure you understand what they mean!
 -/
 
 /- Hint : Click here for a hint, in case you get stuck.
