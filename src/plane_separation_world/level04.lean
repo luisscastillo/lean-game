@@ -1,6 +1,9 @@
 import plane_separation_world.level03 --hide
 open IncidencePlane --hide
 
+noncomputable theory --hide
+open_locale classical --hide
+
 /- Axiom :
 not_on_line_iff_not_collinear (h2 : A ≠ B) (h1: ¬ collinear({A,B,C} : set Ω ))
 : C ∉ line_through A B
