@@ -54,7 +54,7 @@ begin
   have HAB : A ≠ B,
   {
     intro H,
-    rw H at hAB,
+    rw ← H at hAB,
     apply hAB,
     unfold same_side,
     finish,
@@ -62,7 +62,7 @@ begin
   have HAC : A ≠ C,
   {
     intro H,
-    rw H at hAC,
+    rw ← H at hAC,
     apply hAC,
     unfold same_side,
     finish,
@@ -145,10 +145,8 @@ begin
   -- WE NEED TO SHOW THAT C IS NOT IN BETWEEN A and B
   -- USE LEMMA (not_on_line_iff_not_collinear) STATING THAT IF POINTS A B C ARE NOT COLLINEAR AND A≠B,  THEY CANNOT BE IN THE SAME LINE
   cases HADB with D r,
-  {
-    cases r with l1 r1,
-    {
-      cases r1 with l2 r2,
+  cases r with l1 r1,
+  cases r1 with l2 r2,
       {
         --PASCH AXIOM
         --MAKE PASCH A HYPOTHESIS AND THEN SOLVE THE TWO CASES
@@ -189,7 +187,6 @@ begin
               {
                 intro H,
                 exfalso,
-                
                 simp at H,
                 cases H,
               },
@@ -223,20 +220,15 @@ begin
                 simp at H,
                 cases H,
                 finish,
-                
-                
               },
               {
                 intro H,
                 exfalso,
-                
                 simp at H,
                 cases H,
               },
           },
         },
-      },
-    },
   -- BOTH PASCH CASES SOLVED AND PROOF COMPLETED
 end
 
