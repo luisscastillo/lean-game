@@ -53,19 +53,21 @@ begin
   --Step 1: First, prove that A is not equal to B and A is not equal to C
   have HAB: A ≠ B,
   {
-    by_contra,
     unfold same_side at hAB,
-    rw h at hAB,
+    intro H,
+    rw H at hAB,
     simp at hAB,
-    exact hB hAB,
+    apply hB,
+    exact hAB,
   },
   have HAC: A ≠ C,
   {
-    by_contra,
     unfold same_side at hAC,
-    rw h at hAC,
+    intro H,
+    rw H at hAC,
     simp at hAC,
-    exact hC hAC,
+    apply hC,
+    exact hAC,
   },
 --Step 1: Done
 --Step 2: Prove that there exists a point D that is both on line ℓ and on line AB such that A*D*B.
