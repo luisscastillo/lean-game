@@ -51,7 +51,7 @@ lemma at_most_two_classes_of_noncollinear (hA : A ∉ ℓ) (hB : B ∉ ℓ) (hC 
     (h : ¬ collinear ({A, B, C} : set Ω)) : same_side ℓ B C :=
 begin
   --Step 1: First, prove that A is not equal to B and A is not equal to C
-  have HAB: A≠B,
+  have HAB : A ≠ B,
   {
     intro H,
     rw H at hAB,
@@ -60,7 +60,7 @@ begin
     apply hB,
     exact hAB,
   },
-  have HAC: A≠C,
+  have HAC : A ≠ C,
   {
     unfold same_side at hAC,
     intro H,
@@ -144,7 +144,7 @@ begin
 
   --BOTH E AND D POINTS HAVE BEEN PROVED
 
-  -- WE NEDE TO SHOW THAT C IS NOT IN BETWEEN A and B
+  -- WE NEED TO SHOW THAT C IS NOT IN BETWEEN A and B
   -- USE LEMMA (not_on_line_iff_not_collinear) STATING THAT IF POINTS A B C ARE NOT COLLINEAR AND A≠B,  THEY CANNOT BE IN THE SAME LINE
   cases HADB with D r,
   {
@@ -167,7 +167,7 @@ begin
               {
                 intro H,
                 exfalso,
-                have x1: x∈ line_through B C,
+                have x1: x ∈ line_through B C,
                 {
                     cases H with H hxl,
                     simp at H,
