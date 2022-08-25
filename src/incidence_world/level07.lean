@@ -4,7 +4,7 @@ open IncidencePlane --hide
 /-
 # Incidence World
 
-## Level 6: triangles, triangles...
+## Level 7: triangles, triangles...
 
 We end this world by proving the existence of triangles using only incidence axioms. To solve this level, the mathematical proof in paper will be
 provided to you. The goal is to divide it in two cases and reach a contradiction in each of them. In this sense, it is because we want to reach a contradiction
