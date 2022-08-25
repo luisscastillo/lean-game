@@ -34,7 +34,8 @@ Have fun!
 
 The Euclid Game was created as part of the BIYSC project on "Can computers do math?" at Universitat Autònoma de Barcelona.
 
-Some of the explanations are taken/adapted from the original Natural Number Game (https://www.ma.imperial.ac.uk/~buzzard/xena/natural_number_game/).
+Some of the explanations are taken/adapted from the original <a href="https://www.ma.imperial.ac.uk/~buzzard/xena/natural_number_game/"
+  target="blank">Natural Number Game</a>.
 
 Lean is a computer theorem prover being developed at Microsoft Research.
 
