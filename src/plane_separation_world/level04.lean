@@ -58,8 +58,7 @@ begin
     rw H at hAB,
     apply hAB,
     unfold same_side,
-    simp,
-    exact hB,
+    finish,
   },
   have HAC : A ≠ C,
   {
@@ -67,8 +66,7 @@ begin
     rw H at hAC,
     apply hAC,
     unfold same_side,
-    simp,
-    exact hC,
+    finish,
   },
 --Step 1: Done
 --Step 2: Prove that there exists a point D that is both on line ℓ and on line AB such that A*D*B
