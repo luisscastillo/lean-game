@@ -1,6 +1,12 @@
 import plane_separation_world.hilbertaxioms --hide
 open IncidencePlane --hide
 
+/- Axiom :
+pasch (hnc: ¬ C ∈ line_through A B)
+(hnAl: ¬ (A ∈ ℓ)) (hnBl: ¬ B ∈ ℓ) (hnCl: ¬ C ∈ ℓ) (hDl: D ∈ ℓ) (hADB: A * D * B) :
+(∃ E ,  E ∈ ℓ ∧ (A * E * C)) xor (∃ E, E ∈ ℓ ∧ (B * E * C))
+-/
+
 /-
 # Plane Separation World
 
