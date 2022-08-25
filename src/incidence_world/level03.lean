@@ -4,7 +4,7 @@ open IncidencePlane --hide
 /-
 # Incidence World
 
-## Level 3: proving useful lemmas.
+## Level 3: proving useful lemmas (II).
 
 If you look at the list of your theorem statements, you will note that the lemma of the previous level has been added. Despite not
 being useful now, it will come handy for next levels. Analogously, the lemma of this level will be added to the list of theorem 
