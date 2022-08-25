@@ -1,3 +1,4 @@
+import plane_separation_world.hilbertaxioms --hide
 import plane_separation_world.level03 --hide
 open IncidencePlane --hide
 
