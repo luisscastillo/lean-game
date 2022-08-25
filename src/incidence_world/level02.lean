@@ -4,6 +4,7 @@ open IncidencePlane --hide
 /- Axiom :
 line_contains_two_points (ℓ : Line Ω) : ∃ P Q : Ω, P ≠ Q ∧ ℓ = line_through P Q
 -/
+
 /-
 # Incidence World
 
