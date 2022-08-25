@@ -55,19 +55,19 @@ begin
   {
     intro H,
     rw H at hAB,
-    unfold same_side at hAB,
-    simp at hAB,
-    apply hB,
-    exact hAB,
+    apply hAB,
+    unfold same_side,
+    simp,
+    exact hB,
   },
   have HAC : A ≠ C,
   {
-    unfold same_side at hAC,
     intro H,
     rw H at hAC,
-    simp at hAC,
-    apply hC,
-    exact hAC,
+    apply hAC,
+    unfold same_side,
+    simp,
+    exact hC,
   },
 --Step 1: Done
 --Step 2: Prove that there exists a point D that is both on line ℓ and on line AB such that A*D*B
@@ -241,3 +241,4 @@ begin
     },
   -- BOTH PASCH CASES SOLVED AND PROOF COMPLETED
 end
+
