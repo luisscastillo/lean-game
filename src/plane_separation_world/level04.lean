@@ -53,9 +53,9 @@ begin
   --Step 1: First, prove that A is not equal to B and A is not equal to C
   have HAB: A≠B,
   {
-    unfold same_side at hAB,
     intro H,
     rw H at hAB,
+    unfold same_side at hAB,
     simp at hAB,
     apply hB,
     exact hAB,
