@@ -51,15 +51,17 @@ lemma at_most_two_classes_of_noncollinear (hA : A ∉ ℓ) (hB : B ∉ ℓ) (hC 
     (h : ¬ collinear ({A, B, C} : set Ω)) : same_side ℓ B C :=
 begin
   --Step 1: First, prove that A is not equal to B and A is not equal to C
-  have HAB: A≠B,{
-  unfold same_side at hAB,
+  have HAB: A≠B,
+  {
+    unfold same_side at hAB,
     intro H,
     rw H at hAB,
     simp at hAB,
     apply hB,
     exact hAB,
   },
-  have HAC: A≠C,{
+  have HAC: A≠C,
+  {
     unfold same_side at hAC,
     intro H,
     rw H at hAC,
