@@ -51,17 +51,15 @@ lemma at_most_two_classes_of_noncollinear (hA : A ∉ ℓ) (hB : B ∉ ℓ) (hC 
     (h : ¬ collinear ({A, B, C} : set Ω)) : same_side ℓ B C :=
 begin
   --Step 1: First, prove that A is not equal to B and A is not equal to C
-  have HAB: A ≠ B,
-  {
-    unfold same_side at hAB,
+  have HAB: A≠B,{
+  unfold same_side at hAB,
     intro H,
     rw H at hAB,
     simp at hAB,
     apply hB,
     exact hAB,
   },
-  have HAC: A ≠ C,
-  {
+  have HAC: A≠C,{
     unfold same_side at hAC,
     intro H,
     rw H at hAC,
@@ -70,7 +68,7 @@ begin
     exact hAC,
   },
 --Step 1: Done
---Step 2: Prove that there exists a point D that is both on line ℓ and on line AB such that A*D*B.
+--Step 2: Prove that there exists a point D that is both on line ℓ and on line AB such that A*D*B
   have HADB: ∃ (D : Ω), D ∈ ℓ ∧ D ∈ line_through A B ∧ A*D*B,
   {
     unfold same_side at hAB,
@@ -105,8 +103,8 @@ begin
     },
     tauto,
     },
-    -- Step 2: done
-  -- Step 3: Repeat step 2 for another point E that lies on line ℓ and on line AC such that A*E*C.
+    -- D POINT CREATED
+  -- Repeat the same process for another point E that should lie on line ℓ and line AC
   have HAEC: ∃ (E : Ω), E ∈ ℓ ∧ E ∈ line_through A C ∧ A*E*C,
   {
     unfold same_side at hAC,
@@ -141,9 +139,11 @@ begin
     },
     tauto,
     },
-  --Step 3: done.
-  -- WE NEED TO SHOW THAT C IS NOT IN BETWEEN A and B
-  -- USE LEMMA (not_on_line_iff_not_collinear) STATING THAT IF POINTS A B C ARE NON-COLLINEAR AND A ≠ B, THEY CANNOT BE IN THE SAME LINE.
+
+  --BOTH E AND D POINTS HAVE BEEN PROVED
+
+  -- WE NEDE TO SHOW THAT C IS NOT IN BETWEEN A and B
+  -- USE LEMMA (not_on_line_iff_not_collinear) STATING THAT IF POINTS A B C ARE NOT COLLINEAR AND A≠B,  THEY CANNOT BE IN THE SAME LINE
   cases HADB with D r,
   {
     cases r with l1 r1,
@@ -151,7 +151,7 @@ begin
       cases r1 with l2 r2,
       {
         --PASCH AXIOM
-        --MAKE PASCH A HYPOTHESIS AND THEN SOLVE THE TWO CASES.
+        --MAKE PASCH A HYPOTHESIS AND THEN SOLVE THE TWO CASES
         have w := pasch (not_on_line_iff_not_collinear HAB h) hA hB hC l1 r2,
         unfold same_side,
         cases w,
@@ -203,7 +203,7 @@ begin
               {
                 intro H,
                 exfalso,
-                have x1: x ∈ line_through B C,
+                have x1: x∈ line_through B C,
                 {
                     cases H with H hxl,
                     simp at H,
@@ -223,6 +223,8 @@ begin
                 simp at H,
                 cases H,
                 finish,
+                
+                
               },
               {
                 intro H,
@@ -235,5 +237,5 @@ begin
         },
       },
     },
-  -- BOTH PASCH CASES SOLVED. PROOF COMPLETED.
+  -- BOTH PASCH CASES SOLVED AND PROOF COMPLETED
 end
