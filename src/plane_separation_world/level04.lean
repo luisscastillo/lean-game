@@ -1,15 +1,18 @@
 import plane_separation_world.level03 --hide
 open IncidencePlane --hide
 
+/- Axiom :
+not_on_line_iff_not_collinear (h2 : A ≠ B) (h1: ¬ collinear({A,B,C} : set Ω ))
+: C ∉ line_through A B
+-/
+
 /-
 # Plane Separation World
 
 ## Level 4: the Pasch's Axiom in action...
 
-To solve the following levels, we may want to use the lemma that we are going to prove now. Here you have some hints that could help you to step through it!
-**Hint 1:** Whenever you see the word `collinear`, the `unfold` tactic will make progress.
-**Hint 2:** Whenever you find a goal or hypothesis of the form `∀ {X : Ω}, X ∈ {A, B, C} → X ∈ r`, the `simp` tactic will make progress.
-**Hint 3:** To solve the first goal, you may want to use the theorem statement `incidence` with the `rewrite` tactic.
+To solve this level, a new theorem statement has been added to the list. It is called `not_on_line_iff_not_collinear`. Take a look at it and
+
 -/
 
 /- Hint : Click here for a hint, in case you get stuck.
@@ -22,7 +25,8 @@ variables {A B C P Q R : Ω} --hide
 variables {ℓ r s t : Line Ω} --hide
 
 /- Lemma :
-Given three distinct points, they are on the same line if and only if they are collinear.
+Given three non-collinear points A, B, C and a line ℓ that is not incident with them, if A and B are not on the same side of 
+ℓ and A and C are not on the same side of ℓ, then B and C are on the same side of ℓ.
 -/
 lemma at_most_two_classes_of_noncollinear (hA : A ∉ ℓ) (hB : B ∉ ℓ) (hC : C ∉ ℓ)
     (hBneqC : B ≠ C) (hAB: ¬ same_side ℓ A B) (hAC: ¬ same_side ℓ A C)
@@ -46,7 +50,7 @@ begin
     exact hC hAC,
   },
 --Step 1: Done
---Step 2: Prove that there exists a point D that is both on line ℓ and on line AB such that A*D*B
+--Step 2: Prove that there exists a point D that is both on line ℓ and on line AB such that A*D*B.
   have HADB: ∃ (D : Ω), D ∈ ℓ ∧ D ∈ line_through A B ∧ A*D*B,
   {
     unfold same_side at hAB,
@@ -81,8 +85,8 @@ begin
     },
     tauto,
     },
-    -- D POINT CREATED
-  -- Repeat the same process for another point E that should lie on line ℓ and line AC
+    -- Step 2: done
+  -- Step 3: Repeat step 2 for another point E that lies on line ℓ and on line AC such that A*E*C.
   have HAEC: ∃ (E : Ω), E ∈ ℓ ∧ E ∈ line_through A C ∧ A*E*C,
   {
     unfold same_side at hAC,
@@ -117,10 +121,9 @@ begin
     },
     tauto,
     },
-  --BOTH E AND D POINTS HAVE BEEN PROVED
-
+  --Step 3: done.
   -- WE NEED TO SHOW THAT C IS NOT IN BETWEEN A and B
-  -- USE LEMMA (not_on_line_iff_not_collinear) STATING THAT IF POINTS A B C ARE NOT COLLINEAR AND A≠B,  THEY CANNOT BE IN THE SAME LINE
+  -- USE LEMMA (not_on_line_iff_not_collinear) STATING THAT IF POINTS A B C ARE NON-COLLINEAR AND A ≠ B, THEY CANNOT BE IN THE SAME LINE.
   cases HADB with D r,
   {
     cases r with l1 r1,
@@ -128,7 +131,7 @@ begin
       cases r1 with l2 r2,
       {
         --PASCH AXIOM
-        --MAKE PASCH A HYPOTHESIS AND THEN SOLVE THE TWO CASES
+        --MAKE PASCH A HYPOTHESIS AND THEN SOLVE THE TWO CASES.
         have w := pasch (not_on_line_iff_not_collinear HAB h) hA hB hC l1 r2,
         unfold same_side,
         cases w,
@@ -212,5 +215,5 @@ begin
         },
       },
     },
-  -- BOTH PASCH CASES SOLVED AND PROOF COMPLETED
+  -- BOTH PASCH CASES SOLVED. PROOF COMPLETED.
 end
