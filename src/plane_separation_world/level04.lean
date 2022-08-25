@@ -22,6 +22,15 @@ you may want to read the following hints:
 
 Before typing anything in Lean, read the lemma and try to write a proof in paper. In case you want to see a possible solution to this level, 
 click on "View souce" (located on the top right corner of the game screen). 
+
+## Next version of The Euclid Game
+
+In the next version of The Euclid Game, it would be nice to extend the Plane Separation World with more levels and add the Congruence World. 
+
+## What's next?
+
+If you liked the game and want to learn more, look <a href="https://github.com/ImperialCollegeLondon/natural_number_game/blob/master/WHATS_NEXT.md"
+target="blank">here</a> for more ideas about what to do next.
 -/
 
 /- Hint : Click here for a hint, in case you get stuck.
