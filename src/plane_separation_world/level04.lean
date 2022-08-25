@@ -9,15 +9,24 @@ not_on_line_iff_not_collinear (h2 : A ≠ B) (h1: ¬ collinear({A,B,C} : set Ω 
 /-
 # Plane Separation World
 
-## Level 4: the Pasch's Axiom in action...
+## Level 4: the Pasch's Axiom in action... (final level)
 
-To solve this level, a new theorem statement has been added to the list. It is called `not_on_line_iff_not_collinear`. Take a look at it and
+To solve this level, a new theorem statement has been added to the list. It is called `not_on_line_iff_not_collinear`. Because this level is challenging, 
+you may want to read the following hints:
 
+**Hint 1:** Make sure that you have all the hypotheses needed to use the Pasch's Axiom. 
+
+**Hint 2:** Whenever you see the hypothesis `h : ¬∃ (x : Ω), x ∈ ℓ ∧ x ∈ line_through P Q ∧ P*x*Q`, type `push_neg at h` to make progress.
+
+**Hint 3:** Whenever you see a goal of the form `⊢ {x : Ω | x = P ∨ x = Q ∨ P*x*Q} ∩ ↑ℓ = ∅`, type `ext,` to make progress.
+
+Before typing anything in Lean, read the lemma and try to write a proof in paper. In case you want to see a possible solution to this level, 
+click on "View souce" (located on the top right corner of the game screen). 
 -/
 
 /- Hint : Click here for a hint, in case you get stuck.
-... Still bewildered? Click on "View source" (located on the top right
-corner of the game screen) to see the solution. 
+You may want to start the proof with the `by_contra` tactic. Click on "View source" (located on the top right
+corner of the game screen) to see the solution, in case you get stuck.
 -/
 
 variables {Ω : Type} [IncidencePlane Ω] --hide
