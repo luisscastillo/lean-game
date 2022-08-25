@@ -52,7 +52,7 @@ Right after, add the hypothesis `A ∈ pts(A⬝B) ∩ ℓ`. That is, assume that
 To prove it, you will need to type `split,` and type `simp [h1],` twice. What does this mean? The `simp` tactic will look for the lemmas that Lean remembers and
 try to close the goal with them. 
 
-To finish with, can you see that the hypothesis that you've just proved (A ∈ pts(A⬝B) ∩ ℓ) contradicts the hypothesis `h : {x : Ω | x = A ∨ x = B ∨ A*x*B} ∩ ↑ℓ = ∅`?
+To finish with, can you see that the hypothesis that you've just proved (`A ∈ pts(A⬝B) ∩ ℓ`) contradicts the hypothesis `h : {x : Ω | x = A ∨ x = B ∨ A*x*B} ∩ ↑ℓ = ∅`?
 Because of this reason, we can type `finish,` to "finish" the proof. This tactic uses propositional logic and works only when the laws of logic are able to close a goal.
 In this case, since the `finish` tactic finds a contradiction between two hypotheses, then it can close the goal and hence finish the proof.
 
@@ -68,7 +68,7 @@ variables {A B C P Q R : Ω} --hide
 variables {ℓ r s t : Line Ω} --hide
 
 /- Lemma :
-If the segment P·Q is on the same side of a line ℓ, then P ∉ ℓ.
+If the segment `P·Q` is on the same side of a line ℓ, then `P ∉ ℓ`.
 -/
 lemma not_in_line_of_same_side_left (h : same_side ℓ A B) : A ∉ ℓ :=
 begin
