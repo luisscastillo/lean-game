@@ -4,7 +4,7 @@ open IncidencePlane --hide
 /-
 # Incidence World
 
-## Level 5: almost there...
+## Level 6: almost there...
 
 Congratulations! You're almost there! To solve this level, we provide you with the mathematical proof in paper. Read it carefully and make
 an effort to understand every bit of it. Then, try to type the mathematical proof in Lean by your own. If needed, you can go back to the previous 
