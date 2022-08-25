@@ -4,7 +4,7 @@ open IncidencePlane --hide
 /-
 # Incidence World
 
-## Level 4: proving useful lemmas (II).
+## Level 5: proving useful lemmas (III).
 
 Remember that a couple of levels ago we proved that a line could help us deciding that two points were different. Now we will see that
 a point can help us deciding that two lines are different.
