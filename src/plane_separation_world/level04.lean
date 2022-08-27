@@ -4,27 +4,14 @@ open IncidencePlane --hide
 noncomputable theory --hide
 open_locale classical --hide
 
-/- Axiom :
-not_on_line_iff_not_collinear (h2 : A ≠ B) (h1: ¬ collinear({A,B,C} : set Ω ))
-: C ∉ line_through A B
--/
-
 /-
 # Plane Separation World
 
 ## Level 4: the Pasch's Axiom in action... (final level)
 
-To solve this level, a new theorem statement has been added to the list. It is called `not_on_line_iff_not_collinear`. Because this level is challenging, 
-you may want to read the following hints:
-
-**Hint 1:** Make sure that you have all the hypotheses needed to use the Pasch's Axiom. 
-
-**Hint 2:** Whenever you see the hypothesis `h : ¬∃ (x : Ω), x ∈ ℓ ∧ x ∈ line_through P Q ∧ P*x*Q`, type `push_neg at h` to make progress.
-
-**Hint 3:** Whenever you see a goal of the form `⊢ {x : Ω | x = P ∨ x = Q ∨ P*x*Q} ∩ ↑ℓ = ∅`, type `ext,` to make progress.
-
-Before typing anything in Lean, read the lemma and try to write a proof in paper. In case you want to see a possible solution to this level, 
-click on "View souce" (located on the top right corner of the game screen). 
+Welcome to the final level of The Euclid Game! This is perhaps the most challenging level with difference. For this reason, you will be provided with
+a very rigorous proof in paper. In case you want to see a possible solution to this level, click on "View source" (located on the top right corner of the
+game screen). Have fun, and let maths be with you! 
 
 ## Next version of The Euclid Game
 
@@ -34,20 +21,43 @@ In the next version of The Euclid Game, it would be nice to extend the Plane Sep
 
 If you liked the game and want to learn more, look <a href="https://github.com/ImperialCollegeLondon/natural_number_game/blob/master/WHATS_NEXT.md"
 target="blank">here</a> for more ideas about what to do next.
+
+## Mathematical proof in paper...
+
+**Claim:** Given three non-collinear points A, B, C and a line ℓ, if A and B are on the same side of 
+ℓ and B and C are on the same side of ℓ, then A and C are on the same side of ℓ.
+
+**Proof:**
+
+**(i)** Let us assume that `A ≠ C`. That is, `(A = C) → false`. Then, let us assume that `A = C`. Now, we want to prove that this is false. 
+We know that A, B, C are non-collinear. That is, `collinear {A, C, B} → false`. Then, it suffices to prove that A, B, C are collinear points.
+Because `A = C`, then `collinear {A, C, B} = collinear {C, C, B}`. For this reason, there has to exist a line ℓ and a point P, such that `P ∈ {C, C, B} → P ∈ ℓ`.
+Let the line ℓ be the line through B and C. Then, `P ∈ line_through B C`. Because `P ∈ {C, C, B}`, then either P = C or P = B. If P = C, then 
+`(P ∈ line_through B C) = (C ∈ line_through B C)`. By the first axiom of incidence (`line_through_right`), we prove that `C ∈ line_through B C`. 
+If P = B, then `(P ∈ line_through B C) = (B ∈ line_through B C)`. By the first axiom of incidence (`line_through_left`), we prove that `B ∈ line_through B C`.
+Therefore, because we have shown that that A, B, C are collinear points and this is as false as the fact that `A = C`, then we prove that A ≠ C.  
+
+Let us assume that A and B are on the same side of ℓ and that B and C are on the same side of ℓ. Then, we have to prove that A and C are on the same side of ℓ.
+Now, we proceed with the proof by contradiction. That is, let us assume that the intersection of the segment `A·C` with the line ℓ is not empty. 
+
+**(ii)** Let us assume that there exists a point D, such that `D ∈ pts (A⬝C) ∧ D ∈ ℓ`. Then, either `D = A` or `A*D*C` or `D = C`, and `D ∈ ℓ`. Now, we proceed with 
+the proof of (ii) by contradiction. If there does not exist such point D, we have to prove that the intersection of the segment `A·C` with the line ℓ is empty, and `D ∉ ℓ`.
+That is, there exists a point X such that `x ∈ pts (A⬝C) ∩ ↑ℓ ↔ x ∈ ∅`. Now we have to prove that `x ∈ pts (A⬝C) ∩ ↑ℓ → x ∈ ∅` and that `x ∈ ∅ → x ∈ pts (A⬝C) ∩ ↑ℓ`.
+
+**(ii.A)** **Claim**: `x ∈ pts (A⬝C) ∩ ↑ℓ → x ∈ ∅`. **Proof:** Let us assume that `x ∈ pts (A⬝C) ∩ ↑ℓ`. Then, we have to prove `x ∈ ∅`.
+
+
 -/
 
-/- Hint : Click here for a hint, in case you get stuck.
-You may want to start the proof with the `by_contra` tactic. Click on "View source" (located on the top right
-corner of the game screen) to see the solution, in case you get stuck.
--/
+
 
 variables {Ω : Type} [IncidencePlane Ω] --hide
 variables {A B C P Q R : Ω} --hide
 variables {ℓ r s t : Line Ω} --hide
 
 /- Lemma :
-Given three non-collinear points A, B, C and a line ℓ that is not incident with them, if A and B are not on the same side of 
-ℓ and A and C are not on the same side of ℓ, then B and C are on the same side of ℓ.
+Given three non-collinear points A, B, C and a line ℓ, if A and B are on the same side of 
+ℓ and B and C are on the same side of ℓ, then A and C are on the same side of ℓ.
 -/
 lemma same_side_trans_of_noncollinear (hCol : ¬ collinear ({A, C, B} : set Ω)):
     same_side ℓ A B → same_side ℓ B C → same_side ℓ A C :=
