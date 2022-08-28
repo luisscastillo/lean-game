@@ -1,6 +1,10 @@
 import betweenness_world.level04 --hide
 open IncidencePlane --hide
 
+/- Axiom :
+between_symmetric {A B C : Ω} : (A * B * C) ↔ (C * B * A)
+-/
+
 /-
 # Betweenness World
 
