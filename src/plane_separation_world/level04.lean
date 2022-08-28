@@ -40,14 +40,14 @@ Therefore, because we have shown that that A, B, C are collinear points and this
 Let us assume that A and B are on the same side of ℓ and that B and C are on the same side of ℓ. Then, we have to prove that A and C are on the same side of ℓ.
 Now, we proceed with the proof by contradiction. That is, let us assume that the intersection of the segment `A·C` with the line ℓ is not empty. 
 
-**(ii)** Let us assume that there exists a point D, such that `D ∈ pts (A⬝C) ∧ D ∈ ℓ`. Then, either `D = A` or `A*D*C` or `D = C`, and `D ∈ ℓ`. Now, we proceed with 
+**(ii)** Let us assume that there exists a point D, such that `D ∈ pts (A⬝C) ∧ D ∈ ℓ`. Then, either `D = A` or `A * D * C` or `D = C`, and `D ∈ ℓ`. Now, we proceed with 
 the proof of (ii) by contradiction. If there does not exist such point D, we have to prove that the intersection of the segment `A·C` with the line ℓ is empty, and `D ∉ ℓ`.
 That is, there exists a point X such that `x ∈ pts (A⬝C) ∩ ↑ℓ ↔ x ∈ ∅`. Now we have to prove that `x ∈ pts (A⬝C) ∩ ↑ℓ → x ∈ ∅` and that `x ∈ ∅ → x ∈ pts (A⬝C) ∩ ↑ℓ`.
 
 **(ii.A)** **Claim**: `x ∈ pts (A⬝C) ∩ ↑ℓ → x ∈ ∅`. **Proof:** Let us assume that `x ∈ pts (A⬝C) ∩ ↑ℓ`. Then, we have to prove that `x ∈ ∅`. That is, 
 `x ∈ U → false`, where `U` is the `universal set`. Because of this reason, we assume that `x ∈ U` is true and that it suffices to prove `false`. At this point,
-let the point D that we assumed at (ii) be `x`, such that `x = A` or `A*x*C` or `x = C`, and `x ∉ ℓ`. If we assume that `A*x*C`, the `finish` tactic will close the goal.
-Because the fact that `A*x*C` implies that `x ∈ ℓ`, then we reach a contradiction with `x ∈ ∅`. Therefore, the first case is proved. 
+let the point D that we assumed at (ii) be `x`, such that `x = A` or `A * x * C` or `x = C`, and `x ∉ ℓ`. If we assume that `A * x * C`, the `finish` tactic will close the goal.
+Because the fact that `A * x * C` implies that `x ∈ ℓ`, then we reach a contradiction with `x ∈ ∅`. Therefore, the first case is proved. 
 
 **(ii.B)** **Claim:** `x ∈ ∅ → x ∈ pts (A⬝C) ∩ ↑ℓ`. **Proof:** Note that the point `x` being an element of the empty set cannot imply that `x` is an element of 
 the intersection between the segment `A·C` and the line ℓ, since this is not an empty set. Then, propositional logic proves this case. (You can use the `tauto` tactic
@@ -59,6 +59,25 @@ Therefore, we have proved that there exists a point D such that D is an element 
 By the lemma `not_in_line_of_same_side_right`, since the points A and B are on the same side of ℓ, then `B ∉ ℓ`. By the lemma `not_in_line_of_same_side_right`, since 
 the points B and C are on the same side of ℓ, then `C ∉ ℓ`. Hence, we have shown that `A ∉ ℓ ∧ B ∉ ℓ ∧ C ∉ ℓ`. 
 
+**(iv)** Let P the point D from (ii). Then, `P ∈ ℓ` and either `P = A` or `A * P * C` or `P = C`. Let us assume that `A * P * C`. Then we have to prove that `P ≠ A` and 
+that `P ≠ C` to show that `A * P * C` is true. 
+
+**(iv.A)** Let us assume that `P ≠ A`. That is, `(P = A) → false`. Then, let us assume that `P = A`. Now, we want to prove that this is false. In (iii) we proved 
+that `A ∉ ℓ`. That is, `(A ∈ ℓ) → false`. Because we want to prove `false`, it suffices to prove that `A ∈ ℓ`. In (ii), we proved that `D ∈ ℓ` and in (iv) we set
+D to be the point P, such that `P ∈ ℓ`. Because we have assumed that `P = A`, then `A ∈ ℓ`. Therefore, we have shown that `P ≠ A`.
+
+**(iv.B)** Let us assume that `P ≠ C`. That is, `(P = C) → false`. Then, let us assume that `P = C`. Now, we want to prove that this is false. In (iii) we proved 
+that `C ∉ ℓ`. That is, `(C ∈ ℓ) → false`. Because we want to prove `false`, it suffices to prove that `C ∈ ℓ`. In (ii), we proved that `D ∈ ℓ` and in (iv) we set
+D to be the point P, such that `P ∈ ℓ`. Because we have assumed that `P = C`, then `C ∈ ℓ`. Therefore, we have shown that `P ≠ C`.
+
+Because `P ≠ A` and `P ≠ C`, then propositional logic will show that `A * P * C` has to be true, and that `P ∈ ℓ`. (You can use the `tauto` tactic to solve this step in Lean.)
+
+**(v)** Let us assume that the point B is not incident with the line through A and C. By the lemma `collinear_iff_on_line_through`, since `A ≠ C` (proved in (i)),
+then it suffices to prove that the points A, C, B are not collinear. By the assumption of the lemma `hCol : ¬ collinear ({A, C, B} : set Ω))`, then we show that
+`B ∉ line_through A C`.
+
+**(vi)* By the Pasch's Axiom, since `A ∉ ℓ ∧ B ∉ ℓ ∧ C ∉ ℓ` (proved in (iii)), and `P ∈ ℓ` and `A*P*C`(proved in (iv)), then there exists a point E, such that 
+`E ∈ ℓ`, and either E satisfies that `A * E * C` or `C * E * B`.
 
 
 -/
