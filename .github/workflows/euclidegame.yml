@@ -47,7 +47,7 @@ jobs:
       - name: Setup Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.8'
+          python-version: '3.10.4'
 
       - name: Update packages
         run: sudo apt install -y unzip make nodejs gettext build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python3-openssl
@@ -61,19 +61,11 @@ jobs:
       - name: Install python Lean dependencies
         run: |
           python -m pip install --upgrade pip requests markdown2 toml mathlibtools toposort invoke
-          
-      - name: leanpkg configure
-        run: leanpkg configure
-
-      - name: get mathlib cache
-        run: leanproject get-mathlib-cache || true
-
-      - name: leanpkg build
-        id: build
-        run: |
-          echo "::set-output name=started::true"
-          lean --json --make src | python scripts/detect_errors.py
-          lean --json --make src | python scripts/detect_errors.py
+      - name: upgrade Lean and dependencies
+        uses: leanprover-contrib/lean-upgrade-action@master
+        with:
+          repo: ${{ github.repository }}
+          access-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install Game maker
         run: |
@@ -103,6 +95,7 @@ jobs:
         with:
           # Upload ./html files: 
           path: './html'
+          
  
   # Deployment job
   deploy:
