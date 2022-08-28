@@ -22,7 +22,7 @@ In the next version of The Euclid Game, it would be nice to extend the Plane Sep
 If you liked the game and want to learn more, look <a href="https://github.com/ImperialCollegeLondon/natural_number_game/blob/master/WHATS_NEXT.md"
 target="blank">here</a> for more ideas about what to do next.
 
-## Mathematical proof in paper...
+## Step by step proof in paper...
 
 **Claim:** Given three non-collinear points A, B, C and a line ℓ, if A and B are on the same side of 
 ℓ and B and C are on the same side of ℓ, then A and C are on the same side of ℓ.
@@ -44,7 +44,21 @@ Now, we proceed with the proof by contradiction. That is, let us assume that the
 the proof of (ii) by contradiction. If there does not exist such point D, we have to prove that the intersection of the segment `A·C` with the line ℓ is empty, and `D ∉ ℓ`.
 That is, there exists a point X such that `x ∈ pts (A⬝C) ∩ ↑ℓ ↔ x ∈ ∅`. Now we have to prove that `x ∈ pts (A⬝C) ∩ ↑ℓ → x ∈ ∅` and that `x ∈ ∅ → x ∈ pts (A⬝C) ∩ ↑ℓ`.
 
-**(ii.A)** **Claim**: `x ∈ pts (A⬝C) ∩ ↑ℓ → x ∈ ∅`. **Proof:** Let us assume that `x ∈ pts (A⬝C) ∩ ↑ℓ`. Then, we have to prove `x ∈ ∅`.
+**(ii.A)** **Claim**: `x ∈ pts (A⬝C) ∩ ↑ℓ → x ∈ ∅`. **Proof:** Let us assume that `x ∈ pts (A⬝C) ∩ ↑ℓ`. Then, we have to prove that `x ∈ ∅`. That is, 
+`x ∈ U → false`, where `U` is the `universal set`. Because of this reason, we assume that `x ∈ U` is true and that it suffices to prove `false`. At this point,
+let the point D that we assumed at (ii) be `x`, such that `x = A` or `A*x*C` or `x = C`, and `x ∉ ℓ`. If we assume that `A*x*C`, the `finish` tactic will close the goal.
+Because the fact that `A*x*C` implies that `x ∈ ℓ`, then we reach a contradiction with `x ∈ ∅`. Therefore, the first case is proved. 
+
+**(ii.B)** **Claim:** `x ∈ ∅ → x ∈ pts (A⬝C) ∩ ↑ℓ`. **Proof:** Note that the point `x` being an element of the empty set cannot imply that `x` is an element of 
+the intersection between the segment `A·C` and the line ℓ, since this is not an empty set. Then, propositional logic proves this case. (You can use the `tauto` tactic
+to solve it in Lean.)
+
+Therefore, we have proved that there exists a point D such that D is an element of the segment `A·C` and that `D ∈ ℓ`. 
+
+**(iii)** Let us assume that `A ∉ ℓ ∧ B ∉ ℓ ∧ C ∉ ℓ`. By the lemma `not_in_line_of_same_side_left`, since the points A and B are on the same side of ℓ, then `A ∉ ℓ`.
+By the lemma `not_in_line_of_same_side_right`, since the points A and B are on the same side of ℓ, then `B ∉ ℓ`. By the lemma `not_in_line_of_same_side_right`, since 
+the points B and C are on the same side of ℓ, then `C ∉ ℓ`. Hence, we have shown that `A ∉ ℓ ∧ B ∉ ℓ ∧ C ∉ ℓ`. 
+
 
 
 -/
