@@ -82,15 +82,19 @@ then it suffices to prove that the points A, C, B are not collinear. By the assu
 **(vi.A)** Let us assume that there exists a point E, such that `E ∈ ℓ` and `A * E * B`. Because `pts (A⬝B) ∩ ↑ℓ = ∅`, the point E has to satisfy that
 `A * E * B` and `E ∉ ℓ`. By contradiction with the Pasch's Axiom, there cannot exist a point E such that `A * E * B` and `E ∈ ℓ`.
 
-**(vi.B)** Let us assume that there exists a point E, such that `E ∈ ℓ` and `C * E * B`. Because `pts (B⬝C) ∩ ↑ℓ = ∅`, the point E has to satisfy that
-`C * E * B` and `E ∉ ℓ`. By contradiction with the Pasch's Axiom, there cannot exist a point E such that `C * E * B` and `E ∈ ℓ`.
+**(vi.B)** Let us assume that there exists a point E, such that `E ∈ ℓ` and `C * E * B`. By the first axiom of order `between_symmetric`, let `C * E * B` be
+equivalent to `B * E * C`. Because `pts (B⬝C) ∩ ↑ℓ = ∅`, the point E has to satisfy that `B * E * C` and `E ∉ ℓ`. 
+By contradiction with the Pasch's Axiom, there cannot exist a point E such that `B * E * C` and `E ∈ ℓ`.
 
-Because we have shown that there cannot exist a point E such that `E ∈ ℓ` an either `A * E * B` or `C * E * B`, then the segment `A·B` is on the same side of ℓ and
-the segment `B·C` is on the same side of ℓ. Therefore, we prove as a consequence that the segment `A·C` is on the same side of ℓ. 
+Because we have shown that there cannot exist a point E such that `E ∈ ℓ` an either `A * E * B` or `B * E * C`, then the segment `A·B` is on the same side of ℓ and
+the segment `B·C` is on the same side of ℓ. Therefore, we prove, as a consequence, that the segment `A·C` is on the same side of ℓ. 
 
 -/
 
-
+/- Hint : Click here for a hint, in case you get stuck.
+To solve this level, we have used high levels tactics which weren't taught in the Tutorial World. In case you are bewildered, do not hesitate
+to click on "View source" (located on the top right corner of the game screen) to see the solution.
+-/
 
 variables {Ω : Type} [IncidencePlane Ω] --hide
 variables {A B C P Q R : Ω} --hide
