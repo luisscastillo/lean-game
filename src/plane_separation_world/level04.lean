@@ -79,8 +79,14 @@ then it suffices to prove that the points A, C, B are not collinear. By the assu
 **(vi)** By the Pasch's Axiom, since `A ∉ ℓ ∧ B ∉ ℓ ∧ C ∉ ℓ` (proved in (iii)), and `P ∈ ℓ` and `A*P*C`(proved in (iv)), then there exists a point E, such that 
 `E ∈ ℓ`, and either E satisfies that `A * E * B` or `C * E * B`. Now, we proceed with (vi) by cases. 
 
-**(vi.A)** Let us assume that there exists a point E, such that `E ∈ ℓ` and `A * E * B`. (prove this case well written and then do mirror for the other case). 
+**(vi.A)** Let us assume that there exists a point E, such that `E ∈ ℓ` and `A * E * B`. Because `pts (A⬝B) ∩ ↑ℓ = ∅`, the point E has to satisfy that
+`A * E * B` and `E ∉ ℓ`. By contradiction with the Pasch's Axiom, there cannot exist a point E such that `A * E * B` and `E ∈ ℓ`.
 
+**(vi.B)** Let us assume that there exists a point E, such that `E ∈ ℓ` and `C * E * B`. Because `pts (B⬝C) ∩ ↑ℓ = ∅`, the point E has to satisfy that
+`C * E * B` and `E ∉ ℓ`. By contradiction with the Pasch's Axiom, there cannot exist a point E such that `C * E * B` and `E ∈ ℓ`.
+
+Because we have shown that there cannot exist a point E such that `E ∈ ℓ` an either `A * E * B` or `C * E * B`, then the segment `A·B` is on the same side of ℓ and
+the segment `B·C` is on the same side of ℓ. Therefore, we prove as a consequence that the segment `A·C` is on the same side of ℓ. 
 
 -/
 
