@@ -66,6 +66,19 @@ jobs:
         with:
           repo: ${{ github.repository }}
           access-token: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: leanpkg configure
+        run: leanpkg configure
+
+      - name: get mathlib cache
+        run: leanproject get-mathlib-cache || true
+
+      - name: leanpkg build
+        id: build
+        run: |
+          echo "::set-output name=started::true"
+          lean --json --make src | python scripts/detect_errors.py
+          lean --json --make src | python scripts/detect_errors.py
 
       - name: Install Game maker
         run: |
@@ -95,7 +108,6 @@ jobs:
         with:
           # Upload ./html files: 
           path: './html'
-          
  
   # Deployment job
   deploy:
