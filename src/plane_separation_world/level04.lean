@@ -76,8 +76,10 @@ Because `P ≠ A` and `P ≠ C`, then propositional logic will show that `A * P 
 then it suffices to prove that the points A, C, B are not collinear. By the assumption of the lemma `hCol : ¬ collinear ({A, C, B} : set Ω))`, then we show that
 `B ∉ line_through A C`.
 
-**(vi)* By the Pasch's Axiom, since `A ∉ ℓ ∧ B ∉ ℓ ∧ C ∉ ℓ` (proved in (iii)), and `P ∈ ℓ` and `A*P*C`(proved in (iv)), then there exists a point E, such that 
-`E ∈ ℓ`, and either E satisfies that `A * E * C` or `C * E * B`.
+**(vi)** By the Pasch's Axiom, since `A ∉ ℓ ∧ B ∉ ℓ ∧ C ∉ ℓ` (proved in (iii)), and `P ∈ ℓ` and `A*P*C`(proved in (iv)), then there exists a point E, such that 
+`E ∈ ℓ`, and either E satisfies that `A * E * B` or `C * E * B`. Now, we proceed with (vi) by cases. 
+
+**(vi.A)** Let us assume that there exists a point E, such that `E ∈ ℓ` and `A * E * B`. (prove this case well written and then do mirror for the other case). 
 
 
 -/
