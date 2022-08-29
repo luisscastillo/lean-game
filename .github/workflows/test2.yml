@@ -53,7 +53,7 @@ jobs:
       - name: leanpkg build
         id: build
         run: |
-          echo "::set-output name:=started::true"
+          echo "::set-output name=started::true"
           lean --json --make src | python scripts/detect_errors.py
           lean --json --make src | python scripts/detect_errors.py
       - name: Install Game maker
