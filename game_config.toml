@@ -6,7 +6,27 @@ intro = "src/intro.lean"
 [[worlds]]
 name = "Tutorial World"
 id = 1
-levels = [ "src/tutorial_world/level*.lean" ]
+levels = [ 
+  "src/tutorial_world/level01_refl.lean",
+  "src/tutorial_world/level02_rw.lean",
+  "src/tutorial_world/level03_rwbis.lean",
+  "src/tutorial_world/level04_exact.lean",
+  "src/tutorial_world/level05_lemma_usage.lean",
+  "src/tutorial_world/level06_intro.lean",
+  "src/tutorial_world/level07_split.lean",
+  "src/tutorial_world/level08_use.lean",
+  "src/tutorial_world/level09_have.lean",
+  "src/tutorial_world/level10_cases1_and.lean",
+  "src/tutorial_world/level11_cases2_or.lean",
+  "src/tutorial_world/level12_cases3_exists.lean",
+  "src/tutorial_world/level13_leftright.lean",
+  "src/tutorial_world/level14_apply.lean",
+  "src/tutorial_world/level15_simp.lean",
+  "src/tutorial_world/level16_exfalso.lean",
+  "src/tutorial_world/level17_by_cases.lean",
+  "src/tutorial_world/level18_by_contra.lean",
+	
+]
 
 [[worlds]]
 name = "Incidence World"
