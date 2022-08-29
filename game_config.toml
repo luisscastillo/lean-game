@@ -7,6 +7,7 @@ intro = "src/intro.lean"
 name = "Tutorial World"
 id = 1
 levels = [ 
+
   "src/tutorial_world/level01_refl.lean",
   "src/tutorial_world/level02_rw.lean",
   "src/tutorial_world/level03_rwbis.lean",
@@ -25,23 +26,48 @@ levels = [
   "src/tutorial_world/level16_exfalso.lean",
   "src/tutorial_world/level17_by_cases.lean",
   "src/tutorial_world/level18_by_contra.lean",
-	
+  
 ]
 
 [[worlds]]
 name = "Incidence World"
 id = 2
 parents = [1]
-levels = [ "src/incidence_world/level*.lean" ]
+levels = [ 
+
+   "src/incidence_world/level01.lean", 
+   "src/incidence_world/level02.lean", 
+   "src/incidence_world/level03.lean", 
+   "src/incidence_world/level04.lean", 
+   "src/incidence_world/level05.lean", 
+   "src/incidence_world/level06.lean",
+   "src/incidence_world/level07.lean", 
+
+]
 
 [[worlds]]
 name = "Betweenness World"
 id = 3
 parents = [2]
-levels = [ "src/betweenness_world/level*.lean" ]
+levels = [ 
+
+     "src/betweenness_world/level01.lean",
+     "src/betweenness_world/level02.lean",
+     "src/betweenness_world/level03.lean",
+     "src/betweenness_world/level04.lean",
+     "src/betweenness_world/level05.lean",
+
+]
 
 [[worlds]]
 name = "Plane Separation World"
 id = 4
 parents = [3]
-levels = [ "src/plane_separation_world/level*.lean" ]
+levels = [ 
+
+     "src/plane_separation_world/level01.lean",
+     "src/plane_separation_world/level02.lean",
+     "src/plane_separation_world/level03.lean",
+     "src/plane_separation_world/level04.lean",
+
+]
