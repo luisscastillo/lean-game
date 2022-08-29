@@ -39,6 +39,7 @@ jobs:
           echo Deploying branch: $branch
           echo Source base url: $source_base_url
           echo Web editor url: $web_editor_url
+          
       - name: Checkout main branch
         uses: actions/checkout@v2
         with:
