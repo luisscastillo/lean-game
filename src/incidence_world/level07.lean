@@ -49,7 +49,7 @@ Let `s = t`. By the lemma `equal_lines_of_contain_two_points`, because A ≠ C, 
 
 Let `s = r`. Because `s = t`, then `t = r`. By the lemma `equal_lines_of_contain_two_points`, because A ≠ B, A ∈ r, A ∈ t, B ∈ r and B ∈ t, then `t = r`.
 
-But this is a contradiction, becasuse we previously proved that `r ≠ s`.
+But this is a contradiction because we previously proved that `r ≠ s`.
 
 Therefore, it is not possible that three lines share a point in common, when P = A.
 
@@ -57,7 +57,7 @@ Therefore, it is not possible that three lines share a point in common, when P =
 
 Let `r = s`. By the lemma `equal_lines_of_contain_two_points`, because P ≠ A, P ∈ r, P ∈ s, A ∈ r and A ∈ s, then `r = s`.
 
-But this is a contradiction, because we preiously proved that `r ≠ s`.
+But this is a contradiction because we previously proved that `r ≠ s`.
 
 Therefore, it is not possible that three lines share a point in common, when P ≠ A.
 
