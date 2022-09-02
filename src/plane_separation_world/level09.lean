@@ -29,10 +29,8 @@ target="blank">here</a> for more ideas about what to do next.
 Let us assume that A and B are on the same side of ℓ and that B and C are on the same side of ℓ. Then, we have to prove that A and C are on the same side of ℓ.
 Now, we proceed with the proof by contradiction. That is, let us assume that that A and C are on the same side of ℓ.
 
-**(i)** By the lemma `not_same_side_intersection`, since we have assumed that that A and C are on the same side of ℓ, then there exists a point P such that
-`P ∈ pts (A⬝C) ∧ P ∈ ℓ`.
-
-Let that point P be called D. Then, there exists a point D such that `D ∈ pts (A⬝C) ∧ D ∈ ℓ`. That is, `(D = A ∨ D = C ∨ A*D*C) ∧ D ∈ ℓ`.
+**(i)** By the lemma `not_same_side_intersection`, since we have assumed that A and C are on the same side of ℓ, then there exists a point P such that
+`P ∈ pts (A⬝C) ∧ P ∈ ℓ`. Let that point P be called D. Then, there exists a point D such that `D ∈ pts (A⬝C) ∧ D ∈ ℓ`. That is, `(D = A ∨ D = C ∨ A*D*C) ∧ D ∈ ℓ`.
 
 **(ii)** By the lemma `not_same_side_point_in_between`, since A and B are on the same side of ℓ, B and C are on the same side of ℓ, and `(D = A ∨ D = C ∨ A*D*C) ∧ D ∈ ℓ`,
 then D satisfies that `A * D * C`.
@@ -42,16 +40,15 @@ then D satisfies that `A * D * C`.
 **(iv)** By the lemma `same_side_of_noncollinear_ne_line`, since A and B are on the same side of ℓ, and B and C are on the same side of ℓ, then
 `A ∉ ℓ ∧ B ∉ ℓ ∧ C ∉ ℓ`.
 
-**(v)** By the Pasch's Axiom, since `A ∉ ℓ ∧ B ∉ ℓ ∧ C ∉ ℓ` (proved in (iv)), and `P ∈ ℓ` and `A*P*C`(proved in (iv)), then there exists a point E, such that 
+**(v)** By the Pasch's Axiom, since `A ∉ ℓ ∧ B ∉ ℓ ∧ C ∉ ℓ` (proved in (i)), and `D ∈ ℓ` and `A*D*C`(proved in (ii)), then there exists a point E, such that 
 `E ∈ ℓ`, and either E satisfies that `A * E * B` or `C * E * B`. Now, we proceed with (vi) by cases. 
 
 **(v.A)** Let us assume that there exists a point E, such that `E ∈ ℓ` and `A * E * B`. Because `pts (A⬝B) ∩ ↑ℓ = ∅`, the point E has to satisfy that
 `A * E * B` and `E ∉ ℓ`. By contradiction with the Pasch's Axiom, there cannot exist a point E such that `A * E * B` and `E ∈ ℓ`.
 
 **(v.B)** Let us assume that there exists a point E, such that `E ∈ ℓ` and `C * E * B`. By the first axiom of order `between_symmetric`, let `C * E * B` be
-equivalent to `B * E * C`. Because `pts (B⬝C) ∩ ↑ℓ = ∅`, the point E has to satisfy that `B * E * C` and `E ∉ ℓ`. 
-
-By contradiction with the Pasch's Axiom, there cannot exist a point E such that `B * E * C` and `E ∈ ℓ`.
+equivalent to `B * E * C`. Because `pts (B⬝C) ∩ ↑ℓ = ∅`, the point E has to satisfy that `B * E * C` and `E ∉ ℓ`. By contradiction with the Pasch's Axiom, 
+there cannot exist a point E such that `B * E * C` and `E ∈ ℓ`.
 
 Because we have shown that there cannot exist a point E such that `E ∈ ℓ` an either `A * E * B` or `B * E * C`, then the segment `A·B` is on the same side of ℓ and
 the segment `B·C` is on the same side of ℓ. Therefore, we prove, as a consequence, that the segment `A·C` is on the same side of ℓ.
