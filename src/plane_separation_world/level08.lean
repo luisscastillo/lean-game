@@ -46,7 +46,7 @@ variables {ℓ r s t : Line Ω} --hide
 /- Lemma :
 If the segments A·B and B·C are on the same side of the line ℓ, there exists a point P, which satisfies that `(P = A ∨ P = C ∨ A*P*C) ∧ P ∈ ℓ`, such that A * P * C. 
 -/
-lemma not_same_side_point_in_between (hlAB : same_side ℓ A B) (hlAC : ¬ same_side ℓ A C) (hlBC : same_side ℓ B C) (hPAC: (P = A ∨ P = C ∨ A*P*C) ∧ P ∈ ℓ) : A * P * C :=
+lemma not_same_side_point_in_between (hlAB : same_side ℓ A B) (hlBC : same_side ℓ B C) (hPAC: (P = A ∨ P = C ∨ A*P*C) ∧ P ∈ ℓ) : A * P * C :=
 begin 
   have c := same_side_of_noncollinear_ne_line hlAB hlBC,
   have hPA : P ≠ A,
