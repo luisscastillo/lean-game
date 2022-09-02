@@ -1,6 +1,9 @@
 import plane_separation_world.level05 --hide
 open IncidencePlane --hide
 
+noncomputable theory --hide
+open_locale classical --hide
+
 /-
 # Plane Separation World
 
