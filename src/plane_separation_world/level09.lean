@@ -26,7 +26,20 @@ target="blank">here</a> for more ideas about what to do next.
 
 **Proof:**
 
-**(i)** By the lemma 
+Let us assume that A and B are on the same side of ℓ and that B and C are on the same side of ℓ. Then, we have to prove that A and C are on the same side of ℓ.
+Now, we proceed with the proof by contradiction. That is, let us assume that that A and C are on the same side of ℓ.
+
+**(i)** By the lemma `not_same_side_intersection`, since we have assumed that that A and C are on the same side of ℓ, then there exists a point P such that
+`P ∈ pts (A⬝C) ∧ P ∈ ℓ`.
+
+Let that point P be called D. Then, there exists a point D such that `D ∈ pts (A⬝C) ∧ D ∈ ℓ`. That is, `(D = A ∨ D = C ∨ A*D*C) ∧ D ∈ ℓ`.
+
+**(ii)** By the lemma `not_same_side_point_in_between`, since A and B are on the same side of ℓ, B and C are on the same side of ℓ, and `(D = A ∨ D = C ∨ A*D*C) ∧ D ∈ ℓ`,
+then D satisfies that `A * D * C`.
+
+**(iii)** By the lemma `noncollinear_ne_line`, since A, B and C are not collinear, then `B ∉ line_through A C`.
+
+**(iv)** By the lemma `same_side_of_noncollinear_ne_line`
 
 **(vi)** By the Pasch's Axiom, since `A ∉ ℓ ∧ B ∉ ℓ ∧ C ∉ ℓ` (proved in (iii)), and `P ∈ ℓ` and `A*P*C`(proved in (iv)), then there exists a point E, such that 
 `E ∈ ℓ`, and either E satisfies that `A * E * B` or `C * E * B`. Now, we proceed with (vi) by cases. 
