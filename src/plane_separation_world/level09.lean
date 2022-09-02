@@ -39,15 +39,16 @@ then D satisfies that `A * D * C`.
 
 **(iii)** By the lemma `noncollinear_ne_line`, since A, B and C are not collinear, then `B ∉ line_through A C`.
 
-**(iv)** By the lemma `same_side_of_noncollinear_ne_line`
+**(iv)** By the lemma `same_side_of_noncollinear_ne_line`, since A and B are on the same side of ℓ, and B and C are on the same side of ℓ, then
+`A ∉ ℓ ∧ B ∉ ℓ ∧ C ∉ ℓ`.
 
-**(vi)** By the Pasch's Axiom, since `A ∉ ℓ ∧ B ∉ ℓ ∧ C ∉ ℓ` (proved in (iii)), and `P ∈ ℓ` and `A*P*C`(proved in (iv)), then there exists a point E, such that 
+**(v)** By the Pasch's Axiom, since `A ∉ ℓ ∧ B ∉ ℓ ∧ C ∉ ℓ` (proved in (iv)), and `P ∈ ℓ` and `A*P*C`(proved in (iv)), then there exists a point E, such that 
 `E ∈ ℓ`, and either E satisfies that `A * E * B` or `C * E * B`. Now, we proceed with (vi) by cases. 
 
-**(vi.A)** Let us assume that there exists a point E, such that `E ∈ ℓ` and `A * E * B`. Because `pts (A⬝B) ∩ ↑ℓ = ∅`, the point E has to satisfy that
+**(v.A)** Let us assume that there exists a point E, such that `E ∈ ℓ` and `A * E * B`. Because `pts (A⬝B) ∩ ↑ℓ = ∅`, the point E has to satisfy that
 `A * E * B` and `E ∉ ℓ`. By contradiction with the Pasch's Axiom, there cannot exist a point E such that `A * E * B` and `E ∈ ℓ`.
 
-**(vi.B)** Let us assume that there exists a point E, such that `E ∈ ℓ` and `C * E * B`. By the first axiom of order `between_symmetric`, let `C * E * B` be
+**(v.B)** Let us assume that there exists a point E, such that `E ∈ ℓ` and `C * E * B`. By the first axiom of order `between_symmetric`, let `C * E * B` be
 equivalent to `B * E * C`. Because `pts (B⬝C) ∩ ↑ℓ = ∅`, the point E has to satisfy that `B * E * C` and `E ∉ ℓ`. 
 
 By contradiction with the Pasch's Axiom, there cannot exist a point E such that `B * E * C` and `E ∈ ℓ`.
