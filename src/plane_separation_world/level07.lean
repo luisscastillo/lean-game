@@ -27,6 +27,8 @@ Because the fact that `A * x * C` implies that `x ∈ ℓ`, then we reach a cont
 **Proof (b):** Note that the point `x` being an element of the empty set cannot imply that `x` is an element of 
 the intersection between the segment `A·C` and the line ℓ, since this is not an empty set. Then, propositional logic proves this case. (You can use the `tauto` tactic
 to solve it in Lean.)
+
+Therefore, we have proved that there exists a point P such that P is an element of the segment `A·C` and that `P ∈ ℓ`. 
  
 -/
 
