@@ -69,5 +69,10 @@ levels = [
      "src/plane_separation_world/level02.lean",
      "src/plane_separation_world/level03.lean",
      "src/plane_separation_world/level04.lean",
+     "src/plane_separation_world/level05.lean",
+     "src/plane_separation_world/level06.lean",
+     "src/plane_separation_world/level07.lean",
+     "src/plane_separation_world/level08.lean",
+     "src/plane_separation_world/level09.lean",
 
 ]
