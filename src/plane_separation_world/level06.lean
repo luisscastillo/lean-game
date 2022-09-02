@@ -19,7 +19,9 @@ By the lemma `not_in_line_of_same_side_left`, since the points A and B are on th
 
 By the lemma `not_in_line_of_same_side_right`, since the points A and B are on the same side of ℓ, then `B ∉ ℓ`. 
 
-By the lemma `not_in_line_of_same_side_right`, since the points B and C are on the same side of ℓ, then `C ∉ ℓ`. Hence, we have shown that `A ∉ ℓ ∧ B ∉ ℓ ∧ C ∉ ℓ`. 
+By the lemma `not_in_line_of_same_side_right`, since the points B and C are on the same side of ℓ, then `C ∉ ℓ`. 
+
+Hence, we have shown that `A ∉ ℓ ∧ B ∉ ℓ ∧ C ∉ ℓ`. 
 
 -/
 
