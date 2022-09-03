@@ -40,7 +40,7 @@ then D satisfies that `A * D * C`.
 **(iv)** By the lemma `same_side_of_noncollinear_ne_line`, since A and B are on the same side of ℓ, and B and C are on the same side of ℓ, then
 `A ∉ ℓ ∧ B ∉ ℓ ∧ C ∉ ℓ`.
 
-**(v)** By the Pasch's Axiom, since `A ∉ ℓ ∧ B ∉ ℓ ∧ C ∉ ℓ` (proved in (i)), and `D ∈ ℓ` and `A*D*C`(proved in (ii)), then there exists a point E, such that 
+**(v)** By the Pasch's Axiom, since `A ∉ ℓ ∧ B ∉ ℓ ∧ C ∉ ℓ` (proved in (i)), and `D ∈ ℓ` and `A * D * C` (proved in (ii)), then there exists a point E, such that 
 `E ∈ ℓ`, and either E satisfies that `A * E * B` or `C * E * B`. Now, we proceed with (vi) by cases. 
 
 **(v.A)** Let us assume that there exists a point E, such that `E ∈ ℓ` and `A * E * B`. Because `pts (A⬝B) ∩ ↑ℓ = ∅`, the point E has to satisfy that
