@@ -1,9 +1,6 @@
 import plane_separation_world.level05 --hide
 open IncidencePlane --hide
 
-noncomputable theory --hide
-open_locale classical --hide
-
 /-
 # Plane Separation World
 
@@ -25,7 +22,6 @@ By the lemma `not_in_line_of_same_side_right`, since the points A and B are on t
 By the lemma `not_in_line_of_same_side_right`, since the points B and C are on the same side of ℓ, then `C ∉ ℓ`. 
 
 Hence, we have shown that `A ∉ ℓ ∧ B ∉ ℓ ∧ C ∉ ℓ`. 
-
 -/
 
 /- Hint : Click here for a hint, in case you get stuck.
