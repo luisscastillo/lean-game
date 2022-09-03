@@ -50,7 +50,7 @@ then D satisfies that `A * D * C`.
 equivalent to `B * E * C`. Because `pts (B⬝C) ∩ ↑ℓ = ∅`, the point E has to satisfy that `B * E * C` and `E ∉ ℓ`. By contradiction with the Pasch's Axiom, 
 there cannot exist a point E such that `B * E * C` and `E ∈ ℓ`.
 
-Because we have shown that there cannot exist a point E such that `E ∈ ℓ` an either `A * E * B` or `B * E * C`, then the segment `A·B` is on the same side of ℓ and
+Because we have shown that there cannot exist a point E such that `E ∈ ℓ` and either `A * E * B` or `B * E * C`, then the segment `A·B` is on the same side of ℓ and
 the segment `B·C` is on the same side of ℓ. Therefore, we prove, as a consequence, that the segment `A·C` is on the same side of ℓ.
 -/
 
