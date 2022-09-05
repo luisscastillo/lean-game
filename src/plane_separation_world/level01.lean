@@ -65,7 +65,7 @@ In this case, since the `finish` tactic finds a contradiction between two hypoth
 -/
 
 /- Hint : Click here for a hint, in case you get stuck.
-... Still bewildered? Click on "View source" (located on the top right
+Don't forget to finish every line with a comma. Still bewildered? Click on "View source" (located on the top right
 corner of the game screen) to see the solution. 
 -/
 
