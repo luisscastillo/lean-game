@@ -80,19 +80,6 @@ have a1 := noncollinear_ne_line hCol,
 have c := same_side_of_noncollinear_ne_line p q,
 have fact := pasch a1 c.1 c.2.2 c.2.1 hPAC.2 x,
 cases fact,
-/- hint
-{
-  unfold same_side at p,
-  cases fact.1 with E,
-  simp [set.eq_empty_iff_forall_not_mem] at p,
-  replace p := p.2.2 E h_1.2,
-  apply p,
-  exact h_1.1,
-},
-{
-  sorry
-},
--/
 {
   unfold same_side at p,
   cases fact.1 with E,
