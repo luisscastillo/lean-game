@@ -34,10 +34,6 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env: 
-      branch: 'main'
-      source_base_url: "https://raw.githubusercontent.com/${{ github.repository }}/main/"
-      web_editor_url: "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/editor"
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -93,36 +89,7 @@ jobs:
           cp build/shell/* "Lean-game-maker/src/interactive_interface/lean_server/leanprover-community/lean:$VER/"
           
       - name: Make game
-        run: make-lean-game --source_base_url=$source_base_url --web_editor_url=$web_editor_url
-        
-        ## Now we generate the editor ##
-
-      - name: Install lean editor
-        run: git clone --depth=1 https://github.com/leanprover-community/lean-web-editor.git
-
-      - name : Get server files
-        run: |
-          mkdir -p dist
-          mv build/shell/* dist/
-      - name: generate library.zip
-        run: ./generate-library.sh
-
-      - name: upload artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: library
-          path: |
-            ./dist/library.zip
-            ./dist/library.*.json
-      - name: build
-        run: |
-          mv dist lean-web-editor/
-          cd lean-web-editor
-          npm install
-          NODE_ENV=production ./node_modules/.bin/webpack
-  
-      - name: place editor in the website
-        run: mv lean-web-editor/dist html/editor
+        run: make-lean-game --source_base_url=$source_base_url 
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
