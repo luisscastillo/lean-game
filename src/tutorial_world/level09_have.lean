@@ -91,7 +91,7 @@ Then, notice how `exact incidence h h1.1 h1.2,` closes the first goal!
 
 Before jumping onto the second goal, we may want to rewrite something first. Can you see that we can `rw hr,` (where `hr : r = line_through B C`) to change 
 the goal `⊢ r = s` into `⊢ line_through B C = s`. Now, you will be wondering if `exact incidence h h2.1 h2.2,` finishes the proof, but it does not. Do you 
-know why? Because the theorem statement called `incidence` works with the goal `⊢ s = line_through B C`, but not with `⊢ line_through B C` = s`. Because of 
+know why? Because the theorem statement called `incidence` works with the goal `⊢ s = line_through B C`, but not with `⊢ line_through B C = s`. Because of 
 this reason, we should create another hypothesis by using the `have` tactic. That is to say, type `have hs : s = line_through B C,` right before the curly braces.
 
 Now, two final goals are waiting to be proved! I'm sure that you are able to complete the level by your own! Make an effort to apply the knowledge that
