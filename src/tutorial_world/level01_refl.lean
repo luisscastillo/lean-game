@@ -43,21 +43,19 @@ The vast majority of mathematical fields are built up from **Set theory**, which
 that studies sets. In set theory, everything is a set. Even a point can be thought as a set. These sets can contain
 elements, which are mathematical objects of any kind: numbers, points, lines, or even other sets. The set with no element 
 is the empty set. The problem with set theory, however, is that it does not consider mathematical proofs as sets or elements.
-As a consequence, it is more difficult for us to make computers understand that mathematical proofs are entities which exists beyond of set theory.
+As a consequence, it makes the translation of mathematical propositions into programming languages more difficult.
 
 To avoid this problem, the majority of proof assistants, such as Lean or Coq, use **Type Theory**.
-To get the best of this game, you should know that Lean is written in a specific syntax that 
-is designed to look similar to written mathematics. This formal presentation is called **Type theory**. 
 In Type theory, there are `terms` and `types`. A term and its type are written together as `term` : `type`, 
-where the symbol : can be thought as "is an element of" (this is also represented by the symbol ∈).
-Then, if we find the expression Ω : Type , we should understand that Ω is an element of the type "Type". 
-Analogously, A : Ω  will translate into "A is an element of Ω", which makes us think that terms can also be types.
-In this case, because we are talking about geometry, Ω must be interpreted as a plane, where A is a point that lies in 
-that plane. However, if we found h : A = B, that should be read as "h is a hypothesis assuming that A = B is true". 
-These hypotheses/assumptions will be used to step through the mathematical proofs by using `tactics` that point at them.
-
-In conclusion, the syntax of Lean depends on the context of each situation, and adapting to it will be crucial to understand
-the essence of each level. 
+where the symbol : can be thought as "is an element of" (this is an analogy with set theory). 
+Then, if we find the expression Ω : Type , we should understand that Ω is a term of the type "Type". 
+Analogously, A : Ω  will translate into "A is a term of the type Ω", which makes us think that terms can also be types.
+In this case, because we are talking about geometry, Ω must be interpreted as a plane, where A is a point that lies on 
+that plane. In addition to all this, there exists `Prop`, which refers to propositions. Each proposition (when interpreted as a type) 
+is either empty or has exactly one `term`. In this way, it can be used to introduce mathematical proofs. If we found h : A = B, 
+that should be read as "h is a proof of the fact that `A = B`". In Lean, the computer does not care about the content of a proof, 
+but if a proposition is either proved or not. This fact is known as **proof irrelevance**, and makes reasoning about dependent types easier
+for computers. If you want to learn more about this, we encourage you to look for the **Curry–Howard correspondence** and **Homotopy Type Theory**. 
 
 ## Level 1: the `refl` tactic.
 
