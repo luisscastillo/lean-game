@@ -39,4 +39,11 @@ Some of the explanations are taken/adapted from the original <a href="https://ww
 
 Lean is a computer theorem prover being developed at Microsoft Research.
 
+# Contact
+
+You can contribute with more levels and suggestions to The Euclid Game by sharing your thoughts
+<a href="https://annuel2.framapad.org/p/the-euclid-game-9wj1?lang=es">here</a>.
+
+You can visit my GitHub Repository <a href="https://github.com/luisscastillo/lean-game/">here</a>. 
+
 -/
