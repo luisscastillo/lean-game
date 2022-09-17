@@ -3,6 +3,9 @@ version = "1.0.0"
 extra_files = "extras"
 intro = "src/intro.lean"
 
+# The following parameter needs to be set for the "View Source" functionality to work
+source_base_url = "https://raw.githubusercontent.com/luisscastillo/lean-game/main/" # Where to find the source files of the game
+
 [[worlds]]
 name = "Tutorial World"
 id = 1
