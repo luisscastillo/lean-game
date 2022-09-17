@@ -39,6 +39,13 @@ can move on to the next level in the world you're in.
 
 ## The language
 
+The vast majority of mathematical fields are built up from **Set theory**, which is a branch of mathematical logic
+that studies sets. In set theory, everything is a set. Even a point can be thought as a set. These sets can contain
+elements, which are mathematical objects of any kind: numbers, points, lines, or even other sets. The set with no element 
+is the empty set. The problem with set theory, however, is that it does not consider mathematical proofs as sets or elements.
+As a consequence, it is more difficult for us to make computers understand that mathematical proofs are entities which exists beyond of set theory.
+
+To avoid this problem, the majority of proof assistants, such as Lean or Coq, use **Type Theory**.
 To get the best of this game, you should know that Lean is written in a specific syntax that 
 is designed to look similar to written mathematics. This formal presentation is called **Type theory**. 
 In Type theory, there are `terms` and `types`. A term and its type are written together as `term` : `type`, 
