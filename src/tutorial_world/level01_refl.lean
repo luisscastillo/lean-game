@@ -97,5 +97,13 @@ If A is a point, then A = A.
 lemma refl_example (A : Ω) : A = A :=
 begin
   refl,
-  
+  /- hint
+by_cases a = 3,
+{
+  sorry
+},
+{
+  sorry
+}
+-/
 end
