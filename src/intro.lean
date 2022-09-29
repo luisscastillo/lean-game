@@ -30,8 +30,6 @@ You can use this menu to navigate as you try more of the problems.
 
 Have fun!
 
-![alt text](https://www.google.com/url?sa=i&url=https%3A%2F%2Ftheconversation.com%2Fhow-to-overcome-a-fear-of-maths-115646&psig=AOvVaw0-rQVJNXIZL_UD-wbpvTx0&ust=1664520268354000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLCv6qyzufoCFQAAAAAdAAAAABAD)
-
 # Thanks
 
 The Euclid Game was created as part of the BIYSC project on "Can computers do math?" at Universitat Autònoma de Barcelona.
