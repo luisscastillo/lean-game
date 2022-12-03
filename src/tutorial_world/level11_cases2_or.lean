@@ -9,7 +9,7 @@ variables {Ω : Type} [IncidencePlane Ω] --hide
 ## Level 11: the `cases` tactic (II).
 
 Suppose now that your hypothesis says that `P` **or** `Q` holds. That is, you have `h : P ∨ Q`. Then `cases h` will create
-two new goals, and in each of them it will replace `h` with `h : P` in the first case, and with `h : Q` in the second.
+two new goals; in the first place, `h : P ∨ Q` will be replaced by `h : P`, and, in the second case, it will be replaced by `h : Q`.
 
 To solve this level, you may need to remember how to employ the `use` tactic. As a reminder, note that if the goal is of 
 the form `⊢ ∃ (R : Ω), R ∈ X`, then you can type `use ?,`, where `?` is any object that satisfies the property of R, so that it
