@@ -12,7 +12,7 @@ Suppose now that your hypothesis says that `P` **or** `Q` holds. That is, you ha
 two new goals, and in each of them it will replace `h` with `h : P` in the first case, and with `h : Q` in the second.
 
 To solve this level, you may need to remember how to employ the `use` tactic. As a reminder, note that if the goal is of 
-the form `⊢ ∃ (R : Ω), R ∈ X`, then you can type `use ?,', where `?` is any object that satisfies the property of R, so that it
+the form `⊢ ∃ (R : Ω), R ∈ X`, then you can type `use ?,`, where `?` is any object that satisfies the property of R, so that it
 turns the goal into `⊢ ? ∈ X`. The object you are looking for either is found in "Theorem statements" or in the hypotheses located 
 right above the goal of this level. [**Reminder:** if the goal breaks into two goals, remember that you can use curly braces to make 
 the look of the proof more visual.]
