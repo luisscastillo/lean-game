@@ -59,7 +59,7 @@ to prove first that `r = line_through B C`, and then that `s = line_through B C`
 
 To use the tactic `have`, we should follow the following structure: `have h : A = B,`. This line will add the hypothesis `h : A = B` to the local
 context and break the proof into two goals. First, Lean will ask us to prove `⊢ A = B` without the hypothesis `h : A = B`. Then, it will ask us to
-prove the goal that existed before using the tactic `have` with the support of the new hypothesis `h : A = B` that we have added to the local context.
+prove the goal that existed before with the support of the new hypothesis `h : A = B` that we have added to the local context.
 
 **Pro tip:** Because you're getting better at this, proofs are going to be more challenging as time goes by. Whenever you see that you have to prove two 
 or more goals to finsih one level, you may want to use **curly braces**; that is to say, the **{** - **}** symbols. Inside each of them, you just have to
