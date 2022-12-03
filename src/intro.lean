@@ -47,3 +47,5 @@ You can contribute with more levels and suggestions to The Euclid Game by sharin
 You can visit my GitHub Repository <a href="https://github.com/luisscastillo/lean-game/">here</a>. 
 
 -/
+
+![Logo Departament Matemàtiques](logo_departament.png)
