@@ -1,3 +1,18 @@
+/- Symbol :
+∃ : \exists
+∀ : \forall
+∈ : \in
+∉ : \notin
+∪ : \cup
+∩ : \cap
+∅ : \emptyset
+∨ : \or
+∧ : \and
+¬ : \not
+→ : \rightarrow
+↔ : \iff
+-/
+
 /- Tactic : refl
 
 ## Summary
@@ -56,6 +71,12 @@ is either empty or has exactly one `term`. In this way, it can be used to introd
 that should be read as "h is a proof of the fact that `A = B`". In Lean, the computer does not care about the content of a proof, 
 but if a proposition is either proved or not. This fact is known as **proof irrelevance**, and makes reasoning about dependent types easier
 for computers. If you want to learn more about this, we encourage you to look for the **Curry–Howard correspondence** and **Homotopy Type Theory**. 
+
+## The symbols
+
+In case you are not familiar with the symbology of mathematics, you will find a **Vocabulary Section** at the top left corner of
+the screen. Next to each symbol, there is the instruction that you neeed to type in case you want it to appear on the screen.
+Sooner or later, you will come across these symbols during the game, so try to save a space in your brain for them. They will be important!
 
 ## Level 1: the `refl` tactic.
 
